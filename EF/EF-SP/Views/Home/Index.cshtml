@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+ @using (Html.BeginForm("Submit", "Home", FormMethod.Post, new { @idx = "ppp" }))
+{
+<div>
+    @Html.TextBox("email")
+    <input type="submit"/>
+</div>
+    }

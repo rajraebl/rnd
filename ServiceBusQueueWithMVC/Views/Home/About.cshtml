@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+
+@helper Truncate(string str,int length)
+{
+if(str.Length <= length)
+    {@str}
+else
+    { @str.Substring(0,length) }
+}
+<article>
+    <p>
+        @ViewBag.longmsg after @Truncate(ViewBag.longmsg,6)
+        @Html.Raw(ViewBag.str);
+    </p>
+
+    <p>
+        @ViewBag.shortmsg after @Truncate(ViewBag.shortmsg, 6)
+        Use this area to provide additional information.
+    </p>
+
+    <p>
+        Use this area to provide additional information.
+    </p>
+</article>
+
+<aside>
+    <h3>Aside Title</h3>
+    <p>
+        Use this area to provide additional information.
+    </p>
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+    </ul>
+</aside>

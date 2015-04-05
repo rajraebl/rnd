@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <input id="btnFetch" type="button" value="GetData" />
+</div>
+
+<div>
+    <input type ="text" id="txt" value="JSR"/>
+    <input id="btnPost" type="button" value="GetData" />
+</div>
+
+<script>
+    $(document).ready(function() {
+        //alert();
+
+        $('#btnFetch').click(function() {
+            //alert(this.id);
+            fetchData(5);
+        });
+
+        $('#btnPost').click(function() {
+            postData();
+        });
+    });
+
+    function fetchData(i)
+    {
+        $.ajax({
+            type: "Get",
+            url: "http://localhost:12701/motor/details/4",
+            dataType: 'json',
+            crossDomain: true,
+            //data: $(formId).serialize(),
+
+            success: function (jsonResult) {
+                alert('success' + JSON.stringify(jsonResult));
+            },
+            error: function (jqXHR, textStatus) {
+                alert(JSON.stringify(jqXHR));
+            }
+        });
+    }
+
+    function postData() {
+        $.ajax({
+            type: "Post",
+            url: "http://localhost:12701/motor/create",
+            data: { 'name': $('#txt').val(), 'id': 4 },
+
+            success: function (jsonResult) {
+                alert('success' + JSON.stringify(jsonResult));
+            },
+            error: function (jqXHR, textStatus) {
+                alert(JSON.stringify(jqXHR));
+            }
+        });
+    }
+</script>

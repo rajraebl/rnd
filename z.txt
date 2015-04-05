@@ -1,0 +1,1 @@
+http://www.codeproject.com/Articles/34168/WCF-Queued-Messaging

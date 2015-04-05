@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2f031b84-c2d5-464e-918b-a057db3f4def" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8020/msmqservice" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="msmqservice.xsd" MetadataType="Schema" ID="1f4701dc-0935-4b41-8caf-dd94c2e76f25" SourceId="1" SourceUrl="http://localhost:8020/msmqservice?xsd=xsd0" />
+    <MetadataFile FileName="CreditLimitRequestService.wsdl" MetadataType="Wsdl" ID="d43c7579-d99c-47f3-b76b-0507c0e20b63" SourceId="1" SourceUrl="http://localhost:8020/msmqservice?wsdl" />
+    <MetadataFile FileName="msmqservice.disco" MetadataType="Disco" ID="21cad2a5-0751-48d7-89d8-43291e6a7842" SourceId="1" SourceUrl="http://localhost:8020/msmqservice?disco" />
+    <MetadataFile FileName="msmqservice1.xsd" MetadataType="Schema" ID="379f13f9-6205-4775-8420-7ebba046c858" SourceId="1" SourceUrl="http://localhost:8020/msmqservice?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
