@@ -27,9 +27,12 @@ namespace EF_SP.Controllers
         [HttpPost]
         public ActionResult Submit(string email)
         {
-            var db = new AdContext();
-            db.SoftDeleteUserAccountx(email);
-            //db.ExecuteReader("dodldld");
+            using ( var db = new AdContext())
+            {
+            db.SoftDeleteUserAccountWithDBContextExtensionMethod(email);
+
+            //db.SoftDeleteUserAccountWithObjectContext(email);
+            }
             return View("Index");
         }
 

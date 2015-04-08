@@ -65,10 +65,9 @@ namespace EF_SP.Models
 
         }
 
-        public int SoftDeleteUserAccountx(global::System.String email)
+        public int SoftDeleteUserAccountWithDBContextExtensionMethod(global::System.String email)
         {
             SqlParameter emailParameter;
-
             var p = new SqlParameter
             {
                 ParameterName = "@Email",
@@ -78,17 +77,34 @@ namespace EF_SP.Models
                 Value = email
             };
 
-
             var data = 0;
             using (var db = new AdContext())
             {
                 data = db.ExecuteReader("[Identity].[SoftDeleteUserAccountx] @Email", p);
             }
+            return data;
+        }
 
+        public int SoftDeleteUserAccountWithObjectContext(global::System.String email)
+        {
+            SqlParameter emailParameter;
 
+            var p = new SqlParameter("Email", email);
+
+            var data = 0;
+            using (var db = new AdContext())
+            {
+              //return base.ExecuteFunction("GetPasswordSalt", identityIdParameter, passwordSalt);
+
+               var objectContext = (db as System.Data.Entity.Infrastructure.IObjectContextAdapter).ObjectContext;
+               objectContext.ExecuteStoreCommand("[Identity].[SoftDeleteUserAccountx] @Email", p);
+            }
             return data;
         }
     }
+
+
+    
 
     public static class SP
     {

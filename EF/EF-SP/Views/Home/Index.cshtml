@@ -7,8 +7,10 @@
 
  @using (Html.BeginForm("Submit", "Home", FormMethod.Post, new { @idx = "ppp" }))
 {
-<div>
-    @Html.TextBox("email")
-    <input type="submit"/>
-</div>
-    }
+    <div>
+        @Html.TextBox("email")
+        <input type="submit"/>
+    </div>
+
+    <select class="make valid" data-val="true" data-val-requiredifvisible="Please select your vehicle&amp;#39;s make." data-val-requiredifvisible-defaults="" id="Make" name="Make" tabindex="2"><option value="">Please select</option><optgroup label="Most Common"></optgroup><option value="KIA">KIA</option><optgroup label="All Makes"></optgroup><option value="MAZDA">MAZDA</option></select>
+}
