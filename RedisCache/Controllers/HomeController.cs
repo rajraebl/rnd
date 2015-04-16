@@ -3,35 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Microsoft.Ajax.Utilities;
+using RedisCache.Utils;
 using StackExchange.Redis;
 
 namespace RedisCache.Controllers
 {
     public class HomeController : Controller
     {
-        private ConnectionMultiplexer conn = ConnectionMultiplexer.Connect("rajredcache.redis.cache.windows.net,password=I98OmZ0xHAme8AQCJYfUs7V9M0rNe9xSPHlhJe3lCYg=");
-        private IDatabase cache;
-
         //
         // GET: /Home/
 
         public ActionResult Index()
-        { cache = conn.GetDatabase();
+        {
+            IDatabase cache = CacheUtil.Connection.GetDatabase();
             cache.StringSet("ola", DateTime.UtcNow.ToString());
-
             ViewBag.key = cache.StringGet("ola");
-
-            //cache.
             return View();
         }
 
         //
         // GET: /Home/Details/5
 
-        public ActionResult Details(int id)
+        public ActionResult Details()
         {
-            return View();
+            ServiceProxy proxy = new ServiceProxy();
+            var kk = proxy.GetCars();
+            return View(kk);
         }
 
         //

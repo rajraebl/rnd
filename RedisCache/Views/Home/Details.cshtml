@@ -1,0 +1,15 @@
+﻿@model IEnumerable<RedisCache.Models.Car>
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <ul>
+              @foreach (var item in Model)
+              {
+                  <li>@item.CarModel</li>
+              }
+    </ul>
+</div>
