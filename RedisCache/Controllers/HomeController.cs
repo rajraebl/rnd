@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using RedisCache.Utils;
-using StackExchange.Redis;
 
 namespace RedisCache.Controllers
 {
@@ -15,9 +10,9 @@ namespace RedisCache.Controllers
 
         public ActionResult Index()
         {
-            IDatabase cache = CacheUtil.Connection.GetDatabase();
-            cache.StringSet("ola", DateTime.UtcNow.ToString());
-            ViewBag.key = cache.StringGet("ola");
+            //IDatabase cache = CacheUtil.Connection.GetDatabase();
+            //cache.StringSet("ola", DateTime.UtcNow.ToString());
+            //ViewBag.key = cache.StringGet("ola");
             return View();
         }
 

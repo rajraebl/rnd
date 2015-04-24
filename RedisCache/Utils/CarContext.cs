@@ -9,6 +9,10 @@ namespace RedisCache.Utils
 {
     public class CarContext : DbContext
     {
+        public CarContext() : base("CarContext")
+        {
+            Database.SetInitializer<CarContext>(new CarDbInitializer());
+        }
        public DbSet<Car> CarSet { get; set; }
     }
 }

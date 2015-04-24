@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using StackExchange.Redis;
 
@@ -19,7 +20,8 @@ namespace RedisCache.Utils
 
         public static void Set(this IDatabase cache, string key, object value)
         {
-            cache.StringSet(key, Serialize(value));
+            //you can configure to get this expiry from your app settings
+            cache.StringSet(key, Serialize(value), TimeSpan.FromMinutes(2));
         }
 
         static byte[] Serialize(object o)
