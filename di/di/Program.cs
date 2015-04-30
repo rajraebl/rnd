@@ -29,7 +29,15 @@ namespace dinmsp
             //}
 
             //3rd way
-            container.LoadConfiguration("ola");
+            try
+            {
+                container.LoadConfiguration("ola");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
 
             var cc1 = container.Resolve<ICreditCard>();
             cc1.Charge();
@@ -39,9 +47,14 @@ namespace dinmsp
             Console.WriteLine("ReferenceEquals: {0}",kk);
             Console.WriteLine("Equals: {0}", object.Equals(cc1,cc2));
 
-            Console.Write("assembly {0}", typeof(Visa).Assembly.FullName);
+            Console.WriteLine("assembly {0}", typeof(Visa).Assembly.FullName);
+
+            Console.WriteLine("------------------------------------------------");
+
+            var nc1 = container.Resolve<ICache>();
+            nc1.Save("PollResult");
+
             Console.Read();
-            
         }
 
 
@@ -65,6 +78,52 @@ namespace dinmsp
         public void Charge()
         {
             Console.WriteLine("Charging the Master Card");
+        }
+    }
+
+    public interface ICache
+    {
+        void Save(string kk);
+    }
+
+    public class NamedCache : ICache
+    {
+        private IConsoleWriter _cw;
+        public NamedCache(IConsoleWriter cw)
+        {
+            _cw = cw;
+        }
+
+        public void Save(string kk)
+        {
+            _cw.cw("Named Cache Used:" + kk);
+        }
+    }
+
+    public class MemCache : ICache
+    {
+        private IConsoleWriter _cw;
+        public MemCache(IConsoleWriter cw)
+        {
+            _cw = cw;
+        }
+
+        public void Save(string kk)
+        {
+            _cw.cw("Memory Cache Used:" + kk);
+        }
+    }
+
+    public interface IConsoleWriter
+    {
+        void cw(string s);
+    }
+
+    public class ConsoleWriter : IConsoleWriter
+    {
+        public void cw(string s)
+        {
+            Console.WriteLine(s);
         }
     }
 }
