@@ -127,6 +127,7 @@
     <Compile Include="Models\Car.cs" />
     <Compile Include="Utils\CarContext.cs" />
     <Compile Include="Utils\CarDbInitializer.cs" />
+    <Compile Include="Utils\Proxy.cs" />
     <Compile Include="Utils\RedisCacheExtensions.cs" />
     <Compile Include="Utils\Repository.cs" />
     <Compile Include="Utils\ServiceProxy.cs" />

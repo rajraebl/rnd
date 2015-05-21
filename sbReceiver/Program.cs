@@ -12,11 +12,13 @@ namespace sbReceiver
 
     class Program
     {
-        private static string connStr = "Endpoint=sb://rajsbnmsp.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=8q/vO/Hsj2yVCDCTifq5VjOa/keujf29QEnyAzuHkqY=";
+        //private static string connStr = "Endpoint=sb://rajsbnmsp.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=8q/vO/Hsj2yVCDCTifq5VjOa/keujf29QEnyAzuHkqY=";
+        private static string connStr = @"Endpoint=sb://rajnmsp.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=sK/IyLuTPDKxviCFlHqw9JL0KLTJfOjV1kr9G73ctwo=";
+
         static void Main(string[] args)
         {
             MessagingFactory mf = MessagingFactory.CreateFromConnectionString(connStr);
-            MessageReceiver mr = mf.CreateMessageReceiver("rajsbqueue");
+            MessageReceiver mr = mf.CreateMessageReceiver("masqueue");
             while (true)
             {   
                 Console.Write("Receiving Message.....");

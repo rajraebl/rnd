@@ -1,5 +1,7 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Web.Mvc;
 using RedisCache.Utils;
+using StackExchange.Redis;
 
 namespace RedisCache.Controllers
 {
@@ -10,7 +12,18 @@ namespace RedisCache.Controllers
 
         public ActionResult Index()
         {
-            //IDatabase cache = CacheUtil.Connection.GetDatabase();
+            //IDatabase cache = CacheUtil.Connection.GetEndPoints();
+
+            var endpoints = CacheUtil.Connection.GetEndPoints();
+            var server = CacheUtil.Connection.GetServer(endpoints.First());
+            var keys = server.Keys(2, pattern: "85962f27-9fd3-4a90-9a98-3b3efd780f44_QUOTE*");
+            foreach (var key in keys)
+            {
+                var m = key;
+                //Console.WriteLine("Removing Key {0} from cache", key.ToString());
+                //_redisCache.KeyDelete(key);
+            }
+
             //cache.StringSet("ola", DateTime.UtcNow.ToString());
             //ViewBag.key = cache.StringGet("ola");
             return View();
@@ -23,6 +36,11 @@ namespace RedisCache.Controllers
         {
             ServiceProxy proxy = new ServiceProxy();
             var kk = proxy.GetCars();
+
+
+           // ViewBag.key = cache.StringGet("ola");
+
+
             return View(kk);
         }
 
