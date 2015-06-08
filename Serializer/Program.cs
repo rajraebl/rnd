@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,6 +14,10 @@ namespace Serializer
         static void Main(string[] args)
         {
             bool i = true;
+            Car j = new Car() { Id = 3, Name = "Duster", CreatedAt = DateTime.Now };
+
+            //var k = j.ToString();
+            var m = Convert.ToString(j);
             while (i)
             {
                 Console.WriteLine("Please input command");
@@ -43,8 +48,14 @@ namespace Serializer
             {
                 Car c = new Car() {Id = 3, Name = "Duster", CreatedAt = DateTime.Now};
 
+                /*
+                 * This requires class to be decorated with [serializable] attribute
+                BinaryFormatter dc = new BinaryFormatter();
+                dc.Serialize(fs, c);
+                */
+
                 DataContractSerializer dc = new DataContractSerializer(typeof(Car));
-                
+
                 dc.WriteObject(fs,c);
 
             }

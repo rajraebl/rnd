@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{94C98BEE-F0CC-4E49-AA02-6B9C66C64D59}</ProjectGuid>
+    <ProjectGuid>{4617A906-4735-4FA7-A5E1-AF9D61022D1F}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ng</RootNamespace>
-    <AssemblyName>ng</AssemblyName>
+    <RootNamespace>mvc</RootNamespace>
+    <AssemblyName>mvc</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -57,26 +57,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="advance\app.js" />
-    <Content Include="advance\filters.html" />
-    <Content Include="advance\index.html" />
-    <Content Include="advance\index1.html" />
-    <Content Include="advance\main.html" />
-    <Content Include="advance\MainCtrl.js" />
-    <Content Include="advance\service.js" />
-    <Content Include="advance\style.css" />
-    <Content Include="advance\user.html" />
-    <Content Include="advance\UserCtrl.js" />
-    <Content Include="index.html" />
-    <Content Include="scripts\app.js" />
-    <Content Include="scripts\controllers.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="advance\README.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -97,9 +83,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>18235</DevelopmentServerPort>
+          <DevelopmentServerPort>54317</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:18235/</IISUrl>
+          <IISUrl>http://localhost:54317/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

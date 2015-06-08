@@ -145,7 +145,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ser", "ser", "{D3632174-5BCA-4C0E-AF62-0DA1C619E907}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serializer", "Serializer\Serializer.csproj", "{681F6865-4D58-4AE8-A6EC-9E4F60A74BFA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dataContractSerializer", "Serializer\dataContractSerializer.csproj", "{681F6865-4D58-4AE8-A6EC-9E4F60A74BFA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StartUpTaskWithWorkerRole", "StartUpTaskWithWorkerRole", "{31748332-B5FE-4F7A-A56B-ECFF30E6F147}"
 EndProject
@@ -188,6 +188,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zzzz", "zzzz", "{C465DA30-7
 		C:\Users\rajesh.sahu\Desktop\zz.txt = C:\Users\rajesh.sahu\Desktop\zz.txt
 		C:\Users\rajesh.sahu\Desktop\zzz.txt = C:\Users\rajesh.sahu\Desktop\zzz.txt
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mvc", "mvc", "{CDA20D00-41AC-4AAA-9DD5-9C59462C2099}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApplication", "MvcApplication\MvcApplication.csproj", "{3EDAA68F-6FF2-4E55-B093-905D0DC3CB0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -407,6 +411,10 @@ Global
 		{2C63F5C4-F9D3-459D-B148-6381C615112D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C63F5C4-F9D3-459D-B148-6381C615112D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C63F5C4-F9D3-459D-B148-6381C615112D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EDAA68F-6FF2-4E55-B093-905D0DC3CB0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EDAA68F-6FF2-4E55-B093-905D0DC3CB0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EDAA68F-6FF2-4E55-B093-905D0DC3CB0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EDAA68F-6FF2-4E55-B093-905D0DC3CB0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -475,5 +483,6 @@ Global
 		{79149BD0-6DB8-4F75-BF91-68CAD20136A8} = {31748332-B5FE-4F7A-A56B-ECFF30E6F147}
 		{2505501D-EF84-45BF-A970-6DDBA828A381} = {31748332-B5FE-4F7A-A56B-ECFF30E6F147}
 		{2C63F5C4-F9D3-459D-B148-6381C615112D} = {D3632174-5BCA-4C0E-AF62-0DA1C619E907}
+		{3EDAA68F-6FF2-4E55-B093-905D0DC3CB0A} = {CDA20D00-41AC-4AAA-9DD5-9C59462C2099}
 	EndGlobalSection
 EndGlobal
