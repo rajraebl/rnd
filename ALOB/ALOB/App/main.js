@@ -1,5 +1,5 @@
 ﻿(function() {
-    //"use strict";
+    "use strict";
     angular.module("productManagement", ['productResourceMock', 'common.services']);
 
 

@@ -8,13 +8,9 @@
         vm.showImage = false;
 
         vm.toggleImage = function () {
-            //alert(vm.showImage);
             vm.showImage = !vm.showImage;
         };
 
-        //productResource.query(function (data) {
-        //    vm.products = data;
-        //});
 
         productResource.query(function (response) {
             //alert(data);
