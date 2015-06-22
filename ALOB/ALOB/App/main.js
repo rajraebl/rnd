@@ -1,6 +1,6 @@
 ﻿(function() {
     //"use strict";
-    angular.module("productManagement", [])
+    angular.module("productManagement", ['productResourceMock'])
         .factory('productResource', ['$http', function($http) {
                 return $http.get("/api/products/");
                 //return { xx: function() { alert(); } }
@@ -22,7 +22,12 @@
         //    vm.products = data;
         //});
 
-        vm.products = [];
+        vm.products = productResource.then(function(response) {
+            //alert(data);
+            vm.products = response.data;
+        }, function(err) {
+            alert(err);
+        });
 
 
         //angular.module("productManagement", []);
