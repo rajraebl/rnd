@@ -6,30 +6,31 @@
                 //return { xx: function() { alert(); } }
             }
         ]);
-    angular.module("productManagement")
-        .controller("ProductListCtrl", ['productResource', ProductListCtrl]);
 
-    function ProductListCtrl(productResource) {
-        var vm = this;
-        vm.showImage = false;
+    //angular.module("productManagement")
+    //    .controller("ProductListCtrl", ['productResource', ProductListCtrl]);
 
-        vm.toggleImage = function() {
-            //alert(vm.showImage);
-            vm.showImage = !vm.showImage;
-        };
+    //function ProductListCtrl(productResource) {
+    //    var vm = this;
+    //    vm.showImage = false;
 
-        //productResource.query(function (data) {
-        //    vm.products = data;
-        //});
+    //    vm.toggleImage = function() {
+    //        //alert(vm.showImage);
+    //        vm.showImage = !vm.showImage;
+    //    };
 
-        vm.products = productResource.then(function(response) {
-            //alert(data);
-            vm.products = response.data;
-        }, function(err) {
-            alert(err);
-        });
+    //    //productResource.query(function (data) {
+    //    //    vm.products = data;
+    //    //});
+
+    //    vm.products = productResource.then(function(response) {
+    //        //alert(data);
+    //        vm.products = response.data;
+    //    }, function(err) {
+    //        alert(err);
+    //    });
 
 
-        //angular.module("productManagement", []);
-    }
+    //    //angular.module("productManagement", []);
+    //}
 }());
