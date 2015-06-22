@@ -2,8 +2,9 @@
     //"use strict";
 
     angular.module("common.services")
-        .factory('productResource', ['$resource', function($resource) {
-                return $resource("/api/products/:productId");
+        .factory('productResource', ['$http', function ($http) {
+            //return $http.get("/api/products/");
+            return {xx:function () { alert(); }}
         }
 ]);
 
