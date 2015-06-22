@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <!--ANGULAR FILES-->
+    <script src="js/angular.js"></script>
+    <script src="js/angular-resource.js"></script>
+    <script src="js/angular-mocks.js"></script>
+    
+    
+    
+    <!--PROJECT FILES-->
+
+    <script src="common/services/productResourceMock.js"></script>
+
+    <script src="common/services/common.services.js"></script>
+    <script src="common/services/productResource.js"></script>
+    <script src="App/main.js"></script>
+    <script src="App/products/productListCtrl.js"></script>
+    <title>LOB</title>
+</head>
+    <body ng-app="productManagement">
+        <div class="panel panel-primary">
+
+            <div class="panel-heading">
+                Product List
+            </div>
+            <div class="panel-body" ng-controller="ProductListCtrl as vm">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td><button class="btn btn-primary" ng-click="vm.toggleImage()">{{!vm.showImage ? 'Show':'Hide'}} Image</button> </td>
+                            <td>Product</td>
+                            <td>Code</td>
+                            <td>Available</td>
+                            <td>Price</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="product in vm.products">
+                            <td><img width="30px" height="30px" ng-show="vm.showImage" ng-src="{{product.imgUrl}}" title="{{product.imgUrl}}" onerror="this.src='/images/0.jpg'" /></td>
+                            <td>{{product.productName}}</td>
+                            <td>{{product.productCode}}</td>
+                            <td>{{product.releaseDate | date}}</td>
+                            <td>{{product.price|currency}}</td>
+                            <td>Edit</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </body>
+</html>

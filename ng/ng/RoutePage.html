@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script>
+        var myApp = angular.module('myApp', ['ngRoute']);
+
+        myApp.config(function ($routeProvider) {
+            $routeProvider
+                .when('/', { controller: 'myController', templateUrl: 'template/p1.html' })
+                .when('/p2', { controller: 'yourController', templateUrl: 'template/p2.html' })
+                .when('/users',{controller:'myController',templateUrl:'my-ng-template.html'})
+                .otherwise({ redirectTo: '/' });
+        });
+
+        myApp.controller('yourController', function() {});
+
+        myApp.controller('myController', function ($scope, $rootScope) {
+            //alert(0);
+
+            $scope.initUsers = function () {
+                if ($rootScope.users == null) {
+                    //alert(1);
+                    $rootScope.users = [
+                        { id: 1, name: 'Arthur' },
+                        { id: 2, name: 'Barthur' },
+                        { id: 3, name: 'Carthur' }
+                    ];
+                }
+            }
+
+            $scope.addUser = function () {
+                var objUser = { id: $rootScope.users.length + 1, name: $scope.userName };
+                $rootScope.users.push(objUser);
+            };
+
+            $scope.initUsers();
+        });
+
+    </script>
+
+</head>
+<body ng-app="myApp">
+    <div class="container" >
+        <div class="row">
+            <div class="col-sm-3">
+                <ul>
+                    <li><a ng-href="#/">Link 1(Page)</a></li>
+                    <li><a ng-href="#/p2">Link 2(Page)</a></li>
+                    <li><a ng-href="#/users">Users(template)</a> </li>
+                </ul>
+            </div>
+            <div class="col-sm-9">
+                <div ng-view="#/p2"></div>
+            </div>
+        </div>
+        <div class="row">
+            
+        </div>
+        <div class="row">
+        </div>
+
+    </div>
+    
+    <script type="text/ng-template" id="my-ng-template.html">
+        1914 translation by H. Rackham
+        على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء. العديد من برامح النشر المكتبي وبرامح تحرير صفحات الويب تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج عن النص، وإذا قمت بإدخال "lorem ipsum" في أي محرك بحث ستظهر العديد من المواقع الحديثة العهد في نتائج البحث. على مدى السنين ظهرت نسخ جديدة ومختلفة من نص لوريم إيبسوم، أحياناً عن طريق الصدفة، وأحياناً عن عمد كإدخال بعض العبارات الفكاهية إليها.
+        لافاَ للإعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني الكلاسيكي منذ العام 45 قبل الميلاد، مما يجعله أكثر من 2000 عام في القدم. قام البروفيسور "ريتشارد ماك لينتوك" (Richard McClintock) وهو بروفيسور اللغة اللاتينية في جامعة هامبدن-سيدني في فيرجينيا بالبحث عن أصول كلمة لاتينية غامضة في نص لوريم إيبسوم وهي "consectetur"، وخلال تتبعه لهذه الكلمة في الأدب اللاتيني اكتشف المصدر الغير قابل للشك. فلقد اتضح أن كلمات نص لوريم إيبسوم تأتي من الأقسام 1.10.32 و 1.10.33 من كتاب "حول أقاصي الخير والشر" (de Finibus Bonorum et Malorum) للمفكر شيشيرون (Cicero) والذي كتبه في عام 45 قبل الميلاد. هذا الكتاب هو بمثابة مقالة علمية مطولة في نظرية الأخلاق، وكان له شعبية كبيرة في عصر النهضة. السطر الأول من لوريم إيبسوم "Lorem ipsum dolor sit amet.." يأتي من سطر في القسم 1.20.32 من هذا الكتاب.
+
+        للمهتمين قمنا بوضع نص لوريم إبسوم القياسي والمُستخدم منذ القرن الخامس عشر في الأسفل. وتم أيضاً توفير الأقسام 1.10.32 و 1.10.33 من "حول أقاصي الخير والشر" (de Finibus Bonorum et Malorum) لمؤلفه شيشيرون (Cicero) بصيغها الأصلية، مرفقة بالنسخ الإنكليزية لها والتي قام بترجمتها هـ.راكهام (H. Rackham) في عام 1914.
+        <form>
+            <fieldset>
+                <legend>Add User</legend>
+                <input type="text" ng-model="userName" />
+                <input type="button" value="Add User" ng-click="addUser()">
+            </fieldset>
+        </form>
+        <ul>
+            <li ng-repeat="user in users">{{user.id + ': ' + user.name | uppercase }}</li>
+        </ul>
+    </script>
+
+
+
+</body>
+    
+</html>

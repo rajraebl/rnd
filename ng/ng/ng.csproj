@@ -67,9 +67,14 @@
     <Content Include="advance\style.css" />
     <Content Include="advance\user.html" />
     <Content Include="advance\UserCtrl.js" />
+    <Content Include="HtmlPage.html" />
+    <Content Include="HtmlPage1.html" />
+    <Content Include="RoutePage.html" />
     <Content Include="index.html" />
     <Content Include="scripts\app.js" />
     <Content Include="scripts\controllers.js" />
+    <Content Include="template\p2.html" />
+    <Content Include="template\p1.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

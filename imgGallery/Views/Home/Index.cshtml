@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@section scripts{
+    
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-animate.min.js"></script>
+    <script src="~/Scripts/ng/ctrl.js"></script>
+    <script src="~/Scripts/ng/services.js"></script>
+    <!--
+   $("img").error(function () {
+  $(this).unbind("error").attr("src", "broken.gif");
+});
+        -->
+}
+<content ng-app="app" >
+    <div style="border:solid" ng-controller="ctrl">
+        <div classx="col-md-12" style="overflow:auto">
+            <ul style=" display:inline-block" ng-repeat="image in Images" ng-click="onShowImage(image.Image_Path)">
+                <li><img width="30px" height="30px" title="{{image.Image_Path}}" ng-src="{{'/content/images/'+ image.Image_Path}}" onerror="this.src='/content/images/0.jpg'" /></li>
+                <li>{{image.Image_Path}}</li>
+                <li>{{image.Description}}</li>
+            </ul>
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-4"><<</div>
+            <div class="col-md-4">
+                <img width="300px" height="300px" title="{{AnimationImageName}}" ng-src="{{'/content/images/'+ AnimationImageName}}" onerror="this.src='/content/images/0.jpg'" />
+            </div>
+            <div class="col-md-4">>></div>
+        </div>
+
+        <div class="col-md-12">
+            <article>
+                <form>
+                    <input cng-model="Imagename" type="file" id="file" />
+                    <input type="text" ng-model="Description">
+                    <input type="button" ng-click="SaveFile()" value="Upload" />
+                </form>
+            </article>
+        </div>
+        <!--div style="border : solid 2px #ff0000; background : #000000; color : #ffffff; padding : 4px; width : 800px; height : 150px; overflow-x:scroll ">
+            <span ng-repeat="image in Images" style=" display:inline-block">
+                <ul ng-click="onShowImage(image.Image_Path)">
+                    <li><img width="30px" height="30px" title="{{image.Image_Path}}" ng-src="{{'/content/images/'+ image.Image_Path}}" onerror="this.src='/content/images/0.jpg'" /></li>
+                    <li>{{image.Image_Path}}</li>
+                    <li>{{image.Description}}</li>
+                </ul>
+            </span>
+        </div>-->
+    </div>
+
+</content>
