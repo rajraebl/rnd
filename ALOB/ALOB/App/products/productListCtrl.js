@@ -16,11 +16,9 @@
         //    vm.products = data;
         //});
 
-        vm.products = productResource.then(function (response) {
+        productResource.query(function (response) {
             //alert(data);
-            vm.products = response.data;
-        }, function (err) {
-            alert(err);
+            vm.products = response;
         });
 
 

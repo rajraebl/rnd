@@ -1,9 +1,9 @@
 ﻿(function() {
     //"use strict";
-    angular.module("productManagement")
+    angular.module("common.services")
 
-    .factory('productResource', ['$http', function($http) {
-        return $http.get("/api/products/");
+    .factory('productResource', ['$resource', function ($resource) {
+        return $resource("/api/products");
         //return { xx: function() { alert(); } }
     }
     ]);
