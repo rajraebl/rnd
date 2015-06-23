@@ -7,7 +7,8 @@
     <script src="js/angular.js"></script>
     <script src="js/angular-resource.js"></script>
     <script src="js/angular-mocks.js"></script>
-    
+
+    <script src="js/angular-ui-router.js"></script>
     
     
     <!--PROJECT FILES-->
@@ -18,39 +19,31 @@
     <!----><script src="common/services/common.services.js"></script>
     <script src="common/services/productResource.js"></script>
     <script src="App/products/productListCtrl.js"></script>
+    <script src="App/products/productDetailCtrl.js"></script>
     <title>LOB</title>
 </head>
     <body ng-app="productManagement">
-        <div class="panel panel-primary">
-
-            <div class="panel-heading">
-                Product List
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <a class="navbar-brand" ui-sref="home">Home Page</a>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
             </div>
-            <div class="panel-body" ng-controller="ProductListCtrl as vm">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <td><button class="btn btn-primary" ng-click="vm.toggleImage()">{{!vm.showImage ? 'Show':'Hide'}} Image</button> </td>
-                            <td>Product</td>
-                            <td>Code</td>
-                            <td>Available</td>
-                            <td>Price</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr ng-repeat="product in vm.products">
-                            <td><img width="30px" height="30px" ng-show="vm.showImage" ng-src="{{product.imgUrl}}" title="{{product.imgUrl}}" onerror="this.src='/images/0.jpg'" /></td>
-                            <td>{{product.productName}}</td>
-                            <td>{{product.productCode}}</td>
-                            <td>{{product.releaseDate | date}}</td>
-                            <td>{{product.price|currency}}</td>
-                            <td>Edit</td>
-
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a ui-sref="productList">Product List</a></li>
+                    <li><a ui-sref="productEdit({productId:0})"><i class="glyphicon glyphicon-plus"></i>Add Product</a></li>
+                </ul>
             </div>
-        </div>
+
+        </nav>
+        <div data-ui-view class="col-md-10"></div>
 
     </body>
 </html>
