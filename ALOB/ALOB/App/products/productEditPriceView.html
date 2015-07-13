@@ -1,0 +1,42 @@
+﻿<div class="panel panel-primary">
+    <div class="=panel-heading"></div>
+    <div class="panel-body">
+        <form name="productPriceForm" class="form-horizontal">
+
+            <fieldset>
+                <legend>Price Information</legend>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Price</label>
+                    <div class="col-md-4">
+                        <input class="form-control" type="text" ng-model="vm.product.price" placeholder="Price" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Cost</label>
+                    <div class="col-md-4">
+                        <input class="form-control" type="text" name="cost" ng-maxlength="2" ng-model="vm.product.cost" placeholder="Cost" />
+                    </div>
+                    <div class="col-md-4"><span class="has-error" ng-show="productPriceForm.cost.$invalid">ola</span>
+                        <span ng-show="productPriceForm.cost.$error.maxlength">pola</span>
+                        <span ng-class="{'has-error' : productPriceForm.cost.$error.maxlength}">lola</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">{{vm.product.percentage}} %</label>
+                    <div class="col-md-4">
+                        <button type="button" class="btn btn-primary" ng-click="vm.percentage()"> Calculate %</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <button type="button" ng-disabled="productPriceForm.$invalid" class="btn btn-primary" ng-click="vm.submit()">Submit</button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+    <div class="panel-footer">
+
+    </div>
+</div>

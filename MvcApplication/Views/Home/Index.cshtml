@@ -1,5 +1,64 @@
 ﻿@{
     ViewBag.Title = "Index";
 }
+<style>
+    .panel-body > .row >  div {
+    
+    background-color: #eee;
+    border:1px solid #333333;
+    margin-top: 5px;
+    padding:8px;
+}
+</style>
+<div class="container">
+    <div class="panel">
+        <div class="panel-heading">
+            this is the headding
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-3">ola</div>
+                <div class="col-md-3">pola</div>
+                <div class="col-md-3">kola</div>
+                <div class="col-md-3">lola</div>
+                <div class="col-md-3">lola</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">@Html.DropDownList("ola")</div>
+                <div class="col-md-4"><input type="text" /><button class="btn btn-primary" onclick="window.location.reload()">Reload</button></div>
+                <div class="col-md-4">@Html.DropDownList("DropDownName", (IEnumerable<SelectListItem>)ViewBag.ola, "-- Select One --", new{@class="btn btn-primary"})
+</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    col-md-4 col-md-offset-4
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1">ola</div>
+                <div class="col-md-2">@Html.DropDownList("Emps")</div>
+                <div class="col-md-3">kola</div>
+                <div class="col-md-4">@Html.DropDownList("Emps","Please Select")</div>
+                <div class="col-md-2">lola</div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"><button class="btn"> btn</button></div>
+                <div class="col-md-2"><button class="btn btn-primary">btn btn-primary</button></div>
+                <div class="col-md-2"><button class="btn btn-success">btn btn-success</button></div>
+                <div class="col-md-2"><button class="btn btn-info btn-lg">btn btn-info btn-lg</button></div>
+                <div class="col-md-2"><button class="btn btn-danger">btn btn-danger</button></div>
+                <div class="col-md-2"><button class="btn btn-warning">btn-warning </button></div>
+                <div class="col-md-1"><button class="btn btn-danger btn-sm">btn btn-sm</button></div>
 
-<h2>Index</h2>
+            </div>
+        </div>
+        <div class="panel-footer btn-primary">
+            &copy; Raj Corp Inc.
+        </div>
+    </div>
+</div>
+
+
+
+
+

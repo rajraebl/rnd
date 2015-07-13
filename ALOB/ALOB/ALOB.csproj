@@ -57,13 +57,24 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\prices\PriceAnalyticsCtrl.js" />
+    <Content Include="App\prices\priceAnalyticsView.html" />
+    <Content Include="App\products\productDetailCtrl.js" />
+    <Content Include="App\products\productDetailView.html" />
+    <Content Include="App\products\ProductEditCtrl.js" />
+    <Content Include="App\products\productEditInfoView.html" />
+    <Content Include="App\products\productEditPriceView.html" />
+    <Content Include="App\products\productEditTagView.html" />
+    <Content Include="App\products\productEditView.html" />
     <Content Include="App\products\productListView.html" />
     <Content Include="App\welcomeView.html" />
+    <Content Include="css\toastr.css" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="common\services\common.services.js" />
+    <Content Include="common\services\product.service.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -91,10 +102,16 @@
     <Content Include="images\6.jpg" />
     <Content Include="images\7.jpg" />
     <Content Include="Index.html" />
+    <Content Include="js\angular-charts.js" />
     <Content Include="js\angular-mocks.js" />
     <Content Include="js\angular-resource.js" />
     <Content Include="js\angular-ui-router.js" />
     <Content Include="js\angular.js" />
+    <Content Include="js\d3.js" />
+    <Content Include="js\jquery-2.1.4.js" />
+    <Content Include="js\toastr.js" />
+    <Content Include="js\ui-bootstrap-tpls-0.13.0.min.js" />
+    <Content Include="js\ui.utils.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

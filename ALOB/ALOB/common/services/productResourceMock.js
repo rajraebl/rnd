@@ -10,9 +10,10 @@
                 'productCode': 'GDN-0011',
                 'releaseDate': 'March 19, 2009',
                 'price': 9.95,
+                'cost':12,
                 'imgUrl': 'a.jpg',
                 'category': 'garden',
-                'description': 'this is the description'
+                'description': 'this is the description1'
             },
             {
                 'productId': 2,
@@ -20,89 +21,91 @@
                 'productCode': 'GDN-0012',
                 'releaseDate': 'March 11, 2002',
                 'price': 19.90,
+                'cost': 12,
                 'imgUrl': '',
                 'category': 'garden',
-                'description': 'this is the description'
+                'description': 'this is the description2'
             },
             {
                 'productId': 3,
                 'productName': 'Leaf LAke3',
                 'productCode': 'GDN-0013',
                 'releaseDate': 'March 12, 2003',
-                'price': 11.95,
+                'price': 11.95, 'cost': 12,
+
                 'imgUrl': '',
                 'category': 'garden',
-                'description': 'this is the description'
+                'description': 'this is the description3'
             },
             {
                 'productId': 4,
                 'productName': 'Leaf LAke4',
                 'productCode': 'GDN-0014',
                 'releaseDate': 'March 1, 2015',
-                'price': 339.95,
+                'price': 5.95, 'cost': 32,
                 'imgUrl': '',
                 'category': 'garden',
-                'description': 'this is the description'
+                'description': 'this is the description4'
             },
             {
                 'productId': 5,
                 'productName': 'Leaf LAke5',
                 'productCode': 'GDN-0012',
                 'releaseDate': 'March 11, 2002',
-                'price': 19.90,
+                'price': 19.90, 'cost': 72,
                 'imgUrl': '',
                 'category': 'garden',
-                'description': 'this is the description'
+                'description': 'this is the description5'
             },
             {
                 'productId': 6,
                 'productName': 'Leaf LAke6',
                 'productCode': 'GDN-0013',
                 'releaseDate': 'March 12, 2003',
-                'price': 11.95,
+                'price': 41.95, 'cost': 42,
                 'imgUrl': '',
                 'category': 'garden',
-                'description': 'this is the description'
+                'description': 'this is the description6'
             },
             {
                 'productId': 7,
                 'productName': 'Leaf LAke7',
                 'productCode': 'GDN-0014',
                 'releaseDate': 'March 1, 2015',
-                'price': 339.95,
+                'price': 79.95, 'cost': 81,
                 'imgUrl': '',
                 'category': 'garden',
-                'description': 'this is the description'
+                'description': 'this is the description7'
             },
             {
                 'productId': 15,
                 'productName': 'Leaf LAke15',
                 'productCode': 'GDN-0012',
                 'releaseDate': 'March 11, 2002',
-                'price': 19.90,
+                'price': 99.90, 'cost': 112,
                 'imgUrl': '',
                 'category': 'garden',
-                'description': 'this is the description'
+                'description': 'this is the description15'
             },
             {
                 'productId': 16,
                 'productName': 'Leaf LAke16',
                 'productCode': 'GDN-0013',
                 'releaseDate': 'March 12, 2003',
-                'price': 11.95,
+                'price': 101.95, 'cost': 120,
                 'imgUrl': '',
                 'category': 'garden',
-                'description': 'this is the description'
+                'description': 'this is the description16'
             },
             {
                 'productId': 17,
                 'productName': 'Leaf LAke17',
                 'productCode': 'GDN-0014',
                 'releaseDate': 'March 1, 2015',
-                'price': 339.95,
+                'price': 11.95, 'cost': 22,
                 'imgUrl': '',
                 'category': 'garden',
-                'description': 'this is the description'
+                'description': 'this is the description17'
             }
 
         ];

@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="main.css" rel="stylesheet" />
+    <script>
+        function kk(key) {
+            //alert(key);
+            if (key==116) //f5 key
+                return false;
+            return true;
+        }
+
+        function mm(key) {
+            return false;
+        }
+    </script>
+</head>
+<body onbeforeunload="return mm(event.keyCode)" onkeydownx="    return kk(event.keyCode)">
+    <div class="container">
+        <div class="panel">
+            <div class="panel-heading">
+                this is the headding
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-3">ola</div>
+                    <div class="col-md-3">pola</div>
+                    <div class="col-md-3">kola</div>
+                    <div class="col-md-3">lola</div>
+                    <div class="col-md-3">lola</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">sim</div>
+                    <div class="col-md-4"><input type="text" /><button class="btn btn-primary" onclick="window.location.reload()">Reload</button></div>
+                    <div class="col-md-4">ssss</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4">
+                        col-md-4 col-md-offset-4
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1">ola</div>
+                    <div class="col-md-2">pola</div>
+                    <div class="col-md-3">kola</div>
+                    <div class="col-md-4">lola</div>
+                    <div class="col-md-2">lola</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1"><button class="btn" > btn</button></div>
+                    <div class="col-md-2"><button class="btn btn-primary">btn btn-primary</button></div>
+                    <div class="col-md-2"><button class="btn btn-success">btn btn-success</button></div>
+                    <div class="col-md-2"><button class="btn btn-info btn-lg">btn btn-info btn-lg</button></div>
+                    <div class="col-md-2"><button class="btn btn-danger">btn btn-danger</button></div>
+                    <div class="col-md-2"><button class="btn btn-warning">btn-warning </button></div>
+                    <div class="col-md-1"><button class="btn btn-danger btn-sm">btn btn-sm</button></div>
+                </div>
+                <div class="form-group-horizontal">
+                    <div class="control-label">Name</div>
+                    <div class="form-control">
+                        <input class="text-­muted" type="text" />
+                        <span class="glyphicon glyphicon-search"></span>
+                        <!--<span class=­"­gly­phicon glyphi­con­-se­arc­h"> <­/sp­an>-->
+
+                    </div>
+                    <div class="img-c­ircle">
+                        <img width="160px" src="html5.PNG" />
+                    </div>
+                </div>
+                <div>
+                    <table width="100%" border="1">
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr><tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+</tr><tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+</tr><tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+</tr>
+                    </table>
+                </div>
+            </div>
+            <div class="panel-footer btn-primary">
+                &copy; Raj Corp Inc.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

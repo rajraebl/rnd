@@ -1,6 +1,13 @@
 ﻿<div class="panel panel-primary">
-    <div class="panel-header"></div>
-    <div class="panel-body"></div>
+    <div class="panel-heading">{{vm.title}}</div>
+    <div class="panel-body">
+        <div class="wizard">
+            <a ui-sref=".info" ui-sref-active="active">Basic Info</a>
+            <a ui-sref=".price" ui-sref-active="active">Price Info</a>
+            <a ui-sref=".tags" ui-sref-active="active">Tags Info</a>
+        </div>
+        <div ui-view></div>
+    </div>
     <div class="panel-footer">
         <a class="btn btn-default" style="width:80px" ui-sref="productList"><i class="glyphicon glyphicon-chevron-left"></i>Cancel</a>
     </div>

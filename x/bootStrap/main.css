@@ -1,0 +1,9 @@
+﻿body {
+}
+.panel-body > .row >  div {
+    
+    background-color: #eee;
+    border:1px solid #333333;
+    margin-top: 5px;
+    padding:8px;
+}
