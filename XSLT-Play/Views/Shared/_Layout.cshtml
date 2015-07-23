@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    
+    <style>
+        #menu tr td {
+            padding:15px;
+        }
+    </style>
+</head>
+<body>
+    1-The &lt;xsl:value-of &gt;
+    element is used to extract the value of a selected node.<br />2-To sort the output, simply add an xsl:sort element inside the xsl:for-each Ex: elementsort select="artist"
+
+            <table id="menu">
+                <tr>
+                    <td>@Html.ActionLink("Index", "Index", "Home")</td>
+                    <td>@Html.ActionLink("Function", "Index1", "Home")</td>
+                    <td>@Html.ActionLink("Variable/Param", "Variable", "Home")</td>
+                    <td>@Html.ActionLink("Sort", "Sort", "Home")</td>
+                    <td>@Html.ActionLink("Filter", "Filter", "Home")</td>
+                    <td>@Html.ActionLink("Form", "XSLTForm", "Home")</td>
+                    <td>@Html.ActionLink("Calender", "Calender", "Home")</td>
+                    <td>@Html.ActionLink("XsltValidation", "XsltValidation", "Home")</td>
+                    <td>@Html.ActionLink("XsltValidationWithExternalMethod", "XsltValidationWithExternalMethod", "Home")</td>
+                    
+                </tr>
+            </table>
+            @RenderBody()
+
+            @Scripts.Render("~/bundles/jquery")
+            @RenderSection("scripts", required: false)
+    
+    <p style="left:35%;position:absolute;bottom:10px"> &copy; http://www.codeproject.com/Articles/460968/XSLT-programming-basics <br>
+        http://www.codeproject.com/Articles/276915/XML-Validation-with-XSLT-Calling-Custom-function-f
+    </p>
+</body>
+</html>

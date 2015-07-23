@@ -1,0 +1,8 @@
+﻿@{
+    ViewBag.Title = "Sort";
+}
+
+<h2>Sort</h2>
+@("<xsl:for-each select='Employee'><xsl:sort select='EmpId' order='descending' />")
+
+@Html.Raw(ViewBag.data)

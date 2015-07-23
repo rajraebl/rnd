@@ -1,0 +1,1 @@
+<root xmlns:func="urn:actl-xslt"><output>&lt;success&gt;&lt;msg&gt;success&gt;&lt;/msg&gt;&lt;succCode&gt;007&lt;/succCode&gt;&lt;/success&gt;</output><output>&lt;error&gt;&lt;errmsg&gt;UserName is not valid&lt;/errmsg&gt;&lt;errcode&gt;701&lt;/errcode&gt;&lt;/error&gt;</output></root>

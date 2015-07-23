@@ -1,0 +1,13 @@
+<div >
+    <h1>Hello World! {{4/3}}</h1>
+    <div>
+    {{name}}  {{'[' + countDown + ']'}}
+
+          <ul>
+        <!--It was not working to have model filter and their uses on separate files
+      one way binding was working but not 2 way
+      -->
+        <div ng-include="'filters.html'">hi</div>
+      </ul>
+    </div>
+  </div>

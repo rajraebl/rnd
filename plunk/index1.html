@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+
+  <head>
+    <!--script data-require="angular.js@~1.4.0" data-semver="1.4.0-rc.2" src="https://code.angularjs.org/1.4.0-rc.2/angular.js"></script-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <script data-require="angular-route@1.4.0" data-semver="1.4.0" src="https://code.angularjs.org/1.4.0/angular-route.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
+    <script src="MainCtrl.js"></script>
+    <script src="service.js"></script>
+  </head>
+
+  <body ng-controller="MainCtrl">
+    <h1>Hello World! {{4/3}}</h1>
+    <div>
+    {{name}}  {{'[' + countDown + ']'}}
+
+          <ul>
+        <!--It was not working to have model filter and their uses on separate files
+      one way binding was working but not 2 way
+      -->
+        <div ng-include="'filters.html'">hi</div>
+      </ul>
+    </div>
+  </body>
+
+</html>

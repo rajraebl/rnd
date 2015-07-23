@@ -1,0 +1,7 @@
+﻿@{
+    ViewBag.Title = "XsltValidationWithExternalMethod";
+}
+
+<h2>XsltValidationWithExternalMethod</h2>
+
+@Html.Raw(Server.HtmlEncode(ViewBag.data).ToString().Replace("amp;", ""))

@@ -1,0 +1,9 @@
+﻿@{
+    ViewBag.Title = "Filter";
+}
+
+<h2>@("<xsl:if test=\"price &gt; 10\">")   
+@("<xsl:if test=\"Sex= 'Male'\">")
+</h2>
+
+@Html.Raw(ViewBag.data)

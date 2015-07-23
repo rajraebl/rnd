@@ -1,0 +1,29 @@
+<div id="filterArea">
+  <input type="text" ng-model="itemToShow">
+  <select ng-model="orderBy">
+    <option value="+login">login</option>
+    <option selected>-login</option>
+    <option selected>-id</option>
+    <option selected>+id</option>
+  </select>
+  <input type="button" ng-click="startCountDown()" value="@">
+  <input type="button" ng-click="stopCountDown()" value="~">
+  <input type="button" ng-click="getUserFromCustomService()" value="GO">
+  <input type="button" ng-click="moveout()" value="^">
+  <table>
+    <tr valign=top>
+      <td>
+        <li ng-repeat="p in persons | orderBy: orderBy | limitTo:itemToShow">
+          {{p.login|uppercase}}
+          <img ng-src="{{p.avatar_url}}" width=20px height=20px />{{p.id | currency:"$"}}
+        </li>
+      </td>
+      <td>
+        <li ng-repeat="p in personsX">
+          {{p.login|uppercase}}
+          <img ng-src="{{p.avatar_url}}" width=20px height=20px />{{p.id | currency:"$"}}
+        </li>
+      </td>
+    </tr>
+  </table>
+</div>

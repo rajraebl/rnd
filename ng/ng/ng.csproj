@@ -67,8 +67,8 @@
     <Content Include="advance\style.css" />
     <Content Include="advance\user.html" />
     <Content Include="advance\UserCtrl.js" />
-    <Content Include="HtmlPage.html" />
-    <Content Include="HtmlPage1.html" />
+    <Content Include="formValidation.html" />
+    <Content Include="validation.html" />
     <Content Include="RoutePage.html" />
     <Content Include="index.html" />
     <Content Include="scripts\app.js" />

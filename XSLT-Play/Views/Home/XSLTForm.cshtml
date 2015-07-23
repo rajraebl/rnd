@@ -1,0 +1,7 @@
+﻿@{
+    ViewBag.Title = "XSLTForm";
+}
+attribute:	Adds an attribute to the element
+<h2>@("<input type=\"text\"><xsl:attribute name=\"id\"><xsl:value-of select=\"@id\" /></xsl:attribute>")</h2>
+
+@Html.Raw(ViewBag.data)
