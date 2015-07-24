@@ -59,6 +59,7 @@
   <ItemGroup>
     <Content Include="C:\Users\rajesh.sahu\Desktop\EF.txt">
       <Link>zzzz\EF.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Web.config" />
   </ItemGroup>
