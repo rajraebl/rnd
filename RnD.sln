@@ -161,33 +161,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "binaryFormatter", "binaryFormatter\binaryFormatter.csproj", "{2C63F5C4-F9D3-459D-B148-6381C615112D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zzzz", "zzzz", "{C465DA30-707A-4183-BE8C-7EB556DA2BB5}"
-	ProjectSection(SolutionItems) = preProject
-		C:\Users\rajesh.sahu\Desktop\azure cache.txt = C:\Users\rajesh.sahu\Desktop\azure cache.txt
-		C:\Users\rajesh.sahu\Desktop\azure cdn.txt = C:\Users\rajesh.sahu\Desktop\azure cdn.txt
-		C:\Users\rajesh.sahu\Desktop\azure sdk.txt = C:\Users\rajesh.sahu\Desktop\azure sdk.txt
-		C:\Users\rajesh.sahu\Desktop\cdncontent_testblob.txt = C:\Users\rajesh.sahu\Desktop\cdncontent_testblob.txt
-		..\..\..\doc\Components.xlsx = ..\..\..\doc\Components.xlsx
-		C:\Users\rajesh.sahu\Desktop\EF.txt = C:\Users\rajesh.sahu\Desktop\EF.txt
-		C:\Users\rajesh.sahu\Desktop\fakes........txt = C:\Users\rajesh.sahu\Desktop\fakes........txt
-		C:\Users\rajesh.sahu\Desktop\New Text Document (2).txt = C:\Users\rajesh.sahu\Desktop\New Text Document (2).txt
-		C:\Users\rajesh.sahu\Desktop\New Text Document (3).txt = C:\Users\rajesh.sahu\Desktop\New Text Document (3).txt
-		C:\Users\rajesh.sahu\Desktop\New Text Document (4).txt = C:\Users\rajesh.sahu\Desktop\New Text Document (4).txt
-		C:\Users\rajesh.sahu\Desktop\New Text Document (5).txt = C:\Users\rajesh.sahu\Desktop\New Text Document (5).txt
-		C:\Users\rajesh.sahu\Desktop\New Text Document (6).txt = C:\Users\rajesh.sahu\Desktop\New Text Document (6).txt
-		C:\Users\rajesh.sahu\Desktop\New Text Document (7).txt = C:\Users\rajesh.sahu\Desktop\New Text Document (7).txt
-		C:\Users\rajesh.sahu\Desktop\New Text Document (8).txt = C:\Users\rajesh.sahu\Desktop\New Text Document (8).txt
-		C:\Users\rajesh.sahu\Desktop\New Text Document (9).txt = C:\Users\rajesh.sahu\Desktop\New Text Document (9).txt
-		C:\Users\rajesh.sahu\Desktop\New Text Document.txt = C:\Users\rajesh.sahu\Desktop\New Text Document.txt
-		C:\Users\rajesh.sahu\Desktop\Proxy.txt = C:\Users\rajesh.sahu\Desktop\Proxy.txt
-		C:\Users\rajesh.sahu\Desktop\raje.txt = C:\Users\rajesh.sahu\Desktop\raje.txt
-		C:\Users\rajesh.sahu\Desktop\read.txt = C:\Users\rajesh.sahu\Desktop\read.txt
-		C:\Users\rajesh.sahu\Desktop\ssl-app.txt = C:\Users\rajesh.sahu\Desktop\ssl-app.txt
-		C:\Users\rajesh.sahu\Desktop\storage.txt = C:\Users\rajesh.sahu\Desktop\storage.txt
-		C:\Users\rajesh.sahu\Desktop\Traffic Manager.txt = C:\Users\rajesh.sahu\Desktop\Traffic Manager.txt
-		C:\Users\rajesh.sahu\Desktop\z.txt = C:\Users\rajesh.sahu\Desktop\z.txt
-		C:\Users\rajesh.sahu\Desktop\zz.txt = C:\Users\rajesh.sahu\Desktop\zz.txt
-		C:\Users\rajesh.sahu\Desktop\zzz.txt = C:\Users\rajesh.sahu\Desktop\zzz.txt
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mvc", "mvc", "{CDA20D00-41AC-4AAA-9DD5-9C59462C2099}"
 EndProject
@@ -243,6 +216,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Thread", "Thread", "{C10364B4-1E84-4D09-9AA3-513F934D2958}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadPool", "ThreadPool\ThreadPool.csproj", "{03C79737-55DF-45A2-9D32-138E58C25996}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zzzzz", "zzzzz\zzzzz.csproj", "{B82C9D20-A2DB-40F6-BAC5-251C613370EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -546,6 +521,10 @@ Global
 		{03C79737-55DF-45A2-9D32-138E58C25996}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03C79737-55DF-45A2-9D32-138E58C25996}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03C79737-55DF-45A2-9D32-138E58C25996}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B82C9D20-A2DB-40F6-BAC5-251C613370EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B82C9D20-A2DB-40F6-BAC5-251C613370EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B82C9D20-A2DB-40F6-BAC5-251C613370EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B82C9D20-A2DB-40F6-BAC5-251C613370EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -637,5 +616,6 @@ Global
 		{70DABEA6-C753-41A9-926D-A50915FC1B7A} = {2CF2635B-0456-4A04-B2D3-5EE4899C7FE3}
 		{E5110222-383C-42FE-B6C7-2EF32E5A9F55} = {2CF2635B-0456-4A04-B2D3-5EE4899C7FE3}
 		{03C79737-55DF-45A2-9D32-138E58C25996} = {C10364B4-1E84-4D09-9AA3-513F934D2958}
+		{B82C9D20-A2DB-40F6-BAC5-251C613370EF} = {C465DA30-707A-4183-BE8C-7EB556DA2BB5}
 	EndGlobalSection
 EndGlobal

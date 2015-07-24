@@ -1,0 +1,59 @@
+Prior to EntityFramework 4.1, EDM used to generate context class, that were derived from the ObjectContext class. It was little tricky to work with ObjectContext. DbContext is conceptually similar to ObjectContext. It is a wrapper around ObjectContext which is useful in all the development models: Code First, Model First and Database First.
+
+
+
+========================================
+I'm executing this simple query with Entity Framework
+
+db.Database.SqlQuery<string>("SELECT * FROM hospital");
+But I got this error:
+
+The data reader has more than one field. Multiple fields are not valid for EDM primitive or enumeration types.
+
+What could be the problem?------------------
+
+It would be useful to see what the hospital table looks like but assuming something simple like hospital consists of HospitalId and HospitalName then you have a couple of choices.
+
+db.Database.SqlQuery<IEnumerable<string>>("SELECT hospitalName FROM hospital"); //would work if all you're trying to do is get the Name
+
+db.Database.SqlQuery<MyEntity>("SELECT * FROM hospital"); //where you define MyEntity as the same structure as the table would work
+
+db.Database.SqlQuery<IEnumerable<Tuple<int, string>>>("SELECT * FROM hospital"); // would theoretically work although I haven't tried it.  Where the Tuple items would have to match the database types in order.  I.e. if field 1 is an int and field 2 
+
+--------------------------------------------
+we can create wrapper classes using extension method to do this
+public static class Class1 
+{
+    public static List<T> ExecuteStoredProcedure<T>(this DbContext dbContext, string storedProcedureName,List<object> parameters)
+    {
+
+-------------------------------------------------------
+
+            var p = new SqlParameter
+            {
+                ParameterName = "@Email",
+                DbType = System.Data.DbType.String,
+                Size = 150,
+                Direction = System.Data.ParameterDirection.Input,
+                Value = email
+            };
+
+            var data = this.Database.SqlQuery<int>("[Identity].[SoftDeleteUserAccountx] @Email", p).First();
+
+
+            return data;
+
+===================================
+You can execute Stored Procedure by two way:
+
+1.	Using DBContext.Database.SqlQuery which returns any type of entity tracked by DBContext. Eg:
+        var courseList = ctx.Database.SqlQuery<Course>(
+            "exec GetCoursesByStudentId @StudentId ", idParam).ToList<Course>();
+
+
+2.	Using DBSet.SqlQuery which returns entity of same type as DBSet.
+var courseList = ctx.Courses.SqlQuery(
+            "exec GetCoursesByStudentId @StudentId ", idParam).ToList<Course>();
+
+---------------------------------------------------
+Prior to EntityFramework 4.1, EDM used to generate context class, that were derived from the ObjectContext class. It was little tricky to work with ObjectContext. DbContext is conceptually similar to ObjectContext. It is a wrapper around ObjectContext which is useful in all the development models: Code First, Model First and Database First.
