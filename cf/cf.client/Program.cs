@@ -13,7 +13,15 @@ namespace cf.client
     {
         static void Main(string[] args)
         {
-            var cf = new ChannelFactory<cf.service.IService>("");
+            //below code without endPoint name is also valid till u have single endpoint defined in web.config for that serviceContract
+            //var cf = new ChannelFactory<cf.service.IService>("");
+
+            var cf = new ChannelFactory<cf.service.IService>("dummyInvalidEndpoint"); //u can point to some invalid endpoint if need be 
+            //but before making call u have to set the correct address as done in below line
+            //here "dummyInvalidEndpoint" is just a dummy endpoint pointing to invalid service adress.
+
+            cf.Endpoint.Address = new EndpointAddress("http://localhost:8733/myAddresses/cf.service/Service1");
+
             var sProxy = cf.CreateChannel();
             Console.WriteLine("calling the service: {0}", sProxy.Hello());
             foreach (var s in "rajesh sahu")
