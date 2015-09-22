@@ -211,6 +211,8 @@
     <Content Include="XSLTForm.xslt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="XsltValidationMultipleTests.xml" />
+    <Content Include="XsltValidationMultipleTests.xslt" />
     <Content Include="XsltValidationWithExternalMethod.xslt" />
     <Content Include="XsltValidation.xslt" />
     <Content Include="XsltValidationWithExternalMethodIP.xml" />
@@ -260,6 +262,7 @@
     <Content Include="Views\Home\Calender.cshtml" />
     <Content Include="Views\Home\XsltValidation.cshtml" />
     <Content Include="Views\Home\XsltValidationWithExternalMethod.cshtml" />
+    <Content Include="Views\Home\XsltValidationMultipleTests.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

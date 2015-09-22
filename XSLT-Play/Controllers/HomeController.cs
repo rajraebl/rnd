@@ -231,6 +231,9 @@ namespace XSLT_Play.Controllers
 
             XsltArgumentList xal = new XsltArgumentList();
             HomeController hc = new HomeController();
+
+            //XSLT extension objects are added to the XsltArgumentList object using the AddExtensionObject method. 
+            //A qualified name and namespace URI are associated with the extension object at that time.
             xal.AddExtensionObject("urn:actl-xslt",hc); // via this u can inject any class object that may have ur utility methods to do some work
 
             xt.Transform(x, xal, xtw);
@@ -255,6 +258,36 @@ namespace XSLT_Play.Controllers
             }
             return op;
         }
+
+
+        public ActionResult XsltValidationMultipleTests()
+        {
+            ViewBag.data = ProcessorWrapper("XsltValidationMultipleTests");
+
+            //ViewBag.data = kk;
+            return View();
+        }
+
+private dynamic ProcessorWrapper(string fileName)
+{
+
+    XPathDocument x = new XPathDocument(HostingEnvironment.MapPath("~/" + fileName + ".xml"));
+    XslTransform xt = new XslTransform();
+    xt.Load(HostingEnvironment.MapPath("~/" + fileName + ".xslt"));
+
+    XmlTextWriter tw = new XmlTextWriter(HostingEnvironment.MapPath("~/" + fileName + "op.xml"), null);
+
+
+    xt.Transform(x, null, tw);
+    tw.Close();
+    StreamReader s = new StreamReader(HostingEnvironment.MapPath("~/"+ fileName+ "op.xml"));
+
+    var kk = s.ReadToEnd();
+    s.Close();
+    return kk;
+}
+
+        
 
         static string pp(string ipPath)
         {

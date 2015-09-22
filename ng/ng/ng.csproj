@@ -67,7 +67,13 @@
     <Content Include="advance\style.css" />
     <Content Include="advance\user.html" />
     <Content Include="advance\UserCtrl.js" />
+    <Content Include="customFilter.html" />
+    <Content Include="directives.html" />
+    <Content Include="form.html" />
     <Content Include="formValidation.html" />
+    <Content Include="pubsubBroadcast.html" />
+    <Content Include="template\imcft.html" />
+    <Content Include="template\mcft.html" />
     <Content Include="validation.html" />
     <Content Include="RoutePage.html" />
     <Content Include="index.html" />

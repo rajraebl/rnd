@@ -1,19 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
-    <xsl:output method="xml" indent="yes"/>
+  <xsl:output method="xml" indent="yes"/>
 
-    <xsl:template match="@* | node()">
-        <xsl:copy>
-            <xsl:apply-templates select="@* | node()"/>
-        </xsl:copy>
-    </xsl:template>
+  <xsl:template match="@* | node()">
+    <xsl:copy>
+      <xsl:apply-templates select="@* | node()"/>
+    </xsl:copy>
+  </xsl:template>
 
 
   <xsl:template match="Employees">
     <xsl:variable name ="ttlrcrds">
       <xsl:for-each select="/">
-        <xsl:value-of select="count(Employees/Employee)"/> <!-- Count gives number of times an element came in foreach iteration-->
+        <xsl:value-of select="count(Employees/Employee)"/>
+        <!-- Count gives number of times an element came in foreach iteration-->
       </xsl:for-each>
     </xsl:variable>
 
@@ -30,7 +31,7 @@
         <!-- Count gives number of times an element came in foreach iteration-->
       </xsl:for-each>
     </xsl:variable>
-    
+
     <xsl:variable name ="ttlMale">
       <xsl:for-each select="/">
         <xsl:value-of select="count(Employees/Employee[Sex='Male'])"/>
@@ -38,8 +39,8 @@
       </xsl:for-each>
     </xsl:variable>
 
-    
-    
+
+
     <table width="50%">
       <tr align="left">
         <th>EmpId</th>
@@ -67,31 +68,31 @@
           </xsl:if>
         </td>
       </tr>
-      
+
     </table>
 
-    </xsl:template>
-  
+  </xsl:template>
+
   <xsl:template name="results">
     <xsl:param name ="ttlrcrds"/>
 
     <xsl:for-each select="Employee">
-        <tr>
-          <td>
-            <xsl:value-of select="EmpId"/>
-          </td>
-          <td>
-            <xsl:value-of select="Name"/>
-          </td>
-          <td>
-            <xsl:value-of select="Sex"/>
-          </td>
-          <td>
-            <xsl:value-of select="Phone"/>
-          </td>
-        </tr>
-        
-      </xsl:for-each>
+      <tr>
+        <td>
+          <xsl:value-of select="EmpId"/>
+        </td>
+        <td>
+          <xsl:value-of select="Name"/>
+        </td>
+        <td>
+          <xsl:value-of select="Sex"/>
+        </td>
+        <td>
+          <xsl:value-of select="Phone"/>
+        </td>
+      </tr>
+
+    </xsl:for-each>
     <tr>
       <td colspan="4">
         TOTAL RECORDS ARE: <xsl:value-of select="$ttlrcrds"/>
@@ -100,5 +101,5 @@
 
   </xsl:template>
 
-  
+
 </xsl:stylesheet>

@@ -1,0 +1,9 @@
+
+      Do Not Send Rule 2 Applied --- insured driver type = MyChild
+      and id = 1 and date is = Thu Aug 27 18:11:27 UTC+5 2015
+      and addition is 8<br xmlns:my="urn:sample"></br>
+      Do Not Send Rule 2 Applied --- insured driver type = MyParents
+      and id = 2 and date is = Thu Aug 27 18:11:27 UTC+5 2015
+      and addition is 7<br xmlns:my="urn:sample"></br>
+        Do Not Send Rule 4 Applied --- insured driver type =  UrParents 
+        and id = 4<br xmlns:my="urn:sample"></br>

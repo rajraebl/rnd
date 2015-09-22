@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
+    <script>
+        var app = angular.module('main', []);
+        app.controller('mainCtrl', function() {
+            var vm = this;
+            vm.employees = [
+                { userName: 'Rajesh', Age: 30, Married: true },
+                { userName: 'Rahul', Age: 22, Married: false },
+                { userName: 'Rajesh1', Age: 30, Married: true },
+                { userName: 'Rahul1', Age: 22, Married: false }
+            ];
+        });
+
+        //https://docs.angularjs.org/tutorial/step_09
+        app.filter('icon',function (){
+            return function(input) {
+                return (input ? '\u2713' : '\u2718');
+        }});
+    </script>
+</head>
+    <body ng-app="main" ng-controller="mainCtrl as c">
+        
+        <table ng-repeat="e in c.employees">
+            <tr>
+                <td>
+                    <li>{{e.userName}}</li></td>
+                <td>
+                    <li>{{e.Age}}</li>
+                </td>
+                <td>
+                    <li>{{e.Married | icon}}</li>
+                </td>
+            </tr>
+        </table>
+
+
+    </body>
+</html>

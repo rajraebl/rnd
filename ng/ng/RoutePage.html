@@ -19,7 +19,7 @@
 
         myApp.controller('yourController', function() {});
 
-        myApp.controller('myController', function ($scope, $rootScope) {
+        myApp.controller('myController', function ($scope, $rootScope, $log) {
             //alert(0);
 
             $scope.initUsers = function () {
@@ -29,12 +29,13 @@
                         { id: 1, name: 'Arthur' },
                         { id: 2, name: 'Barthur' },
                         { id: 3, name: 'Carthur' }
-                    ];
+                    ]; 
                 }
             }
 
             $scope.addUser = function () {
                 var objUser = { id: $rootScope.users.length + 1, name: $scope.userName };
+                $log.debug(objUser); //$log service is used for debugging purpose
                 $rootScope.users.push(objUser);
             };
 
@@ -55,7 +56,7 @@
                 </ul>
             </div>
             <div class="col-sm-9">
-                <div ng-view="#/p2"></div>
+                <div ng-view="" />
             </div>
         </div>
         <div class="row">

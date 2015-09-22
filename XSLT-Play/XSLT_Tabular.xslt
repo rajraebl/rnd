@@ -10,12 +10,15 @@
     </xsl:template>
 
   <xsl:template match="Employees">
-    <table width="70%">
+    <table width="70%" border="1">
       <tr align="left">
         <th>EmpId</th>
         <th>Name</th>
         <th>Sex</th>
         <th>Phone</th>
+        <th>Home-Phone</th>
+        <th>Work-Phone</th>
+        <th>Edit-Phone</th>
       </tr>
 
       <xsl:for-each select="Employee">
@@ -32,14 +35,23 @@
           <td>
             <xsl:value-of select="Phone"/>
           </td>
-          <td>
-            <xsl:value-of select="Phone/@Type"/>
-          </td>
+
+          <xsl:for-each select="Phone">
+            <td>
+              <xsl:value-of select="@Type"/>
+              :-
+              <xsl:value-of select="."/>
+            </td>
+          </xsl:for-each>
+
           <td>
             <input type="text">
-            <xsl:attribute name="value">
-              <xsl:value-of select="Phone/@Type"/>
-            </xsl:attribute>
+              <xsl:attribute name="name">
+                <xsl:value-of select="Phone"/>
+              </xsl:attribute>
+              <xsl:attribute name="value">
+                <xsl:value-of select="Phone/@Type"/>
+              </xsl:attribute>
             </input>
           </td>
 

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<risks>
+  <risk id="1">
+  <insuredDriverType>MyChild</insuredDriverType>
+    <LicenseCancellation>2</LicenseCancellation>
+  </risk>
+  <risk id="2">
+    <insuredDriverType>MyParents</insuredDriverType>
+    <LicenseCancellation>1</LicenseCancellation>
+  </risk>
+  <risk id="4">
+    <insuredDriverType> UrParents </insuredDriverType>
+    <LicenseCancellation> 5 </LicenseCancellation>
+  </risk>
+</risks>
