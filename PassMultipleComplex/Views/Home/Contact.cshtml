@@ -1,0 +1,117 @@
+﻿@using PassMultipleComplex.Models
+@{
+    ViewBag.Title = "Contact";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+
+<section class="contact">
+    <header>
+        <h3>This is combination of jQuery Ajax and angular $http working together</h3>
+    </header>
+    <form>
+        <input type="text" id="ProductId" placeholder="ProductId" />
+        <input type="text" id="Category" placeholder="Category" />
+        <input type="text" id="Name" placeholder="Name" />
+        <input type="text" id="Price" placeholder="Price" />
+        <input type="button" id="btnSave" value="Save" />
+    </form>
+</section>
+
+<section class="contact" ng-app="main">
+    <header>
+        <h3>Email</h3>
+    </header>
+    <table ng-controller="mainCtrl as vm">
+        <tr><td><span id="reloadSpan" ng-click="vm.refresh()">ReloadData</span></td></tr>
+
+        @{
+            var d = ViewBag.data;
+            foreach (var p in d)
+            {
+                <tr>
+                    <td>@p.ProductId</td>
+                    <td>@p.Name</td>
+                    <td>@p.Category</td>
+                    <td>@p.Price</td>
+                </tr>
+            }
+        }
+        
+        <tr ng-repeat="p in vm.products" style="background-color:aquamarine">
+            <td>{{p.ProductId}}</td>
+            <td>{{p.Name}}</td>
+            <td>{{p.Category}}</td>
+            <td>{{p.Price|currency}}</td>
+        </tr>
+    </table>
+</section>
+
+<section class="contact">
+    <header>
+        <h3>Address</h3>
+    </header>
+    <p>
+        One Microsoft Way<br />
+        Redmond, WA 98052-6399
+    </p>
+</section>
+@section scripts
+{
+<script src="~/Scripts/angular.js"></script>
+    <script>
+
+        (function() {
+            var main = angular.module('main', [])
+                .controller('mainCtrl', ['$http',
+                    function($http) {
+                        var vm = this;
+                        vm.products = [];
+                        vm.refresh = function (){ $http.get('http://localhost:50831/api/product').success(function(data) {
+                            vm.products = data;
+                        });
+                        }
+
+                        vm.refresh();
+                    }
+                ]);
+        })();
+
+
+
+
+
+
+        $(function() {
+            $('#btnSave').click(function() {
+
+                var product = {
+                    ProductId: $('#ProductId').val(),
+                    Category: $('#Category').val(),
+                    Name: $('#Name').val(),
+                    Price: $('#Price').val(),
+                };
+
+                 var d = JSON.stringify(product);
+                //var d = product; will not work as it is not json format
+
+                $.ajax({
+                    url: 'http://localhost:50831/api/product',
+                    cache: false,
+                    type: 'POST',
+                    data: d,
+                    dataType: 'json',
+                    contentType: 'application/json; charset=utf-8',
+                    success: function(da) {
+                        alert('Success');
+                        $('#reloadSpan').click();
+                    }
+                }).fail(function(xhr, status, err) {
+                    alert(err);
+                });
+            });
+        });
+    </script>}

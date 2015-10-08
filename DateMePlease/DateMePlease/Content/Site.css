@@ -1,0 +1,42 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Roboto:400,900);
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', 'OpenSans', sans-serif;
+}
+
+body {
+  font-family: 'Open Sans', Tahoma, Verdana, sans-serif;
+}
+
+.logo {
+  padding-top: 0;
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+  color: red;
+}
+
+.btn.btn-primary,  
+.btn.btn-success, 
+.btn.btn-warning, 
+.btn.btn-info {
+  color: #fff !important;
+}
+
+.btn.btn-default {
+  color: #222 !important;
+}
+
+.member-ad {
+  padding: 3px;
+}
+
+.foot blockquote {
+  padding: 5px 40px;
+  line-height: 24px;
+}
+
+.field-validation-error {
+color: red;
+font-style: italic;
+}

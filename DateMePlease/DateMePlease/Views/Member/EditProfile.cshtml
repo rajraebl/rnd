@@ -1,0 +1,65 @@
+﻿@{
+  ViewBag.Title = "Edit Your Profile";
+}
+
+@section header {
+<link href="~/Content/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+}
+
+@section Scripts {
+<script src="~/Scripts/moment.min.js"></script>
+<script src="~/Scripts/bootstrap-datetimepicker.min.js"></script>
+<script src="~/js/editprofile-member.js"></script>
+}
+
+
+<div class="container">
+  <div class="row">
+    <h1>Edit Your Profile</h1>
+  </div>
+  <div class="row">
+    <form id="profileForm" novalidate action="@Url.Action("SaveProfile", "Member")" method="post">
+      <div class="col-lg-10">
+
+        <div class="form-inline">
+          <div class="form-group">
+            <label for="birthdate">Birthdate:</label>
+            <div class='input-group date'>
+              <input type="text" class="form-control" id="birthdate" name="birthdate" />
+              <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+              </span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="gender">Gender:</label>
+            <input type="text" class="form-control" id="gender" name="gender" />
+          </div>
+
+          <div class="form-group">
+            <label for="orientation">Sexual Orientation:</label>
+            <input type="text" class="form-control" id="orientation" name="orientation" />
+          </div>
+        </div>
+        <div>
+          <label for="lookingFor">Looking For:</label>
+          <textarea class="form-control" rows="2" id="lookingFor" name="lookingFor"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="intro">Introduction:</label>
+          <textarea class="form-control" rows="6" id="intro" name="intro"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="pitch">Pitch:</label>
+          <textarea class="form-control" rows="2" id="pitch" name="pitch"></textarea>
+        </div>
+        <div class="form-group pull-right">
+          <a href="@Url.Action("EditPhotos", "Member")" class="btn btn-primary">Edit Photos</a>
+          <a href="@Url.Action("ShowProfile", "Member")" class="btn btn-default">Cancel</a>
+          <input type="submit" class="btn btn-success" value="Save" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

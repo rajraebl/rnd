@@ -19,11 +19,13 @@
         
         <div class="form-group">
             <label class="col-md-2 control-label">Date o f  Release</label>
-            <div class="col-md-2">
-                <input type="text" class="form-control" id="ipreleaseDate" is-open="vm.opened" datepicker-popup="MMM dd, yyyy " ng-model="vm.product.releaseDate" />
-                <span class="input-group-btn"><button ng-click="vm.open($event)" class="btn btn-default"><i class="glyphicon glyphicon-calendar"></i></button>
-                    
-                </span>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="ipreleaseDate" is-open="vm.opened" datepicker-popup="MMM dd, yyyy " ng-model="vm.product.releaseDate" />
+                    <span class="input-group-btn">
+                        <button ng-click="vm.open($event)" class="btn btn-default"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
             </div>
         </div>
         <div class="form-group">

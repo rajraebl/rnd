@@ -1,0 +1,65 @@
+﻿@{
+  Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+  <div class="well-lg">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>
+          <strong>AwkwardGuy</strong> (42% Match)
+          @if (User.Identity.IsAuthenticated) // TODO add checking for my profile
+          {
+            <a href="@Url.Action("EditProfile", "Member")" class="btn btn-success btn-sm">Edit My Profile</a>
+          }
+        </h2>
+        <hr />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3">
+        <img src="~/Images/awkwardguy.jpg" alt="Just me" class="img-responsive img-thumbnail" />
+        <a href="@Url.Action("Contact", "Member")" class="btn btn-success col-lg-12">Contact Them!</a>
+      </div>
+      <div class="col-lg-6">
+        <h3>Pitch:</h3>
+        <p>I'm just an awkward guy</p>
+        <h3>Looking For:</h3>
+        <p>Any woman...really.</p>
+        <h3>Introduction</h3>
+        <p>Crossfit family is very important to me I value art Oxford comma. Murakami Netflix working on my body and my mind Indian food feminism, home brewing I value art coffee home brewing amazing women I've met. Knowing the difference between their/there/they're my friends tell me they don't get why I'm single Myers-Briggs medical school The Daily Show snowboarding.</p>
+        <p>Dubstep medical school making people laugh my eyes. Bored at home having a few beers Werner Herzog using my farmshare thinking about trying yoga, my cats going to shows Ethiopian tattoos pickles. Murakami is pretty awesome I hate lists Kurosawa trying different restaurants fitness.</p>
+
+      </div>
+      <div class="col-lg-3">
+        <div class="panel panel-danger">
+          <div class="panel-heading">About AwkwardGuy</div>
+          <div class="panel-body">
+            <dl>
+              <dt>Age:</dt>
+              <dd>31</dd>
+              <dt>Lives in:</dt>
+              <dd>Sacramento, CA</dd>
+              <dt>Gender:</dt>
+              <dd>Male</dd>
+              <dt>Orientation:</dt>
+              <dd>Straight</dd>
+              <dt>Last Logged On:</dt>
+              <dd>Apr 1, 2015</dd>
+            </dl>
+            <h3>Interests</h3>
+            <ul class="list-unstyled">
+              <li>Dancing</li>
+              <li>Video Games</li>
+              <li>Historical Fiction</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
