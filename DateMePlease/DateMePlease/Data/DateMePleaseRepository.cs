@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using DateMePlease.Entities;
+using DateMePlease.Models;
 
 namespace DateMePlease.Data
 {
@@ -37,6 +38,28 @@ namespace DateMePlease.Data
                      .Include("Member")
                      .Where(m => m.Member.MemberName.ToLower() == lowerMemberName).FirstOrDefault();
     }
+
+    public EditProfileViewModel GetProfileForEdit(string userName)
+    {
+        var lowerUserName = userName.ToLowerInvariant();
+
+        return _context.Profile
+            .Include("Demographics")
+            .Include("Member")
+            .Where(m => m.Member.UserName.ToLower() == lowerUserName)
+            .Select(p => new EditProfileViewModel()
+            {
+                Id = p.Id,
+                Pitch = p.Pitch,
+                LookingFor = p.LookingFor,
+                Introduction = p.Introduction,
+                Birthdate = p.Demographics.Birthdate,
+                Gender = p.Demographics.Gender,
+                Orientation = p.Demographics.Orientation,
+                MemberName = p.Member.MemberName
+            }).FirstOrDefault();
+    }
+
 
     public List<Profile> GetRandomProfiles(int numberToReturn)
     {

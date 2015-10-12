@@ -1,4 +1,6 @@
-﻿@{
+﻿
+@model DateMePlease.Models.EditProfileViewModel
+@{
   ViewBag.Title = "Edit Your Profile";
 }
 
@@ -8,58 +10,84 @@
 
 @section Scripts {
 <script src="~/Scripts/moment.min.js"></script>
-<script src="~/Scripts/bootstrap-datetimepicker.min.js"></script>
-<script src="~/js/editprofile-member.js"></script>
+    <script src="~/Scripts/bootstrap-datetimepicker.min.js"></script>
+    <script src="~/js/editprofile-member.js"></script>
+<script>
+    //$('.input-group.date').datetimepicker({
+    //    format: 'dd/mm/yyyy',
+
+    //})
+    //$.fn.datepicker.default.format = "mm/dd/yyyy";
+</script>
+
+
 }
 
 
 <div class="container">
   <div class="row">
     <h1>Edit Your Profile</h1>
-  </div>
-  <div class="row">
-    <form id="profileForm" novalidate action="@Url.Action("SaveProfile", "Member")" method="post">
-      <div class="col-lg-10">
+  </div><br />
+    <div class="row">
+        @Html.ValidationSummary(true)
 
-        <div class="form-inline">
-          <div class="form-group">
-            <label for="birthdate">Birthdate:</label>
-            <div class='input-group date'>
-              <input type="text" class="form-control" id="birthdate" name="birthdate" />
-              <span class="input-group-addon">
-                <span class="glyphicon glyphicon-calendar"></span>
-              </span>
+        @*  @Html.EditorForModel(Model)*@
+
+        <form id="profileForm" novalidate action="@Url.Action("EditProfile", "Member")" method="post">
+            <div class="col-lg-10">
+                @Html.HiddenFor(p=>p.MemberName)
+                <div class="form-inline">
+                    <div class="form-group">
+                        @Html.LabelFor(p=>p.Birthdate)
+                        <div class='input-group date'>
+                            @Html.TextBoxFor(p => p.Birthdate, new { data_date_format="DD/MM/YYYY", @class = "form-control"   })
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                        @Html.ValidationMessageFor(p => p.Birthdate)
+
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">@Html.LabelFor(p=>p.Gender):</label>
+                        @Html.TextBoxFor(p => p.Gender, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(p=>p.Gender)
+                    </div>
+
+                    <div class="form-group">
+                        <label for="orientation">@Html.LabelFor(p=>p.Orientation):</label>
+                        @Html.TextBoxFor(p => p.Orientation, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(p => p.Orientation)
+
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lookingFor">@Html.LabelFor(p => p.LookingFor):</label>
+                    @Html.TextAreaFor(p => p.LookingFor, new { @class = "form-control", rows = 2 })
+                </div>
+                <div class="form-group">
+                    <label for="intro">@Html.LabelFor(m=>m.Introduction):</label>
+                    @Html.TextAreaFor(m => m.Introduction, new { @class = "form-control", rows=6 })
+                    @Html.ValidationMessageFor(p => p.Introduction,"*")
+
+
+                </div>
+                <div class="form-group">
+                    <label for="pitch">@Html.LabelFor(m => m.Pitch):</label>
+                    @Html.TextAreaFor(m => m.Pitch, new { @class = "form-control", rows = 2 })
+                    @Html.ValidationMessageFor(p => p.Pitch)
+
+
+                </div>
+                <div class="form-group pull-right">
+                    <a href="@Url.Action("EditPhotos", "Member")" class="btn btn-primary">Edit Photos</a>
+                    <a href="@Url.Action("ShowProfile", "Member")" class="btn btn-default">Cancel</a>
+                    <input type="submit" class="btn btn-success" value="Save" />
+                </div>
             </div>
-          </div>
-
-          <div class="form-group">
-            <label for="gender">Gender:</label>
-            <input type="text" class="form-control" id="gender" name="gender" />
-          </div>
-
-          <div class="form-group">
-            <label for="orientation">Sexual Orientation:</label>
-            <input type="text" class="form-control" id="orientation" name="orientation" />
-          </div>
-        </div>
-        <div>
-          <label for="lookingFor">Looking For:</label>
-          <textarea class="form-control" rows="2" id="lookingFor" name="lookingFor"></textarea>
-        </div>
-        <div class="form-group">
-          <label for="intro">Introduction:</label>
-          <textarea class="form-control" rows="6" id="intro" name="intro"></textarea>
-        </div>
-        <div class="form-group">
-          <label for="pitch">Pitch:</label>
-          <textarea class="form-control" rows="2" id="pitch" name="pitch"></textarea>
-        </div>
-        <div class="form-group pull-right">
-          <a href="@Url.Action("EditPhotos", "Member")" class="btn btn-primary">Edit Photos</a>
-          <a href="@Url.Action("ShowProfile", "Member")" class="btn btn-default">Cancel</a>
-          <input type="submit" class="btn btn-success" value="Save" />
-        </div>
-      </div>
-    </form>
-  </div>
+        </form>
+    </div>
 </div>

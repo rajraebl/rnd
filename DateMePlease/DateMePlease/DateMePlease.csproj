@@ -194,6 +194,8 @@
     <Compile Include="Data\DateMePleaseContext.cs" />
     <Compile Include="Data\DateMePleaseInitializer.cs" />
     <Compile Include="Data\DateMePleaseRepository.cs" />
+    <Compile Include="Extension\DateTimeExtensions.cs" />
+    <Compile Include="Models\EditProfileViewModel.cs" />
     <Compile Include="Data\IDateMePleaseRepository.cs" />
     <Compile Include="Entities\Demographics.cs" />
     <Compile Include="Entities\Favorite.cs" />
@@ -211,6 +213,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Validators\AgeRangeAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-datetimepicker.css" />
