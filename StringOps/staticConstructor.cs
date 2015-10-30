@@ -52,3 +52,9 @@ namespace StringOps
     {
     }
 }
+
+/*
+ A static constructor does not take access modifiers or have parameters.
+A static constructor is called automatically to initialize the class before the first instance is created or any static members are referenced.
+ * If a static constructor throws an exception, the runtime will not invoke it a second time, and the type will remain uninitialized for the lifetime of the application domain in which your program is running.
+ */
