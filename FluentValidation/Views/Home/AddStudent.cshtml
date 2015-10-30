@@ -1,0 +1,28 @@
+﻿@model FluentValidation.Models.Student
+@{
+    ViewBag.Title = "AddStudent";
+}
+
+<h2>
+    AddStudent
+    http://www.c-sharpcorner.com/UploadFile/3d39b4/Asp-Net-mvc-validation-using-fluent-validation/
+</h2>
+
+@if (ViewData.ModelState.IsValid)
+    {
+        <b>
+            Name : @ViewBag.Name<br />
+            Email : @ViewBag.Email
+        </b>
+    }
+    
+    @using (Html.BeginForm()) { 
+        <input type="text" name="FirstName" />
+        @Html.ValidationMessageFor(x=>x.FirstName)
+
+        <input type="text" name="LastName" />
+        @Html.ValidationMessageFor(x => x.LastName)
+
+
+        <input type="submit" value="Submit" />
+    }

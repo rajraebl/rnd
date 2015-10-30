@@ -10,8 +10,10 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            CommandPattern.CommandPatternMain();
-
+            //CommandPattern.CommandPatternMain();
+            //Factory.FactoryMain();
+            //DesignPatterns_.AbstractFactory.AbstractFactoryMain();
+            TemplatePattern.TemplatePatternMain();
             Console.Read();
         }
     }

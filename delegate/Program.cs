@@ -12,13 +12,13 @@ namespace @delegate
         static void Main(string[] args)
         {
 
-            /*
+            /*CREATE 2 INSTANCE OF DELEGATE DECLARED ABOVE
             //these are 2 business rules which can b passed dynamically to the process data */
             BizRuleDelegate addDel = (x, y) => x + y;
             BizRuleDelegate mulDel = (x, y) => x * y;
 
             ProcessDta pd = new ProcessDta();
-            pd.ProcessViaDelegate(3, 5, addDel);
+            pd.ProcessViaDelegate(3, 5, addDel); //PASSING TO A METHOD THAT TAKES 3 PARAM (2 I/P PARAMS AND ONE DELEGATE I.E. DYNAMIC BIZ RULE)
             pd.ProcessViaDelegate(3, 5, mulDel);
             
 

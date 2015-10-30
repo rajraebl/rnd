@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-1.8.2.min.js"></script>
+    <script>
+        $('.SelectAll').live('click', function(){
+            $(this).closest('.divAll').find('input[type=checkbox].item').attr('checked', true);
+            return false;
+        });
+        $('.DeselectAll').live('click', function(){
+            $(this).closest('.divAll').find('input[type=checkbox].item').attr('checked', false);
+            return false;
+        });
+
+        $(document).ready(function() { //attach event only after item is loaded into DOM
+            $('#All').on('click', function() {
+                console.log('ola: ' + !!$(this).attr('checked'));
+                $(document).find('input[type=checkbox].item').attr('checked', !!$(this).attr('checked'));
+            });
+        });
+
+
+
+
+        /*
+        
+
+jQuery: Disabling Right Click
+$(document).bind('contextmenu',function(e){
+    e.preventDefault();
+}); 
+
+<!– jQuery: Which key is Pressed. –>
+$(‘#txtFirstName’).keypress(function(event){
+     alert(event.keyCode);
+});
+
+
+<!– jQuery: Limiting MaLength for TextArea –>
+var MaxLength = 500;
+$(‘#txtDescription’).keypress(function(e)
+{
+if ($(this).val().length >= MaxLength) {
+e.preventDefault();}
+});
+
+*/
+
+    </script>
+</head>
+<body>
+    <!-- HTML: Select/Deselect All -->
+    http://www.webdevelopmenthelp.net/2013/09/7-jQuery-Code-Snippet.html
+    <div class="divAll">
+        <a href=# class=SelectAll>Select All</a>&nbsp;
+        <a href=# class=DeselectAll>Deselect All</a>
+        <p />
+
+        <input type="checkbox" id="All" />Select All&nbsp;
+        <p />
+        
+        <input type="checkbox" id="Lahore" class="item" /><label for="Lahore">Lahore</label>
+
+        <input type="checkbox" id="Karachi" class="item" /><label for="Karachi">Karachi</label>
+
+        <input type="checkbox" id="Islamabad" class="item" /><label for="Islamabad">Islamabad</label>
+    </div>
+</body>
+</html>

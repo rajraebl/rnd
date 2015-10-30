@@ -68,6 +68,7 @@
     <Content Include="App\products\productEditView.html" />
     <Content Include="App\products\productListView.html" />
     <Content Include="App\welcomeView.html" />
+    <Content Include="concepts-module-service.png" />
     <Content Include="css\toastr.css" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

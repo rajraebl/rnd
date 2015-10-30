@@ -41,12 +41,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractFactory.cs" />
+    <Compile Include="Factory.cs" />
     <Compile Include="CommandPattern.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TemplatePattern.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="2.JPG" />
+    <Content Include="abstractfactorypg.png" />
+    <Content Include="Drawing6_Topic.bmp" />
+    <Content Include="Drawing8_BRE_OpenClose.bmp" />
+    <Content Include="Drawing8_BRE_Xslt.bmp" />
+    <Content Include="Drawing8_SBQueue.bmp" />
+    <Content Include="repo.PNG" />
+    <Content Include="Visualization.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

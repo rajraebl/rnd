@@ -1,0 +1,69 @@
+﻿@model ProductSPA.Data.TrainingProductVM
+@{
+    ViewBag.Title = "Raj's Training Company";
+}
+@using (Html.BeginForm())
+{
+    <!-- Hidden Field Areea-->
+    @Html.HiddenFor(m=>m.Command)
+    
+    <!--Search Area-->
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h1 class="panel-title">Search For Product</h1>
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                @Html.LabelFor(m=>m.SearchEntity.ProductName)
+                @Html.TextBoxFor(m=>m.SearchEntity.ProductName, new {@class="form-control"})
+            </div>
+        </div>
+        <div class="panel-footer">
+            <button id="btnSearch" class="btn btn-sm btn-primary" data-pdsa-action="search"><i class="glyphicon glyphicon-search"></i>&nbsp;Search</button>
+            <button id="btnReset" class="btn btn-sm btn-primary" data-pdsa-action="resetsearch"><i class="glyphicon glyphicon-share-alt"></i>&nbsp;Reset</button>
+        </div>
+    </div>
+    
+    
+    
+    
+    <!--List Area-->
+    <div class="table-responsive">
+        <table class="table table-condensed table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Introduced</th>
+                    <th>Url</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var product in Model.Products) 
+                { 
+                    <tr>
+                        <td>@product.ProductName</td>
+                        <td>@product.IntroductionDate</td>
+                        <td>@product.Url</td>
+                        <td>@product.Price.ToString("C")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+@section scripts
+{
+    <script>
+        $(document).ready(function() {
+            $("[data-pdsa-action]").on("click", function(e) {
+                e.preventDefault();
+
+                $("#Command").val($(this).data("pdsa-action"));
+                //alert($("#Command").val());
+                $("form").submit();
+            });
+        });
+    </script>
+}
