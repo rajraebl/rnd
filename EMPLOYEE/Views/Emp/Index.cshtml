@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<p></p>
+<div class="container">
+    <div class="panel panel-primary" ng-controller="myCtrl as vm">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-1">Id</div>
+                        <div class="col-md-3">Name</div>
+                        <div class="col-md-2">Email</div>
+                        <div class="col-md-2">Mobile</div>
+                        <div class="col-md-2">Edit</div>
+                        <div class="col-md-2">Delete</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+
+            <div class="row" ng-repeat="emp in vm.emps">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-1">{{emp.Id}}</div>
+                        <div class="col-md-3">{{emp.Name}}</div>
+                        <div class="col-md-2">{{emp.Email}}</div>
+                        <div class="col-md-2">{{emp.Mobile}}</div>
+                        <div class="col-md-2"><input type="button" class="btn btn-sm btn-primary" value="Edit" ng-click="vm.editEmp(emp)" /></div>
+                        <div class="col-md-2"><input type="button" class="btn btn-sm btn-primary" ng-click="vm.DeleteEmp(emp.Id)" value="Delete" /></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="panel-footer">
+            <h4>{{vm.Action}} Employee</h4>
+            <table>
+                <tr>
+                    <td><b>Id</b></td>
+                    <td>
+                        <input type="text" disabled="disabled" ng-model="vm.emp.Id" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Name</b></td>
+                    <td>
+                        <input type="text" ng-model="vm.emp.Name" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Email</b></td>
+                    <td>
+                        <input type="text" ng-model="vm.emp.Email" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Age</b></td>
+                    <td>
+                        <input type="text" ng-model="vm.emp.Mobile" />
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+
+                    <td colspan="1"><input type="reset" class="btn btn-primary btn-xs" value="Clear" ng-click="vm.clearEmp()" />
+                        <input type="button" class="btn btn-primary btn-xs" value="{{' ' + vm.Action+' '}}" ng-click="vm.addEmp()" />
+
+                    </td>
+
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>
