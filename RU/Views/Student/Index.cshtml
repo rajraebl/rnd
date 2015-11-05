@@ -10,7 +10,7 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Index","Student",FormMethod.Get))
 {
     @Html.TextBox("SearchString");
     <input type="submit" value="Search" />
@@ -19,13 +19,14 @@
 <table>
     <tr>
         <th>
-            @Html.ActionLink("Last Name", "Index", new { sortOrder = ViewBag.NameSortParm })
+            <!--here the param searchString can not be [S]earchString bcs it will give duplicate error-->
+            @Html.ActionLink("Last Name", "Index", new { sortOrder = ViewBag.NameSortParm, searchString = ViewBag.SearchString })
         </th>
         <th>
             @Html.DisplayNameFor(model => model.FirstName)
         </th>
         <th>
-            @Html.ActionLink("Enrol Date", "Index", new { sortOrder = ViewBag.DateSortOrder })
+            @Html.ActionLink("Enrol Date", "Index", new { sortOrder = ViewBag.DateSortOrder, searchString = ViewBag.SearchString })
         </th>
         <th></th>
     </tr>

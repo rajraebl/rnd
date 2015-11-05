@@ -20,6 +20,7 @@ namespace RU.Controllers
 
         public ActionResult Index(string sortOrder, string SearchString)
         {
+            ViewBag.SearchString = SearchString;
             //If sord order is name then we will reverse(name_desc) in viewBag and it will go to view to create apposite link
             ViewBag.NameSortParm = (sortOrder == "Name") ? "Name_Desc" : "Name";
             ViewBag.DateSortOrder = (sortOrder == "Date") ? "Date_Desc" : "Date";
