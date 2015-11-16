@@ -295,6 +295,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Throttling", "Throttling", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Throttling.Client", "Throttling.Client\Throttling.Client.csproj", "{56506686-D9BE-40EE-8155-EE74F4D85709}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcError", "MvcApplication2\MvcError.csproj", "{0D0FB376-983E-40EB-B2CC-FC51CE19D261}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -721,6 +723,10 @@ Global
 		{56506686-D9BE-40EE-8155-EE74F4D85709}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56506686-D9BE-40EE-8155-EE74F4D85709}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56506686-D9BE-40EE-8155-EE74F4D85709}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D0FB376-983E-40EB-B2CC-FC51CE19D261}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D0FB376-983E-40EB-B2CC-FC51CE19D261}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D0FB376-983E-40EB-B2CC-FC51CE19D261}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D0FB376-983E-40EB-B2CC-FC51CE19D261}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -848,5 +854,6 @@ Global
 		{2C160D79-A6A0-4A2C-8DC9-464CDB736540} = {D9D109A8-751F-4AEB-A49B-2D95D05FA46B}
 		{E223F3F6-8F4A-4E56-8EA9-DDC806E3508D} = {1E841E7B-0280-4430-884E-2E499B063A80}
 		{56506686-D9BE-40EE-8155-EE74F4D85709} = {E223F3F6-8F4A-4E56-8EA9-DDC806E3508D}
+		{0D0FB376-983E-40EB-B2CC-FC51CE19D261} = {CDA20D00-41AC-4AAA-9DD5-9C59462C2099}
 	EndGlobalSection
 EndGlobal
