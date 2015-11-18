@@ -33,6 +33,6 @@ namespace RU.Models
 
         public virtual Instructor Instructor { get; set; }
 
-        public ICollection<Course> Courses { get; set; }
+        public virtual ICollection<Course> Courses { get; set; }
     }
 }

@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.Ajax.Utilities;
 using RU.Models;
 
 namespace RU.Controllers
@@ -24,12 +25,18 @@ namespace RU.Controllers
                 .Include((i => i.Corses.Select(c => c.Department)))
                 .OrderBy(i => i.LastName);
 
+            //Fill all the instructor but fill(in the InstructorIndexData) only those courses which are tought by selected InstructorID
             if (id != null)
             {
                 ViewBag.InstructorId = id.Value;
+                //The Where method returns a collection
+                //The Single method converts the collection into a single Instructor entity
+                //Single().Corses selects all Courses taught by that selected single Instructor
+                //we cud have written this like vm.Instructors.Single(i => i.InstructorID == id.Value)
                 vm.Courses = vm.Instructors.Where(i => i.InstructorId == id.Value).Single().Corses;
             }
 
+            //fill only those enrollemnts which belong to selected Course
             if (courseId != null)
             {
                 ViewBag.CourseId = courseId.Value;
@@ -86,12 +93,9 @@ namespace RU.Controllers
 
         public ActionResult Edit(int id = 0)
         {
-            Instructor instructor = db.InstructorSet.Find(id);
-            if (instructor == null)
-            {
-                return HttpNotFound();
-            }
-            ViewBag.InstructorId = new SelectList(db.OfficeAssignmentSet, "InstructorId", "Location", instructor.InstructorId);
+            var instructor = db.InstructorSet.Include(x => x.OfficeAssignment)
+                .Where(x => x.InstructorId == id)
+                .Single();
             return View(instructor);
         }
 
@@ -102,6 +106,10 @@ namespace RU.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Instructor instructor)
         {
+            var instructoR = db.InstructorSet.Include(x => x.OfficeAssignment)
+                .Where(x => x.InstructorId == instructor.InstructorId)
+                .Single();
+
             if (ModelState.IsValid)
             {
                 db.Entry(instructor).State = EntityState.Modified;
