@@ -9,12 +9,13 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table>
+<table style="border:solid 1px;">
     <tr>
         <th>Last Name</th>
         <th>First Name</th>
         <th>Hire Date</th>
         <th>Office</th>
+        <th>Courses</th>
         <th></th>
     </tr>
 
@@ -38,6 +39,14 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.OfficeAssignment.Location)
+            </td>
+            <td>
+                @{
+                    foreach (var c in item.Corses)
+                    {
+                        @c.CourseID @: @c.Title </br> 
+                    }
+                }
             </td>
             <td>
                 @Html.ActionLink("Select", "Index", new {id=item.InstructorId}) |

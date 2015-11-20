@@ -1,4 +1,5 @@
-﻿@model RU.Models.Instructor
+﻿@using RU.Models
+@model RU.Models.Instructor
 
 @{
     ViewBag.Title = "Edit";
@@ -38,11 +39,43 @@
             @Html.EditorFor(model => model.HireDate)
             @Html.ValidationMessageFor(model => model.HireDate)
         </div>
+        <!--extra field for virtual prop-->
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OfficeAssignment.Location)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OfficeAssignment.Location)
+            @Html.ValidationMessageFor(model => model.OfficeAssignment.Location)
+        </div>
+        
+        <!--course checkbox area-->
+        <div class="editor-field">
+            <table>
+                <tr>
+                    @{
+                        int cnt = 0;
+                        List<AssignedCourseData> courses = ViewBag.Courses;
+                        foreach (var course in courses)
+                        {
+                            if (cnt++%3 == 0)
+                            {
+                                @: </tr><tr>
+                            }
+                            @: <td>
+                            int j = 0; <input type="checkbox" name="selectedCourses" value="@course.CourseId" @(Html.Raw(course.Assigned ? "checked": ""))/>
+                        @course.CourseId @: @course.Title
+                              @: </td>
+                        }
+                        
+                    }
+                </tr>
+            </table>
+        </div>
 
-        <p>
-            <input type="submit" value="Save" />
-        </p>
-    </fieldset>
+            <p>
+                <input type="submit" value="Save" />
+            </p>
+</fieldset>
 }
 
 <div>
