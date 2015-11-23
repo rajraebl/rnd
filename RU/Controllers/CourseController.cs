@@ -5,21 +5,25 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using RU.DAL;
 using RU.Models;
 
 namespace RU.Controllers
 {
     public class CourseController : Controller
     {
-        private RUContext db = new RUContext();
-
+        //private RUContext db = new RUContext();
+        private UnitOfWork unitOfWork = new UnitOfWork();
         //
         // GET: /Course/
 
         public ActionResult Index()
         {
-            var courseset = db.CourseSet.Include(c => c.Department);
-            return View(courseset.ToList());
+            //var courseset = db.CourseSet.Include(c => c.Department);
+            //return View(courseset.ToList());
+
+            var courses = unitOfWork.CourseRepository.Get(includeProperties: "Department");
+            return View(courses);
         }
 
         //
@@ -27,7 +31,9 @@ namespace RU.Controllers
 
         public ActionResult Details(int id = 0)
         {
-            Course course = db.CourseSet.Find(id);
+            //Course course = db.CourseSet.Find(id);
+            Course course = unitOfWork.CourseRepository.GetById(id);
+
             if (course == null)
             {
                 return HttpNotFound();
@@ -40,7 +46,8 @@ namespace RU.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.DepartmentId = new SelectList(db.DepartmentSet, "DepartmentId", "Name");
+            //ViewBag.DepartmentId = new SelectList(db.DepartmentSet, "DepartmentId", "Name");
+            ViewBag.DepartmentId = new SelectList(unitOfWork.DepartmentRepository.Get(orderBy: q=>q.OrderBy(d=>d.Name)), "DepartmentId", "Name");
             return View();
         }
 
@@ -53,12 +60,14 @@ namespace RU.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.CourseSet.Add(course);
-                db.SaveChanges();
+                //db.CourseSet.Add(course);
+                //db.SaveChanges();
+                unitOfWork.CourseRepository.Add(course);
+                unitOfWork.Save();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.DepartmentId = new SelectList(db.DepartmentSet, "DepartmentId", "Name", course.DepartmentId);
+            ViewBag.DepartmentId = new SelectList(unitOfWork.DepartmentRepository.Get(orderBy:q=>q.OrderBy(x=>x.Name)), "DepartmentId", "Name", course.DepartmentId);
             return View(course);
         }
 
@@ -67,12 +76,13 @@ namespace RU.Controllers
 
         public ActionResult Edit(int id = 0)
         {
-            Course course = db.CourseSet.Find(id);
+            //Course course = db.CourseSet.Find(id);
+            Course course = unitOfWork.CourseRepository.GetById(id);
             if (course == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.DepartmentId = new SelectList(db.DepartmentSet, "DepartmentId", "Name", course.DepartmentId);
+            ViewBag.DepartmentId = new SelectList(unitOfWork.DepartmentRepository.Get(orderBy:x=>x.OrderBy(q=>q.Name)), "DepartmentId", "Name", course.DepartmentId);
             return View(course);
         }
 
@@ -85,11 +95,14 @@ namespace RU.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(course).State = EntityState.Modified;
-                db.SaveChanges();
+                //db.Entry(course).State = EntityState.Modified;
+                //db.SaveChanges();
+
+                unitOfWork.CourseRepository.Update(course);
+                unitOfWork.Save();
                 return RedirectToAction("Index");
             }
-            ViewBag.DepartmentId = new SelectList(db.DepartmentSet, "DepartmentId", "Name", course.DepartmentId);
+            ViewBag.DepartmentId = new SelectList(unitOfWork.DepartmentRepository.Get(orderBy:x=>x.OrderBy(n=>n.Name)), "DepartmentId", "Name", course.DepartmentId);
             return View(course);
         }
 
@@ -98,7 +111,8 @@ namespace RU.Controllers
 
         public ActionResult Delete(int id = 0)
         {
-            Course course = db.CourseSet.Find(id);
+            //Course course = db.CourseSet.Find(id);
+            Course course = unitOfWork.CourseRepository.GetById(id);
             if (course == null)
             {
                 return HttpNotFound();
@@ -113,15 +127,19 @@ namespace RU.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Course course = db.CourseSet.Find(id);
-            db.CourseSet.Remove(course);
-            db.SaveChanges();
+            //Course course = db.CourseSet.Find(id);
+            //db.CourseSet.Remove(course);
+            //db.SaveChanges();
+
+            unitOfWork.CourseRepository.Delete(id);
+            unitOfWork.Save();
+
             return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)
         {
-            db.Dispose();
+            unitOfWork.Dispose();
             base.Dispose(disposing);
         }
     }

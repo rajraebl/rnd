@@ -7,13 +7,26 @@ using System.Security.Cryptography;
 using System.Web;
 using System.Web.Configuration;
 using System.Web.Mvc;
+using RU.DAL;
 using RU.Models;
 
 namespace RU.Controllers
 {
     public class StudentController : Controller
     {
-        private RUContext db = new RUContext();
+        private IStudentRepository studentRepository;
+
+        public StudentController()
+        {
+            this.studentRepository = new StudentRepository(new RUContext());
+        }
+
+        public StudentController(IStudentRepository studentRepository)
+        {
+            this.studentRepository = studentRepository;
+        }
+
+        //private RUContext db = new RUContext();
 
         //
         // GET: /Student/
@@ -25,7 +38,7 @@ namespace RU.Controllers
             ViewBag.NameSortParm = (sortOrder == "Name") ? "Name_Desc" : "Name";
             ViewBag.DateSortOrder = (sortOrder == "Date") ? "Date_Desc" : "Date";
 
-            var students = from s in db.StudentSet select s;
+            var students = from s in studentRepository.GetStudents() select s;
 
             if (!string.IsNullOrEmpty(SearchString))
             {
@@ -55,7 +68,7 @@ namespace RU.Controllers
 
         public ActionResult Details(int id = 0)
         {
-            Student student = db.StudentSet.Find(id);
+            Student student = studentRepository.GetStudentById(id);
             if (student == null)
             {
                 return HttpNotFound();
@@ -80,8 +93,8 @@ namespace RU.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.StudentSet.Add(student);
-                db.SaveChanges();
+                studentRepository.AddStudent(student);
+                studentRepository.Save();
                 return RedirectToAction("Index");
             }
 
@@ -93,7 +106,7 @@ namespace RU.Controllers
 
         public ActionResult Edit(int id = 0)
         {
-            Student student = db.StudentSet.Find(id);
+            Student student = studentRepository.GetStudentById(id);
             if (student == null)
             {
                 return HttpNotFound();
@@ -110,8 +123,12 @@ namespace RU.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(student).State = EntityState.Modified;
-                db.SaveChanges();
+                //db.Entry(student).State = EntityState.Modified;
+                //db.SaveChanges();
+
+                studentRepository.UpdateStudent(student);
+                studentRepository.Save();
+
                 return RedirectToAction("Index");
             }
             return View(student);
@@ -122,7 +139,7 @@ namespace RU.Controllers
 
         public ActionResult Delete(int id = 0)
         {
-            Student student = db.StudentSet.Find(id);
+            Student student = studentRepository.GetStudentById(id);
             if (student == null)
             {
                 return HttpNotFound();
@@ -137,15 +154,20 @@ namespace RU.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Student student = db.StudentSet.Find(id);
-            db.StudentSet.Remove(student);
-            db.SaveChanges();
+            //Student student = db.StudentSet.Find(id);
+            //db.StudentSet.Remove(student);
+            //db.SaveChanges();
+
+            studentRepository.DeleteStudent(id);
+            studentRepository.Save();
+
             return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)
         {
-            db.Dispose();
+            //db.Dispose();
+            studentRepository.Dispose();
             base.Dispose(disposing);
         }
     }
