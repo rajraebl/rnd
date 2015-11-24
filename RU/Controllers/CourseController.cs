@@ -32,7 +32,9 @@ namespace RU.Controllers
         public ActionResult Details(int id = 0)
         {
             //Course course = db.CourseSet.Find(id);
-            Course course = unitOfWork.CourseRepository.GetById(id);
+            //Course course = unitOfWork.CourseRepository.GetById(id);
+            var query = "select * from Course where CourseId=@p0";
+            Course course = unitOfWork.CourseRepository.GetWithRawSql(query, id).Single();
 
             if (course == null)
             {
@@ -135,6 +137,15 @@ namespace RU.Controllers
             unitOfWork.Save();
 
             return RedirectToAction("Index");
+        }
+
+        public ActionResult UpdateCourseCredits(byte? multiplier)
+        {
+            if (multiplier != null)
+            {
+                ViewBag.RowsAffected = unitOfWork.CourseRepository.UpdateCourseCredits(multiplier);
+            }
+            return View();
         }
 
         protected override void Dispose(bool disposing)

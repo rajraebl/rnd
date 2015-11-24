@@ -12,12 +12,13 @@ using RU.Models;
 
 namespace RU.DAL
 {
-    public class UnitOfWork :IDisposable
+    public class UnitOfWork : IDisposable
     {
         //variables for the database context and each repository
         RUContext context = new RUContext();
         private GenericRepository<Department> departmentRepository;
-        private GenericRepository<Course> courseRepository;
+        //private GenericRepository<Course> courseRepository;
+        private CourseRepository courseRepository;
 
         // instantiates the repository, passing in the context instance. As a result, all repositories share the same context instance.
         public GenericRepository<Department> DepartmentRepository
@@ -33,13 +34,15 @@ namespace RU.DAL
         }
 
         // instantiates the repository, passing in the context instance. As a result, all repositories share the same context instance.
-        public GenericRepository<Course> CourseRepository
+        //public GenericRepository<Course> CourseRepository
+        public CourseRepository CourseRepository
         {
             get
             {
                 if (this.courseRepository == null)
                 {
-                    this.courseRepository = new GenericRepository<Course>(context);
+                    //this.courseRepository = new GenericRepository<Course>(context);
+                    this.courseRepository = new CourseRepository(context);
                 }
                 return courseRepository;
             }
