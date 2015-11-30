@@ -1,0 +1,33 @@
+﻿@model IEnumerable< Ticket.Models.Department>
+<h6> This below table content is from partial view</h6>
+
+@if (Model != null)
+ {
+     <div>
+         <table cellspacing="0"width="50%" border="1">
+                <thead>
+                 <tr>
+                     <th>
+                         Department Name
+                     </th>
+                     <th>
+                         Admin Name
+                     </th>
+                 </tr>
+             </thead>
+              <tbody>
+                 @foreach (var dept in Model)
+                 {
+                     <tr>
+                         <td align="center">
+                             @dept.DepartmentName
+                         </td>
+                         <td align="center">
+                             @dept.AdminName
+                         </td>
+                     </tr>
+                 }
+             </tbody>
+       </table>
+     </div>
+ }

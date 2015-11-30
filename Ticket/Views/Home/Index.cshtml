@@ -1,0 +1,35 @@
+﻿@model Ticket.Models.Company
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div>
+        <h1>This is from main view upper.</h1>
+        
+        <div>
+            <!--partial views without action method-->
+            @Html.Partial("showPartialView", Model.Departments)
+            @{Html.RenderPartial("showPartialView", Model.Departments);}
+        </div>
+        <div>
+            <h1>This is from main view lower.</h1>
+        </div>
+        <div id="divTest">
+        </div>
+        <input type="button" value="Click" id="btnClick"/>
+    </div>
+<script src="~/Scripts/jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+        $(function() {
+            $('#btnClick').click(function(data) {//alert()
+                $.get("@Url.Action("secondPartialView", "Home")",{}, function (data, status) {
+                    //alert("Data: " + data + "\nStatus: " + status);
+                    if (data) {
+                        console.log(data);
+                        $('#divTest').append(data);
+                    }
+                });
+            });
+        });
+</script>
