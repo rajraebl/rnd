@@ -15,9 +15,10 @@
         <div>
             <h1>This is from main view lower.</h1>
         </div>
-        <div id="divTest">
-        </div>
-        <input type="button" value="Click" id="btnClick"/>
+    <input type="button" value="Click" id="btnClick"/>    
+    <table border="1" id="divTest">
+        </table>
+        
     </div>
 <script src="~/Scripts/jquery-1.8.2.min.js"></script>
 <script type="text/javascript">
@@ -30,6 +31,11 @@
                         $('#divTest').append(data);
                     }
                 });
+            });
+
+            $('#divTest').on('click', 'input[type="button"]', function () {
+                $(this).closest('tr').remove();
+
             });
         });
 </script>
