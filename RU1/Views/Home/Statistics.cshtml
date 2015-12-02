@@ -1,0 +1,11 @@
+﻿@model IEnumerable<RU1.Models.Statistics>
+@{
+    ViewBag.Title = "Contact";
+}
+<table>
+    <tr><td>Enroll Date</td><td>Student Count</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr><td>@Html.DisplayFor(x=>item.EnrollmentDate) </td><td>@item.Count</td></tr>
+    }
+</table>
