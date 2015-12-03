@@ -1,58 +1,62 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-    <title></title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.min.js"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <script>
-        var myApp = angular.module('myApp', ['ngRoute']);
+    <head>
+        <base href="/RoutePage.html" />
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script>
+            var myApp = angular.module('myApp', ['ngRoute']);
 
-        myApp.config(function ($routeProvider) {
-            $routeProvider
-                .when('/', { controller: 'myController', templateUrl: 'template/p1.html' })
-                .when('/p2', { controller: 'yourController', templateUrl: 'template/p2.html' })
-                .when('/users',{controller:'myController',templateUrl:'my-ng-template.html'})
-                .otherwise({ redirectTo: '/' });
-        });
+            myApp.config(function($routeProvider, $locationProvider) {
+                $locationProvider.html5Mode(true); // = true;
 
-        myApp.controller('yourController', function() {});
+                $routeProvider
+                    .when('/RoutePage.html', { controller: 'myController', templateUrl: 'template/p1.html' })
+                    .when('/RoutePage.html/p2', { controller: 'yourController', templateUrl: 'template/p2.html' })
+                    .when('/RoutePage.html/users', { controller: 'myController', templateUrl: 'my-ng-template.html' })
+                    .otherwise({ redirectTo: '/' });
 
-        myApp.controller('myController', function ($scope, $rootScope, $log) {
-            //alert(0);
+            });
 
-            $scope.initUsers = function () {
-                if ($rootScope.users == null) {
-                    //alert(1);
-                    $rootScope.users = [
-                        { id: 1, name: 'Arthur' },
-                        { id: 2, name: 'Barthur' },
-                        { id: 3, name: 'Carthur' }
-                    ]; 
+            myApp.controller('yourController', function() {});
+
+            myApp.controller('myController', function ($scope, $rootScope, $log) {
+                //alert(0);
+
+                $scope.initUsers = function () {
+                    if ($rootScope.users == null) {
+                        //alert(1);
+                        $rootScope.users = [
+                            { id: 1, name: 'Arthur' },
+                            { id: 2, name: 'Barthur' },
+                            { id: 3, name: 'Carthur' }
+                        ]; 
+                    }
                 }
-            }
 
-            $scope.addUser = function () {
-                var objUser = { id: $rootScope.users.length + 1, name: $scope.userName };
-                $log.debug(objUser); //$log service is used for debugging purpose
-                $rootScope.users.push(objUser);
-            };
+                $scope.addUser = function () {
+                    var objUser = { id: $rootScope.users.length + 1, name: $scope.userName };
+                    $log.debug(objUser); //$log service is used for debugging purpose
+                    $rootScope.users.push(objUser);
+                };
 
-            $scope.initUsers();
-        });
+                $scope.initUsers();
+            });
 
-    </script>
+        </script>
 
-</head>
+    </head>
 <body ng-app="myApp">
     <div class="container" >
         <div class="row">
             <div class="col-sm-3">
                 <ul>
-                    <li><a ng-href="#/">Link 1(Page)</a></li>
-                    <li><a ng-href="#/p2">Link 2(Page)</a></li>
-                    <li><a ng-href="#/users">Users(template)</a> </li>
+                    <li><a ng-href="/RoutePage.html">Link 1(Page)</a></li>
+                    <li><a ng-href="/RoutePage.html/p2">Link 2(Page)</a></li>
+                    <li><a ng-href="/RoutePage.html/users">Users(template)</a> </li>
                 </ul>
             </div>
             <div class="col-sm-9">
