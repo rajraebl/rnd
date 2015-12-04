@@ -5,13 +5,13 @@ namespace RU1.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    public sealed partial class studentInit : IMigrationMetadata
+    public sealed partial class init : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(studentInit));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(init));
         
         string IMigrationMetadata.Id
         {
-            get { return "201512011007587_studentInit"; }
+            get { return "201512041014484_init"; }
         }
         
         string IMigrationMetadata.Source

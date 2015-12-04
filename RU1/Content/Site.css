@@ -754,3 +754,8 @@ tr.pager td {
             margin: 0;
         }
 }
+
+.selectedrow 
+{ 
+    background-color: #a4d4e6; 
+}
