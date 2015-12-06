@@ -58,7 +58,7 @@
                         {
                             if (cnt++%3 == 0)
                             {
-                                <tr></tr>
+                              @:  </tr><tr>
                             }
                             <td>
                                 <input type="checkbox" name="selectedCourses" @Html.Raw(course.Assigned ? "checked":"") value="@course.CourseId" /> @course.Title

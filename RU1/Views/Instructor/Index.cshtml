@@ -9,12 +9,12 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table>
+<table class="tbl">
     <tr>
         <th>Last Name</th>
         <th>First Name</th>
         <th>Hire Date</th>
-        <th>Office</th>        <th></th>
+        <th>Office</th><th>Courses</th>        <th></th>
     </tr>
 
         @foreach (var item in Model.Instructors) {
@@ -36,6 +36,12 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.OfficeAssignment.Location)
+            </td>
+               <td><table class="tbl"><tr>
+                @foreach (var k in item.Courses)
+                { <td>
+                 @k.CourseId   @k.Title </td>
+                }</tr></table>
             </td>
             <td>
                 @Html.ActionLink("Select", "Index", new { id = item.InstructorId })
@@ -78,7 +84,7 @@
 
 @if (Model.Enrollments != null)
 {
-    <h2>Student Enrolled in the Course</h2>
+    <h3>Student Enrolled in the Course</h3>
     <table>
         <tr>
             <th>Name</th><th>Grade</th>

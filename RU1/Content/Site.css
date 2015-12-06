@@ -759,3 +759,21 @@ tr.pager td {
 { 
     background-color: #a4d4e6; 
 }
+
+
+table.tblx {
+    border-collapse:separate;
+           border-style:solid;
+            border-width:1px;
+            border-color:#333333;
+            padding:0px;
+            border-spacing:0px
+}
+table {
+           border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+                padding:0px;
+}

@@ -12,14 +12,15 @@ namespace RU1.Controllers
 {
     public class CourseController : Controller
     {
-        private RU1Context db = new RU1Context();
-
+        //private RU1Context db = new RU1Context();
+        UnitOfWork uow = new UnitOfWork();
         //
         // GET: /Course/
 
         public ActionResult Index()
         {
-            var tblcourse = db.tblCourse.Include(c => c.Department);
+            //var tblcourse =  db.tblCourse.Include(c => c.Department);
+            var tblcourse = uow.CourseRepo.Get(includeProperties: "Department");
             return View(tblcourse.ToList());
         }
 
@@ -28,7 +29,8 @@ namespace RU1.Controllers
 
         public ActionResult Details(int id = 0)
         {
-            Course course = db.tblCourse.Find(id);
+            //Course course = db.tblCourse.Find(id);
+            Course course = uow.CourseRepo.getById(id);
             if (course == null)
             {
                 return HttpNotFound();
@@ -57,8 +59,12 @@ namespace RU1.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    db.tblCourse.Add(course);
-                    db.SaveChanges();
+                    
+                    //db.tblCourse.Add(course);
+                    //db.SaveChanges();
+
+                    uow.CourseRepo.add(course);
+                    uow.Save();
                     return RedirectToAction("Index");
                 }
             }
@@ -73,7 +79,8 @@ namespace RU1.Controllers
 
         private void PopulateDepartmentsDropDownList(int? departmentId=0)
         {
-            ViewBag.DepartmentId = new SelectList(db.tblDepartment, "DepartmentId", "Name", departmentId);
+            //ViewBag.DepartmentId = new SelectList(db.tblDepartment, "DepartmentId", "Name", departmentId);
+            ViewBag.DepartmentId = new SelectList(uow.DepartmentRepo.Get(orderBy: q => q.OrderBy(d => d.Name)), "DepartmentId", "Name", departmentId);
         }
 
         //
@@ -81,7 +88,8 @@ namespace RU1.Controllers
 
         public ActionResult Edit(int id = 0)
         {
-            Course course = db.tblCourse.Find(id);
+            //Course course = db.tblCourse.Find(id);
+            Course course = uow.CourseRepo.getById(id);
             if (course == null)
             {
                 return HttpNotFound();
@@ -103,8 +111,12 @@ namespace RU1.Controllers
             
             if (ModelState.IsValid)
             {
-                db.Entry(course).State = EntityState.Modified;
-                db.SaveChanges();
+                //db.Entry(course).State = EntityState.Modified;
+                //db.SaveChanges();
+
+                uow.CourseRepo.update(course);
+                uow.Save();
+
                 return RedirectToAction("Index");
             }
             }
@@ -122,7 +134,8 @@ namespace RU1.Controllers
 
         public ActionResult Delete(int id = 0)
         {
-            Course course = db.tblCourse.Find(id);
+           // Course course = db.tblCourse.Find(id);
+            Course course = uow.CourseRepo.getById(id);
             if (course == null)
             {
                 return HttpNotFound();
@@ -137,15 +150,18 @@ namespace RU1.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Course course = db.tblCourse.Find(id);
-            db.tblCourse.Remove(course);
-            db.SaveChanges();
+            //Course course = db.tblCourse.Find(id);
+            //db.tblCourse.Remove(course);
+            //db.SaveChanges();
+
+            uow.CourseRepo.delete(id);
+            uow.Save();
             return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)
         {
-            db.Dispose();
+            uow.Dispose();
             base.Dispose(disposing);
         }
     }

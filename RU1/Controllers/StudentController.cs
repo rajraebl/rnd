@@ -11,8 +11,19 @@ namespace RU1.Controllers
 {
     public class StudentController : Controller
     {
-        private RU1Context db = new RU1Context();
+        IStudentRepository repo;
 
+        public StudentController() : this(new StudentRepository(new RU1Context()))
+        {
+
+        }
+
+        public StudentController(IStudentRepository _repo)
+        {
+            repo = _repo;
+        }
+
+       // RU1Context db = new RU1Context();
         //
         // GET: /Student/
 
@@ -23,7 +34,8 @@ namespace RU1.Controllers
             ViewBag.CurrentFilter = searchString;
 
             //var students = from s in db.tblStudent select s;
-            var students = db.tblStudent.Select(x=>x);
+            //var students = db.tblStudent.Select(x=>x);
+            var students = repo.getStudents();
 
             if (!(string.IsNullOrEmpty(searchString)))
             {
@@ -60,7 +72,7 @@ namespace RU1.Controllers
 
         public ActionResult Details(int id = 0)
         {
-            Student student = db.tblStudent.Find(id);
+            Student student = repo.getStudent(id);
             if (student == null)
             {
                 return HttpNotFound();
@@ -88,8 +100,9 @@ namespace RU1.Controllers
 
             if (ModelState.IsValid)
             {
-                db.tblStudent.Add(student);
-                db.SaveChanges();
+                repo.addStudent(student);
+
+                repo.save();
                 return RedirectToAction("Index");
             }
 
@@ -107,7 +120,7 @@ namespace RU1.Controllers
 
         public ActionResult Edit(int id = 0)
         {
-            Student student = db.tblStudent.Find(id);
+            Student student = repo.getStudent(id);
             if (student == null)
             {
                 return HttpNotFound();
@@ -124,8 +137,9 @@ namespace RU1.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(student).State = EntityState.Modified;
-                db.SaveChanges();
+                //db.Entry(student).State = EntityState.Modified
+                repo.updateStudent(student);
+                repo.save();
                 return RedirectToAction("Index");
             }
             return View(student);
@@ -136,7 +150,7 @@ namespace RU1.Controllers
 
         public ActionResult Delete(int id = 0)
         {
-            Student student = db.tblStudent.Find(id);
+            Student student = repo.getStudent (id);
             if (student == null)
             {
                 return HttpNotFound();
@@ -151,15 +165,18 @@ namespace RU1.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Student student = db.tblStudent.Find(id);
-            db.tblStudent.Remove(student);
-            db.SaveChanges();
+            //Student student = db.tblStudent.Find(id);
+            //db.tblStudent.Remove(student);
+            //db.SaveChanges();
+            repo.deleteStudent(id);
             return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)
         {
-            db.Dispose();
+            //db.Dispose();
+            repo.Dispose();
+
             base.Dispose(disposing);
         }
     }

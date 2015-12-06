@@ -114,9 +114,11 @@ namespace RU1.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, FormCollection formCollection)
+        public ActionResult Edit(int id, FormCollection formCollection, string[] selectedCourses)
         {
-            var instructortoUpdate = db.tblInstructor.Include(c => c.OfficeAssignment).Where(i => i.InstructorId == id).Single();
+            var instructortoUpdate = db.tblInstructor.Include(c => c.OfficeAssignment)
+                .Include(m=>m.Courses)
+                .Where(i => i.InstructorId == id).Single();
             //update the row selected from db from the values posted from form
             if (TryUpdateModel(instructortoUpdate, "", new string[] {"LastName", "FirstMidName", "HireDate", "OfficeAssignment"}))
             {
@@ -126,6 +128,8 @@ namespace RU1.Controllers
                     {
                         instructortoUpdate.OfficeAssignment = null;
                     }
+
+                    UpdateInstructorCourses(selectedCourses, instructortoUpdate);
 
                     db.Entry(instructortoUpdate).State = EntityState.Modified;
                     db.SaveChanges();
@@ -148,6 +152,27 @@ namespace RU1.Controllers
             //return View(instructor);
         }
 
+        private void UpdateInstructorCourses(string[] selectedCourses, Instructor instructorToUpdate) { 
+        //if no course is selected then this string array will be empty
+            instructorToUpdate.Courses = new List<Course>();
+
+            if (selectedCourses == null)
+            {
+                return;
+            }
+
+            var selectedCoursesHS = new HashSet<string>(selectedCourses);
+
+            foreach (var course in db.tblCourse)
+            {
+                if (selectedCoursesHS.Contains(course.CourseId.ToString()))
+                {
+                    instructorToUpdate.Courses.Add(course);
+                }
+            }
+
+        
+        }
         //
         // GET: /Instructor/Delete/5
 
