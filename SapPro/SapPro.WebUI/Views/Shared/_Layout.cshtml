@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/toastr.css" rel="stylesheet" />
+    <script src="~/app/angular.js"></script>
+    <script src="~/app/angular-resource.js"></script>
+    <script src="~/app/d3.js"></script>
+    <script src="~/app/angular-charts.js"></script>
+    <script src="~/app/app.js"></script>
+    <script src="~/app/service/common.services.js"></script>
+    <script src="~/app/service/productResource.js"></script>
+    <script src="~/app/service/priceResource.js"></script>
+    <script src="~/app/productListCtrl.js"></script>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body ng-app="productManagement">
+    <p></p>
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

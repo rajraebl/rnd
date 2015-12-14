@@ -1,0 +1,38 @@
+﻿@using RU1.Models
+
+@{
+    ViewBag.Title = "Update Credit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+
+    <fieldset>
+        <legend>Instructor</legend>
+
+        <div class="editor-label">
+            @Html.Label("Please enter amount")
+        </div>
+        <div class="editor-field">
+            @Html.TextBox("i")
+        </div>
+
+
+            <p>
+                <input type="submit" value="Save" />
+            </p>
+</fieldset>
+}
+@if (ViewBag.Amount != null)
+{
+    <p>Credits updated by @ViewBag.Amount</p>
+    <p>Rows affected are @ViewBag.RowsAffected</p>
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -68,5 +68,11 @@ namespace RU1
         public virtual void delete(T t) {
             dbset.Remove(t);
         }
+
+        public virtual IEnumerable<T> GetWithRawSql(string query, params object[] parameters)
+        {
+            return dbset.SqlQuery(query, parameters);
+        } 
+
     }
 }

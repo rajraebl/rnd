@@ -30,7 +30,10 @@ namespace RU1.Controllers
         public ActionResult Details(int id = 0)
         {
             //Course course = db.tblCourse.Find(id);
-            Course course = uow.CourseRepo.getById(id);
+            //Course course = uow.CourseRepo.getById(id);
+            // making single to get single row
+            Course course = uow.CourseRepo.GetWithRawSql("Select * From Course Where CourseId=@p0", id).Single();
+
             if (course == null)
             {
                 return HttpNotFound();

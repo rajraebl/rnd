@@ -313,6 +313,33 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Book", "Book", "{B3639B36-B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApplication3", "MvcApplication3\MvcApplication3.csproj", "{B34EB9CF-F482-43F6-9CCD-E6995F635A62}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pics", "Pics", "{6F12DBE2-61ED-4085-ACC0-80782116D0E9}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\rajesh.sahu\Desktop\Azure-3-tier-vNet.jpg = C:\Users\rajesh.sahu\Desktop\Azure-3-tier-vNet.jpg
+		C:\Users\rajesh.sahu\Desktop\azureAccount.png = C:\Users\rajesh.sahu\Desktop\azureAccount.png
+		C:\Users\rajesh.sahu\Desktop\Drawing6.gif = C:\Users\rajesh.sahu\Desktop\Drawing6.gif
+		C:\Users\rajesh.sahu\Desktop\Drawing6_Topic.bmp = C:\Users\rajesh.sahu\Desktop\Drawing6_Topic.bmp
+		C:\Users\rajesh.sahu\Desktop\Drawing7.bmp = C:\Users\rajesh.sahu\Desktop\Drawing7.bmp
+		C:\Users\rajesh.sahu\Desktop\Drawing8_SBQueue.bmp = C:\Users\rajesh.sahu\Desktop\Drawing8_SBQueue.bmp
+		C:\Users\rajesh.sahu\Desktop\sec-azgsfig3.png = C:\Users\rajesh.sahu\Desktop\sec-azgsfig3.png
+		C:\Users\rajesh.sahu\Desktop\sec-azgsfig4.png = C:\Users\rajesh.sahu\Desktop\sec-azgsfig4.png
+		C:\Users\rajesh.sahu\Desktop\web_browser_to_web_api.png = C:\Users\rajesh.sahu\Desktop\web_browser_to_web_api.png
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiPractical", "WebApiPractical\WebApiPractical.csproj", "{CB1E2306-7719-4837-B0DB-1F2088E327B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sapPro", "sapPro", "{DEB19CF7-E91F-4222-8E44-18504E2BE1AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SapPro.Entity", "SapPro\SapPro.Entity\SapPro.Entity.csproj", "{55E57D6E-0D73-43BB-8433-DCD83CEC1FFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SapPro.DAL", "SapPro\SapPro.DAL\SapPro.DAL.csproj", "{F03AA865-62D1-4A1E-AB27-3CBAF422CF81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SapPro.Service.Pricing", "SapPro\SapPro.Service.Pricing\SapPro.Service.Pricing.csproj", "{068D6242-D26B-46DB-9C8C-9B3F0C02AFD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SapPro.Service.ProductCatalog", "SapPro\SapPro.Service.Product\SapPro.Service.ProductCatalog.csproj", "{D76DCE43-BC93-4FEB-A2B3-F9C4B5CE028B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SapPro.WebUI", "SapPro\SapPro.WebUI\SapPro.WebUI.csproj", "{35C198BF-C305-4A21-8706-27BB23150707}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -767,6 +794,30 @@ Global
 		{B34EB9CF-F482-43F6-9CCD-E6995F635A62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B34EB9CF-F482-43F6-9CCD-E6995F635A62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B34EB9CF-F482-43F6-9CCD-E6995F635A62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB1E2306-7719-4837-B0DB-1F2088E327B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB1E2306-7719-4837-B0DB-1F2088E327B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB1E2306-7719-4837-B0DB-1F2088E327B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB1E2306-7719-4837-B0DB-1F2088E327B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55E57D6E-0D73-43BB-8433-DCD83CEC1FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55E57D6E-0D73-43BB-8433-DCD83CEC1FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55E57D6E-0D73-43BB-8433-DCD83CEC1FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55E57D6E-0D73-43BB-8433-DCD83CEC1FFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F03AA865-62D1-4A1E-AB27-3CBAF422CF81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F03AA865-62D1-4A1E-AB27-3CBAF422CF81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F03AA865-62D1-4A1E-AB27-3CBAF422CF81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F03AA865-62D1-4A1E-AB27-3CBAF422CF81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{068D6242-D26B-46DB-9C8C-9B3F0C02AFD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{068D6242-D26B-46DB-9C8C-9B3F0C02AFD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{068D6242-D26B-46DB-9C8C-9B3F0C02AFD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{068D6242-D26B-46DB-9C8C-9B3F0C02AFD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D76DCE43-BC93-4FEB-A2B3-F9C4B5CE028B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D76DCE43-BC93-4FEB-A2B3-F9C4B5CE028B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D76DCE43-BC93-4FEB-A2B3-F9C4B5CE028B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D76DCE43-BC93-4FEB-A2B3-F9C4B5CE028B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35C198BF-C305-4A21-8706-27BB23150707}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35C198BF-C305-4A21-8706-27BB23150707}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35C198BF-C305-4A21-8706-27BB23150707}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35C198BF-C305-4A21-8706-27BB23150707}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -902,5 +953,13 @@ Global
 		{A4A8F942-F063-426E-B182-84D0AB619A14} = {D9D109A8-751F-4AEB-A49B-2D95D05FA46B}
 		{63335BB7-1193-4F1F-B79A-C7D56FBA14F8} = {A4A8F942-F063-426E-B182-84D0AB619A14}
 		{B34EB9CF-F482-43F6-9CCD-E6995F635A62} = {B3639B36-B588-4F35-B269-F5F7E3528EEA}
+		{6F12DBE2-61ED-4085-ACC0-80782116D0E9} = {09B7534D-3E89-476B-BB0F-FDFAF6C5A5AD}
+		{CB1E2306-7719-4837-B0DB-1F2088E327B3} = {B4399228-A471-4BAB-9A81-4190E9D86CCA}
+		{DEB19CF7-E91F-4222-8E44-18504E2BE1AD} = {B4399228-A471-4BAB-9A81-4190E9D86CCA}
+		{55E57D6E-0D73-43BB-8433-DCD83CEC1FFD} = {DEB19CF7-E91F-4222-8E44-18504E2BE1AD}
+		{F03AA865-62D1-4A1E-AB27-3CBAF422CF81} = {DEB19CF7-E91F-4222-8E44-18504E2BE1AD}
+		{068D6242-D26B-46DB-9C8C-9B3F0C02AFD1} = {DEB19CF7-E91F-4222-8E44-18504E2BE1AD}
+		{D76DCE43-BC93-4FEB-A2B3-F9C4B5CE028B} = {DEB19CF7-E91F-4222-8E44-18504E2BE1AD}
+		{35C198BF-C305-4A21-8706-27BB23150707} = {DEB19CF7-E91F-4222-8E44-18504E2BE1AD}
 	EndGlobalSection
 EndGlobal

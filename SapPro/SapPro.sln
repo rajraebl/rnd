@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SapPro.Entity", "SapPro.Entity\SapPro.Entity.csproj", "{55E57D6E-0D73-43BB-8433-DCD83CEC1FFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SapPro.DAL", "SapPro.DAL\SapPro.DAL.csproj", "{F03AA865-62D1-4A1E-AB27-3CBAF422CF81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SapPro.WebUI", "SapPro.WebUI\SapPro.WebUI.csproj", "{35C198BF-C305-4A21-8706-27BB23150707}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SapPro.Service.ProductCatalog", "SapPro.Service.Product\SapPro.Service.ProductCatalog.csproj", "{D76DCE43-BC93-4FEB-A2B3-F9C4B5CE028B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SapPro.Service.Pricing", "SapPro.Service.Pricing\SapPro.Service.Pricing.csproj", "{068D6242-D26B-46DB-9C8C-9B3F0C02AFD1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{27A5B54D-DA4F-4D85-8D08-0E29A13C8947}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{278F07CC-9834-4776-B656-15470E7E992C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55E57D6E-0D73-43BB-8433-DCD83CEC1FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55E57D6E-0D73-43BB-8433-DCD83CEC1FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55E57D6E-0D73-43BB-8433-DCD83CEC1FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55E57D6E-0D73-43BB-8433-DCD83CEC1FFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F03AA865-62D1-4A1E-AB27-3CBAF422CF81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F03AA865-62D1-4A1E-AB27-3CBAF422CF81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F03AA865-62D1-4A1E-AB27-3CBAF422CF81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F03AA865-62D1-4A1E-AB27-3CBAF422CF81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35C198BF-C305-4A21-8706-27BB23150707}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35C198BF-C305-4A21-8706-27BB23150707}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35C198BF-C305-4A21-8706-27BB23150707}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35C198BF-C305-4A21-8706-27BB23150707}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D76DCE43-BC93-4FEB-A2B3-F9C4B5CE028B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D76DCE43-BC93-4FEB-A2B3-F9C4B5CE028B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D76DCE43-BC93-4FEB-A2B3-F9C4B5CE028B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D76DCE43-BC93-4FEB-A2B3-F9C4B5CE028B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{068D6242-D26B-46DB-9C8C-9B3F0C02AFD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{068D6242-D26B-46DB-9C8C-9B3F0C02AFD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{068D6242-D26B-46DB-9C8C-9B3F0C02AFD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{068D6242-D26B-46DB-9C8C-9B3F0C02AFD1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{55E57D6E-0D73-43BB-8433-DCD83CEC1FFD} = {278F07CC-9834-4776-B656-15470E7E992C}
+		{F03AA865-62D1-4A1E-AB27-3CBAF422CF81} = {278F07CC-9834-4776-B656-15470E7E992C}
+		{D76DCE43-BC93-4FEB-A2B3-F9C4B5CE028B} = {27A5B54D-DA4F-4D85-8D08-0E29A13C8947}
+		{068D6242-D26B-46DB-9C8C-9B3F0C02AFD1} = {27A5B54D-DA4F-4D85-8D08-0E29A13C8947}
+	EndGlobalSection
+EndGlobal

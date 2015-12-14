@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div ng-controller="ProductListCtrl as vm" class="container">
+    Select Filter 
+    <select ng-model="vm.filterCategory" ng-change="vm.filter()">
+        <option value="">Select</option>
+        <option value="Category 1">Category 1</option>
+        <option>Category 2</option>
+        <option>Category 3</option>
+    </select>
+
+
+    <div class="panel panel-primary">
+
+        <div class="panel-heading">
+            Product List
+        </div>
+        <div class="panel-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>Product Name</td>
+                        <td>Category</td>
+                        <td>Price</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="product in vm.products">
+                        <td><a ui-sref="productDetail({productId:product.productId})"> {{product.Name}}</a></td>
+                        <td>{{product.Category}}</td>
+                        <td>{{product.price|currency}}</td>
+                        <td><a class="btn btn-primary" ng-click="vm.showPrice(product.Category,$event)">Show Price</a></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

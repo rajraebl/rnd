@@ -49,7 +49,28 @@ namespace TokenBasedAuthentication.API.Controllers
 
         private IHttpActionResult GetErrorResult(IdentityResult result)
         {
-            throw new NotImplementedException();
+            if (result == null)
+            {
+                return InternalServerError();
+            }
+
+            if (!result.Succeeded)
+            {
+                if (result.Errors != null)
+                {
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError("",error);
+                    }
+                }
+
+                if (ModelState.IsValid)
+                {
+                    return BadRequest();
+                }
+                return BadRequest(ModelState);
+            }
+            return null;
         }
 
     }

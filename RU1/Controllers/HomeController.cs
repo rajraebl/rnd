@@ -20,14 +20,16 @@ namespace RU1.Controllers
         public ActionResult Statistics()
         {
 
-            var model = from student in db.tblStudent
-                group student by student.EnrollmentDate
-                into dateGroup
-                select new Statistics()
-                {
-                    EnrollmentDate = dateGroup.Key,
-                    Count = dateGroup.Count()
-                };
+            //var model = from student in db.tblStudent
+            //    group student by student.EnrollmentDate
+            //    into dateGroup
+            //    select new Statistics()
+            //    {
+            //        EnrollmentDate = dateGroup.Key,
+            //        Count = dateGroup.Count()
+            //    };
+
+            var model = db.Database.SqlQuery<Statistics>("select EnrollmentDate , count('c') as Count from student group by EnrollmentDate");
 
             return View(model);
         }
