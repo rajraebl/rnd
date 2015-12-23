@@ -37,6 +37,7 @@ namespace RU1.Migrations
                     EnrollmentDate = DateTime.Parse("2005-09-01") }
             };
 
+            
 
             students.ForEach(s => context.tblStudent.AddOrUpdate(p => p.LastName, s));
             context.SaveChanges();

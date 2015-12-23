@@ -111,7 +111,8 @@ namespace RU1.Controllers
 
         //
         // POST: /Instructor/Edit/5
-
+        //we are receiving selectedCourses in separate parameter for ease of use. However It will be available in FormCollection also. 
+        //You can receive selectedCourses as Request.Form["selectedCourses"].ToString() also
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, FormCollection formCollection, string[] selectedCourses)
