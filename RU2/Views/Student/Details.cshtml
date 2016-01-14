@@ -1,0 +1,54 @@
+﻿@model RU2.Models.Student
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Student</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LastName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FirstMidName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstMidName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EnrollmentDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EnrollmentDate)
+    </div>
+    <div class="display-label">
+        Enrollments
+    </div>
+    <div class="display-field">
+        <table width="30%"><tr><th>Course Title</th><th>Grade</th></tr>
+        @{
+            foreach (var item in Model.Enrollments)
+            {
+                <tr><td>
+                    @Html.DisplayFor(x=>item.Course.Title)
+                    </td><td>
+                    @Html.DisplayFor(x=>item.Grade)
+                    </td></tr>
+            }
+        }
+        
+        </table>
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.StudentId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
