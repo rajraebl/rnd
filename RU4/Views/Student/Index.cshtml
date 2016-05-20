@@ -1,0 +1,53 @@
+﻿@model IEnumerable<RU4.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>
+    @using (Html.BeginForm())
+    {
+        @Html.TextBox("searchString")
+        <input type="submit" value="Search" />
+    }
+</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table width="70%">
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.LastName)*@
+            @Html.ActionLink("LastName", "Index", new { sortOrder = ViewBag.NameSortOrder, searchString=ViewBag.searchString })
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstMidName)
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.EnrollmentDate)*@
+            @Html.ActionLink("EnrollmentDate", "Index", new { sortOrder = ViewBag.DateSortOrder, searchString = ViewBag.searchString })
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstMidName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnrollmentDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.StudentId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.StudentId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.StudentId })
+        </td>
+    </tr>
+}
+
+</table>

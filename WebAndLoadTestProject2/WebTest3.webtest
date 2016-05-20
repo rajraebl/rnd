@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="WebTest3" Id="90530c88-70a0-4eb2-9b75-8d3e79b63789" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="a2b4d4ac-91b1-40ae-a8aa-9cdb9b4e7085" Version="1.0" Url="https://mbsupdates-pne.partners.extranet.microsoft.com/Webservice/PX3Integration/api/program" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="200" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Authorization" Value="Bearer PUID:00037FFE8D225FBD" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="ApiVersion" Value="2016-02" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="ProgramID" Value="B1040434-30BB-40F0-A498-C3338D73845C" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+  </Items>
+</WebTest>

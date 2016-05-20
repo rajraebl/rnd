@@ -1,0 +1,97 @@
+﻿
+@model RU4.ViewModel.InstructorIndexData
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Instructors.First().LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Instructors.First().FirstMidName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Instructors.First().HireDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Instructors.First().OfficeAssignment.Location)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.Instructors) {
+     string selectedrow = ViewBag.selectedrow == item.InstructorID?"selectedrow":"";
+        
+    <tr class="@selectedrow">
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstMidName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HireDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OfficeAssignment.Location)
+        </td>
+        <td>
+            @Html.ActionLink("Select", "Index", new { id = item.InstructorID }) |
+            @Html.ActionLink("Edit", "Edit", new { id = item.InstructorID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.InstructorID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.InstructorID })
+        </td>
+    </tr>
+}
+
+</table>
+
+@if (Model.Courses != null)
+{
+    <table>
+        <tr>
+            <th>Course Title</th><th>Credit</th><th></th>
+        </tr>
+        @foreach (var item in Model.Courses)
+        {
+            string selectedrow = ViewBag.CourseId == item.CourseId ? "selectedrow" : "";
+
+            <tr class="@selectedrow">
+                <td>@item.Title</td>
+                <td>Credit</td>
+                <td>@Html.ActionLink("Select", "Index", new { id = ViewBag.selectedrow, courseId=item.CourseId })</td>
+            </tr>
+
+        }
+    </table>
+}
+
+@if (Model.Enrollments != null)
+{
+    <table>
+        <tr>
+            <th>Student</th>
+            <th>Grade</th>
+        </tr>
+        @foreach (var item in Model.Enrollments)
+        {
+
+            <tr>
+                <td>@item.Student.FirstMidName @item.Student.LastName</td>
+                <td>@item.Grade</td>
+                <td>@Html.DisplayFor(x=> item.Student.EnrollmentDate)</td>
+            </tr>
+
+        }
+    </table>
+}
+

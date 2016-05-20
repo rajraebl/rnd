@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="WebTest4" Id="a12e7d27-921a-47a9-b922-f7a3e998e1ad" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="669a3f37-559f-428e-9e94-d37981d02833" Version="1.1" Url="https://mbsupdates-pne.partners.extranet.microsoft.com/webservice/Px3Integration/api/Locations/Programs/B1040434-30BB-40F0-A498-C3338D73845C/Partners/1046345/Locations" ThinkTime="3" Timeout="50" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="50" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Authorization" Value="Bearer PUID:0003BFFDDDD4F7C0" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="apiversion" Value="2016-02" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+  </Items>
+</WebTest>

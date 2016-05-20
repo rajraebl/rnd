@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="CreateToken" Id="ed70de75-6cd4-498c-965a-816076ff2074" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="False" Proxy="default" StopOnError="False" RecordedResultFile="" ResultsLocale="">
+  <Items>
+    <Request Method="POST" Guid="fcb767fc-5f5c-4b0a-9de7-aa23c74f4200" Version="1.1" Url="https://partnerpayee-int.cloudapp.net/api/CreateToken" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="200" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Authorization" Value="Bearer PUID:00034001DC949BFF" />
+        <Header Name="Accept" Value="application/json" />
+        <Header Name="CorrelationId" Value="5b5a4621-1e1b-48a3-ba52-95fc85571c20" />
+        <Header Name="Content-Type" Value="application/json" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="apiversion" Value="2016-02" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="ProgramResources" Value="[{&quot;ProgramResource&quot;:&quot;Source/105/Programs/B1040434-30BB-40F0-A498-C3338D73845C&quot;}]" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ReturnUri" Value="https://businesscenter-pne.mbs.microsoft.com" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="HeaderUri" Value="https://mbs2-pne.partners.extranet.microsoft.com/PX3Header.html" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="FooterUri" Value="https://mbs2-pne.partners.extranet.microsoft.com/PX3Footer.html" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="PartnerResource" Value="Source/105/Partners/1" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="CultureCode" Value="en-US" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="PartnerResource" Value="Source/105/Partners/1" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="LocationResource" Value="Source/105/Location/" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ProgramResources[ProgramResource]" Value="Source/105/Programs/B1040434-30BB-40F0-A498-C3338D73845C" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="data" Value="{&quot;UniqueUserId&quot;:&quot;0003BFFDDDD4F7C0&quot;,&quot;ReturnUri&quot;:&quot;https://businesscenter-pne.mbs.microsoft.com&quot;,&quot;HeaderUri&quot;:&quot;https://mbs2-pne.partners.extranet.microsoft.com/PX3Header.html&quot;,&quot;FooterUri&quot;:&quot;https://mbs2-pne.partners.extranet.microsoft.com/PX3Footer.html&quot;,&quot;MasterCSSUri&quot;:&quot;https://mbs2-pne.partners.extranet.microsoft.com/css/PX3HeaderStyle.css&quot;,&quot;CultureCode&quot;:&quot;en-US&quot;,&quot;PartnerResource&quot;:&quot;Source/105/Partners/1&quot;,&quot;LocationResource&quot;:&quot;Source/105/Location/&quot;,&quot;ProgramResources&quot;:[{&quot;ProgramResource&quot;:&quot;Source/105/Programs/B1040434-30BB-40F0-A498-C3338D73845C&quot;}]}" RecordedValue="" CorrelationBinding="" UrlEncode="False" />
+      </FormPostHttpBody>
+    </Request>
+  </Items>
+</WebTest>

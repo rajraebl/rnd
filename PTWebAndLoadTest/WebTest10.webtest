@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="WebTest10" Id="d767f1ed-5b7f-4338-a711-8269112f7711" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest10.ca40f920-f966-4478-b743-749313267b44.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="27f6b9e2-38f1-4a24-a92f-bca4a4d463bf" Version="1.1" Url="https://mbs2-pne.partners.extranet.microsoft.com/MSVoice/OrganizationMapping.aspx" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://corp.sts.microsoft.com/adfs/ls/?wa=wsignin1.0&amp;wtrealm=urn%3ambs2-pne.partners.extranet.microsoft.com&amp;wctx=rm%3d0%26id%3dpassive%26ru%3d%252fUserInfo%252fSelectProfile.aspx%253fReturnURL%253dhttps%25253a%25252f%25252fmbs2-pne.partners.extranet.microsoft.com%25252fMSVoice%25252fOrganizationMapping.aspx%25253fe%25253dOQZSRROYTXYYRRQWMTVPQNQYVUSTRLWSUONRUPQOYPMNRLUK&amp;wct=2016-04-22T12%3a27%3a18Z" ReportingName="" IgnoreHttpStatusCode="False">
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam14.wct" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;wct=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam11.wa" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?wa=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam12.wtrealm" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;wtrealm=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam13.wctx" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;wctx=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam3.CustomHRD$emailTB" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="CustomHRD_emailTB" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam4.fspost" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="der=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam5.i17" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="der=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam6.i21" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="der=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam7.i22" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="der=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam8.i13" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="der=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="e" Value="OQZSRROYTXYYRRQWMTVPQNQYVUSTRLWSUONRUPQOYPMNRLUK" RecordedValue="OQZSRROYTXYYRRQWMTVPQNQYVUSTRLWSUONRUPQOYPMNRLUK" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="1eba4b97-5b24-4c74-96e2-f2bde831fdb4" Version="1.1" Url="https://corp.sts.microsoft.com/adfs/ls/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://login.live.com/login.srf?wa=wsignin1.0&amp;wtrealm=http%3a%2f%2fcorp.sts.microsoft.com&amp;wctx=ef3c3454-ed4a-4545-9652-36bb785da5c0&amp;wct=2016-04-22T12%3a27%3a18Z" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://corp.sts.microsoft.com/adfs/ls/?wa=wsignin1.0&amp;wtrealm=urn%3ambs2-pne.partners.extranet.microsoft.com&amp;wctx=rm%3d0%26id%3dpassive%26ru%3d%252fUserInfo%252fSelectProfile.aspx%253fReturnURL%253dhttps%25253a%25252f%25252fmbs2-pne.partners.extranet.microsoft.com%25252fMSVoice%25252fOrganizationMapping.aspx%25253fe%25253dOQZSRROYTXYYRRQWMTVPQNQYVUSTRLWSUONRUPQOYPMNRLUK&amp;wct=2016-04-22T12%3a27%3a18Z" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam6.wctx" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;wctx=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="4" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam7.wct" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;wct=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="3" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam8.bk" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;bk=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="3" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam9.uaid" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;uaid=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam4.wa" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?wa=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam5.wtrealm" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;wtrealm=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="4" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam10.pid" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;pid=" />
+            <RuleParameter Name="EndsWith" Value="'" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="wa" Value="wsignin1.0" RecordedValue="wsignin1.0" CorrelationBinding="{{QueryStringParam11.wa}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="wtrealm" Value="urn%3ambs2-pne.partners.extranet.microsoft.com" RecordedValue="urn%3ambs2-pne.partners.extranet.microsoft.com" CorrelationBinding="{{QueryStringParam12.wtrealm}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="wctx" Value="rm%3d0%26id%3dpassive%26ru%3d%252fUserInfo%252fSelectProfile.aspx%253fReturnURL%253dhttps%25253a%25252f%25252fmbs2-pne.partners.extranet.microsoft.com%25252fMSVoice%25252fOrganizationMapping.aspx%25253fe%25253dOQZSRROYTXYYRRQWMTVPQNQYVUSTRLWSUONRUPQOYPMNRLUK" RecordedValue="rm%3d0%26id%3dpassive%26ru%3d%252fUserInfo%252fSelectProfile.aspx%253fReturnURL%253dhttps%25253a%25252f%25252fmbs2-pne.partners.extranet.microsoft.com%25252fMSVoice%25252fOrganizationMapping.aspx%25253fe%25253dOQZSRROYTXYYRRQWMTVPQNQYVUSTRLWSUONRUPQOYPMNRLUK" CorrelationBinding="{{QueryStringParam13.wctx}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="wct" Value="{{QueryStringParam14.wct}}" RecordedValue="2016-04-22T12%3a27%3a18Z" CorrelationBinding="{{QueryStringParam14.wct}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="locale" Value="en-us" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="__EVENTTARGET" Value="CustomHRD$LinkButton_LiveId" RecordedValue="CustomHRD$LinkButton_LiveId" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="/wEPDwUKLTg3MzMwNzE5MA9kFgICAw8WAh4GYWN0aW9uBfMCL2FkZnMvbHMvP3dhPXdzaWduaW4xLjAmd3RyZWFsbT11cm4lM2FtYnMyLXBuZS5wYXJ0bmVycy5leHRyYW5ldC5taWNyb3NvZnQuY29tJndjdHg9cm0lM2QwJTI2aWQlM2RwYXNzaXZlJTI2cnUlM2QlMjUyZlVzZXJJbmZvJTI1MmZTZWxlY3RQcm9maWxlLmFzcHglMjUzZlJldHVyblVSTCUyNTNkaHR0cHMlMjUyNTNhJTI1MjUyZiUyNTI1MmZtYnMyLXBuZS5wYXJ0bmVycy5leHRyYW5ldC5taWNyb3NvZnQuY29tJTI1MjUyZk1TVm9pY2UlMjUyNTJmT3JnYW5pemF0aW9uTWFwcGluZy5hc3B4JTI1MjUzZmUlMjUyNTNkT1FaU1JST1lUWFlZUlJRV01UVlBRTlFZVlVTVFJMV1NVT05SVVBRT1lQTU5STFVLJndjdD0yMDE2LTA0LTIyVDEyJTNhMjclM2ExOFoWAgICD2QWAmYPZBYCAgMPD2QWBB4Gb25sb2FkBSNqYXZhc2NyaXB0OnRoaXMuc3R5bGUuY29sb3I9J2dyYXknOx4Hb25mb2N1cwVbamF2YXNjcmlwdDppZih0aGlzLnZhbHVlPT0nYWxpYXNAZmFicmlrYW0uY29tJyl0aGlzLnZhbHVlPScnO3RoaXMuc3R5bGUuZm9udFN0eWxlPSdub3JtYWwnO2RkixuK81gwwqVeiQO8e9ImmTVO5SQ=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="FE623ECD" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="/wEWCAK8pIo8AueZycUBAvLP9uIOAvilk6IMAuKyh8EEAvbv18sFAsDg3rYPAtXLib0F8BDixLhZ1X1wETR3s+oK3ZOYghE=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__db" Value="{{$HIDDEN1.__db}}" RecordedValue="14" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="CustomHRD$emailTB" Value="alias@fabrikam.com" RecordedValue="alias@fabrikam.com" CorrelationBinding="{{FormPostParam3.CustomHRD$emailTB}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="49b2b1c7-4c06-4b1b-b709-5eac72ddd90f" Version="1.1" Url="https://login.live.com/ppsecure/post.srf" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://login.live.com/login.srf?wa=wsignin1.0&amp;wtrealm=http%3a%2f%2fcorp.sts.microsoft.com&amp;wctx=ef3c3454-ed4a-4545-9652-36bb785da5c0&amp;wct=2016-04-22T12%3a27%3a18Z" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="wa" Value="wsignin1.0" RecordedValue="wsignin1.0" CorrelationBinding="{{QueryStringParam4.wa}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="wtrealm" Value="http%3a%2f%2fcorp.sts.microsoft.com" RecordedValue="http%3a%2f%2fcorp.sts.microsoft.com" CorrelationBinding="{{QueryStringParam5.wtrealm}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="wctx" Value="{{QueryStringParam6.wctx}}" RecordedValue="ef3c3454-ed4a-4545-9652-36bb785da5c0" CorrelationBinding="{{QueryStringParam6.wctx}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="wct" Value="{{QueryStringParam7.wct}}" RecordedValue="2016-04-22T12%3a27%3a18Z" CorrelationBinding="{{QueryStringParam7.wct}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="bk" Value="{{QueryStringParam8.bk}}" RecordedValue="1461328043" CorrelationBinding="{{QueryStringParam8.bk}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="uaid" Value="{{QueryStringParam9.uaid}}" RecordedValue="2bec84f556e24988a7236a81ce096ad3" CorrelationBinding="{{QueryStringParam9.uaid}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="pid" Value="0" RecordedValue="0" CorrelationBinding="{{QueryStringParam10.pid}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="loginfmt" Value="px3rajesh@outlook.com" RecordedValue="px3rajesh@outlook.com" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="login" Value="px3rajesh@outlook.com" RecordedValue="px3rajesh@outlook.com" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="passwd" Value="rajeshpx3" RecordedValue="rajeshpx3" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="type" Value="11" RecordedValue="11" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="PPFT" Value="{{$HIDDEN1.PPFT}}" RecordedValue="DW8ikFmQ1xksXTwzEfGfAqR0Loyn18!uCRSmYQ6wZwCMG907R4ZLtjtwwuL4rYoVvnkxu7lHv!jCRh2ziQN3bsORmU2uqzXS6UqT*oHcfl!efXQQMBh8M8j12ciRZEARxQ2cSAtcJK5pI207AzZQomTdcu99oEvg1caehbOQbf5seZy6M7NWz6TneHICHOiVM7*yUgihA4Eg5QEZf9Wzl9B2RkoV5OS5G*YjWp0hSyIraSlwsJ8LiR!AQWcnce!N90eyfWnDH58MzinhGx9BSBA$" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="PPSX" Value="Passport" RecordedValue="Passport" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="NewUser" Value="1" RecordedValue="1" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="LoginOptions" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="FoundMSAs" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="fspost" Value="0" RecordedValue="0" CorrelationBinding="{{FormPostParam4.fspost}}" UrlEncode="True" />
+        <FormPostParameter Name="i2" Value="1" RecordedValue="1" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="i16" Value="{&quot;navigationStart&quot;:1461328042222,&quot;unloadEventStart&quot;:0,&quot;unloadEventEnd&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1461328042526,&quot;domainLookupStart&quot;:1461328042526,&quot;domainLookupEnd&quot;:1461328042526,&quot;connectStart&quot;:1461328042526,&quot;connectEnd&quot;:1461328042526,&quot;requestStart&quot;:1461328043380,&quot;responseStart&quot;:1461328043658,&quot;responseEnd&quot;:1461328043661,&quot;domLoading&quot;:1461328043658,&quot;domInteractive&quot;:1461328043832,&quot;domContentLoadedEventStart&quot;:1461328043832,&quot;domContentLoadedEventEnd&quot;:1461328043832,&quot;domComplete&quot;:1461328043835,&quot;loadEventStart&quot;:1461328043838,&quot;loadEventEnd&quot;:0,&quot;msFirstPaint&quot;:0}" RecordedValue="{&quot;navigationStart&quot;:1461328042222,&quot;unloadEventStart&quot;:0,&quot;unloadEventEnd&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1461328042526,&quot;domainLookupStart&quot;:1461328042526,&quot;domainLookupEnd&quot;:1461328042526,&quot;connectStart&quot;:1461328042526,&quot;connectEnd&quot;:1461328042526,&quot;requestStart&quot;:1461328043380,&quot;responseStart&quot;:1461328043658,&quot;responseEnd&quot;:1461328043661,&quot;domLoading&quot;:1461328043658,&quot;domInteractive&quot;:1461328043832,&quot;domContentLoadedEventStart&quot;:1461328043832,&quot;domContentLoadedEventEnd&quot;:1461328043832,&quot;domComplete&quot;:1461328043835,&quot;loadEventStart&quot;:1461328043838,&quot;loadEventEnd&quot;:0,&quot;msFirstPaint&quot;:0}" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="i17" Value="0" RecordedValue="0" CorrelationBinding="{{FormPostParam5.i17}}" UrlEncode="True" />
+        <FormPostParameter Name="i18" Value="__DefaultLogin_Strings|1,__DefaultLogin_Core|1," RecordedValue="__DefaultLogin_Strings|1,__DefaultLogin_Core|1," CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="i19" Value="5380" RecordedValue="5380" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="i21" Value="0" RecordedValue="0" CorrelationBinding="{{FormPostParam6.i21}}" UrlEncode="True" />
+        <FormPostParameter Name="i22" Value="0" RecordedValue="0" CorrelationBinding="{{FormPostParam7.i22}}" UrlEncode="True" />
+        <FormPostParameter Name="i13" Value="0" RecordedValue="0" CorrelationBinding="{{FormPostParam8.i13}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="9142a443-536e-467c-b569-35cf16bb362a" Version="1.1" Url="https://corp.sts.microsoft.com/adfs/ls/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://login.live.com/ppsecure/post.srf?wa=wsignin1.0&amp;wtrealm=http%3a%2f%2fcorp.sts.microsoft.com&amp;wctx=ef3c3454-ed4a-4545-9652-36bb785da5c0&amp;wct=2016-04-22T12%3a27%3a18Z&amp;bk=1461328043&amp;uaid=2bec84f556e24988a7236a81ce096ad3&amp;pid=0" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <FormPostHttpBody>
+        <FormPostParameter Name="wctx" Value="{{$HIDDEN1.wctx}}" RecordedValue="ef3c3454-ed4a-4545-9652-36bb785da5c0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="NAP" Value="{{$HIDDEN1.NAP}}" RecordedValue="V%3D1.9%26E%3D11e9%26C%3DIMKN0nRF2ycfAFw4uQNO1x8KnyNj8y6bpL9NBGF7GqiNRrS-hkL0bA%26W%3D1" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="wresult" Value="{{$HIDDEN1.wresult}}" RecordedValue="&lt;wst:RequestSecurityTokenResponse xmlns:wst=&quot;http://schemas.xmlsoap.org/ws/2005/02/trust&quot;&gt;&lt;wst:RequestedSecurityToken&gt;&lt;saml:Assertion xmlns:saml=&quot;urn:oasis:names:tc:SAML:1.0:assertion&quot; AssertionID=&quot;uuid-23757e6e-6e5b-4028-b39c-cae96505933e&quot; IssueInstant=&quot;2016-04-22T12:27:25Z&quot; Issuer=&quot;uri:WindowsLiveID&quot; MajorVersion=&quot;1&quot; MinorVersion=&quot;1&quot;&gt;&lt;saml:Conditions NotBefore=&quot;2016-04-22T12:27:25Z&quot; NotOnOrAfter=&quot;2016-04-22T20:27:25Z&quot;&gt;&lt;saml:AudienceRestrictionCondition&gt;&lt;saml:Audience&gt;corp.sts.microsoft.com&lt;/saml:Audience&gt;&lt;/saml:AudienceRestrictionCondition&gt;&lt;/saml:Conditions&gt;&lt;saml:AuthenticationStatement AuthenticationInstant=&quot;2016-04-22T12:27:25Z&quot; AuthenticationMethod=&quot;urn:oasis:names:tc:SAML:1.0:am:password&quot;&gt;&lt;saml:Subject&gt;&lt;saml:NameIdentifier Format=&quot;http://schemas.xmlsoap.org/claims/UPN&quot;&gt;0003BFFDE1350D30@Live.com&lt;/saml:NameIdentifier&gt;&lt;/saml:Subject&gt;&lt;/saml:AuthenticationStatement&gt;&lt;saml:AttributeStatement&gt;&lt;saml:Subject&gt;&lt;saml:NameIdentifier Format=&quot;http://schemas.xmlsoap.org/claims/UPN&quot;&gt;0003BFFDE1350D30@Live.com&lt;/saml:NameIdentifier&gt;&lt;/saml:Subject&gt;&lt;saml:Attribute AttributeName=&quot;Managed&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/claims&quot;&gt;&lt;saml:AttributeValue&gt;TRUE&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;Child&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/claims&quot;&gt;&lt;saml:AttributeValue&gt;FALSE&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;TOUAccepted&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/claims&quot;&gt;&lt;saml:AttributeValue&gt;TRUE&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;CID&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/claims&quot;&gt;&lt;saml:AttributeValue&gt;3c6f0f6ced18dabd&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;EmailAddress&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/claims&quot;&gt;&lt;saml:AttributeValue&gt;px3rajesh@outlook.com&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;PUID&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/claims&quot;&gt;&lt;saml:AttributeValue&gt;0003BFFDE1350D30&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;/saml:AttributeStatement&gt;&lt;Signature xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;&lt;SignedInfo&gt;&lt;CanonicalizationMethod Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;&gt;&lt;/CanonicalizationMethod&gt;&lt;SignatureMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#rsa-sha1&quot;&gt;&lt;/SignatureMethod&gt;&lt;Reference URI=&quot;#uuid-23757e6e-6e5b-4028-b39c-cae96505933e&quot;&gt;&lt;Transforms&gt;&lt;Transform Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot;&gt;&lt;/Transform&gt;&lt;Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;&gt;&lt;/Transform&gt;&lt;/Transforms&gt;&lt;DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;&gt;&lt;/DigestMethod&gt;&lt;DigestValue&gt;zziN2+1JUG/x/gyqp86hBciuvRg=&lt;/DigestValue&gt;&lt;/Reference&gt;&lt;/SignedInfo&gt;&lt;SignatureValue&gt;NkhQvvFwf/GghAZfbdFhuHq+LYsA+dIzSHrwUStu7qdZKVETSPAsYvLuiUKv4Y0c+4CBsfsjxe/c&#xD;&#xA;UlHpobWI2vodgVgmDJhebBQAltW0FQUTtqIySHJFQRr5qPCv6fRKQ/DRCA3kRxRnhQbBUzzLgFXE&#xD;&#xA;k0n1nKDHdmEjF7jd4RU=&lt;/SignatureValue&gt;&lt;KeyInfo&gt;&lt;X509Data&gt;&lt;X509SKI&gt;RCN+4cb0pvkykJCUmpjyfUfnRMo=&lt;/X509SKI&gt;&lt;/X509Data&gt;&lt;KeyName&gt;Window Live ID&lt;/KeyName&gt;&lt;/KeyInfo&gt;&lt;/Signature&gt;&lt;/saml:Assertion&gt;&lt;/wst:RequestedSecurityToken&gt;&lt;wsp:AppliesTo xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2004/09/policy&quot;&gt;&lt;wsa:EndpointReference xmlns:wsa=&quot;http://schemas.xmlsoap.org/ws/2004/08/addressing&quot;&gt;&lt;wsa:Address&gt;http://corp.sts.microsoft.com&lt;/wsa:Address&gt;&lt;/wsa:EndpointReference&gt;&lt;/wsp:AppliesTo&gt;&lt;/wst:RequestSecurityTokenResponse&gt;" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="wa" Value="{{$HIDDEN1.wa}}" RecordedValue="wsignin1.0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ANON" Value="{{$HIDDEN1.ANON}}" RecordedValue="A%3D4D39BAD5EE012D180B7B1558FFFFFFFF%26E%3D1243%26W%3D1" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="bcc4a70a-945d-4902-bdd9-668c98f618ce" Version="1.1" Url="https://mbs2-pne.partners.extranet.microsoft.com/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://mbs2-pne.partners.extranet.microsoft.com/UserInfo/SelectProfile.aspx?ReturnURL=https%3a%2f%2fmbs2-pne.partners.extranet.microsoft.com%2fMSVoice%2fOrganizationMapping.aspx%3fe%3dOQZSRROYTXYYRRQWMTVPQNQYVUSTRLWSUONRUPQOYPMNRLUK" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://corp.sts.microsoft.com/adfs/ls/" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam3.ReturnURL" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?ReturnURL=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam1.radioGroup" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="2562063" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="6" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam2.continueButton" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="continueButton" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam15.name" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;name=" />
+            <RuleParameter Name="EndsWith" Value="'" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <FormPostHttpBody>
+        <FormPostParameter Name="wa" Value="{{$HIDDEN1.wa}}" RecordedValue="wsignin1.0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="wresult" Value="{{$HIDDEN1.wresult}}" RecordedValue="&lt;t:RequestSecurityTokenResponse xmlns:t=&quot;http://schemas.xmlsoap.org/ws/2005/02/trust&quot;&gt;&lt;t:Lifetime&gt;&lt;wsu:Created xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;2016-04-22T12:27:31.073Z&lt;/wsu:Created&gt;&lt;wsu:Expires xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;2016-04-22T13:27:31.073Z&lt;/wsu:Expires&gt;&lt;/t:Lifetime&gt;&lt;wsp:AppliesTo xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2004/09/policy&quot;&gt;&lt;wsa:EndpointReference xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address&gt;urn:mbs2-pne.partners.extranet.microsoft.com&lt;/wsa:Address&gt;&lt;/wsa:EndpointReference&gt;&lt;/wsp:AppliesTo&gt;&lt;t:RequestedSecurityToken&gt;&lt;saml:Assertion MajorVersion=&quot;1&quot; MinorVersion=&quot;1&quot; AssertionID=&quot;_e277fbf0-08be-4e01-9ab2-d412eecd7eb7&quot; Issuer=&quot;http://corp.sts.microsoft.com&quot; IssueInstant=&quot;2016-04-22T12:27:31.198Z&quot; xmlns:saml=&quot;urn:oasis:names:tc:SAML:1.0:assertion&quot;&gt;&lt;saml:Conditions NotBefore=&quot;2016-04-22T12:27:31.073Z&quot; NotOnOrAfter=&quot;2016-04-22T13:27:31.073Z&quot;&gt;&lt;saml:AudienceRestrictionCondition&gt;&lt;saml:Audience&gt;urn:mbs2-pne.partners.extranet.microsoft.com&lt;/saml:Audience&gt;&lt;/saml:AudienceRestrictionCondition&gt;&lt;/saml:Conditions&gt;&lt;saml:AttributeStatement&gt;&lt;saml:Subject&gt;&lt;saml:NameIdentifier Format=&quot;http://schemas.xmlsoap.org/claims/UPN&quot;&gt;0003BFFDE1350D30@Live.com&lt;/saml:NameIdentifier&gt;&lt;saml:SubjectConfirmation&gt;&lt;saml:ConfirmationMethod&gt;urn:oasis:names:tc:SAML:1.0:cm:bearer&lt;/saml:ConfirmationMethod&gt;&lt;/saml:SubjectConfirmation&gt;&lt;/saml:Subject&gt;&lt;saml:Attribute AttributeName=&quot;AdfsPPID&quot; AttributeNamespace=&quot;http://sts.msft.net/user&quot;&gt;&lt;saml:AttributeValue&gt;772384A6D2F4A090DE188FE283D7719F62999965BBA300A4291CD1B7696C5A0D&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;CID&quot; AttributeNamespace=&quot;http://sts.msft.net/user&quot;&gt;&lt;saml:AttributeValue&gt;3c6f0f6ced18dabd&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;OrgName&quot; AttributeNamespace=&quot;http://sts.msft.net/user&quot;&gt;&lt;saml:AttributeValue&gt;uri:WindowsLiveID&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;PartnerImmutableID&quot; AttributeNamespace=&quot;http://sts.msft.net/user&quot; a:OriginalIssuer=&quot;uri:WindowsLiveID&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;0003BFFDE1350D30&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;claimProviderTrust&quot; AttributeNamespace=&quot;http://sts.msft.net&quot;&gt;&lt;saml:AttributeValue&gt;Windows Live ID&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;IsValidPVP&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/claims&quot;&gt;&lt;saml:AttributeValue&gt;True&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;Managed&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/claims&quot; a:OriginalIssuer=&quot;uri:WindowsLiveID&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;TRUE&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;Child&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/claims&quot; a:OriginalIssuer=&quot;uri:WindowsLiveID&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;FALSE&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;TOUAccepted&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/claims&quot; a:OriginalIssuer=&quot;uri:WindowsLiveID&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;TRUE&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;CID&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/claims&quot; a:OriginalIssuer=&quot;uri:WindowsLiveID&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;3c6f0f6ced18dabd&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;EmailAddress&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/claims&quot; a:OriginalIssuer=&quot;uri:WindowsLiveID&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;px3rajesh@outlook.com&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;PUID&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/claims&quot; a:OriginalIssuer=&quot;uri:WindowsLiveID&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;0003BFFDE1350D30&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;x-ms-proxy&quot; AttributeNamespace=&quot;http://schemas.microsoft.com/2012/01/requestcontext/claims&quot; a:OriginalIssuer=&quot;CLIENT CONTEXT&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;TK5-IAMFSP-01.partners.extranet.microsoft.com&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;x-ms-endpoint-absolute-path&quot; AttributeNamespace=&quot;http://schemas.microsoft.com/2012/01/requestcontext/claims&quot; a:OriginalIssuer=&quot;CLIENT CONTEXT&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;/adfs/ls/&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;Country&quot; AttributeNamespace=&quot;http://sts.msft.net/user&quot;&gt;&lt;saml:AttributeValue&gt;US&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;EmailAddress&quot; AttributeNamespace=&quot;http://sts.msft.net/user&quot; a:OriginalIssuer=&quot;uri:WindowsLiveID&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;px3rajesh@outlook.com&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;/saml:AttributeStatement&gt;&lt;saml:AuthenticationStatement AuthenticationMethod=&quot;urn:oasis:names:tc:SAML:1.0:am:password&quot; AuthenticationInstant=&quot;2016-04-22T12:27:25.000Z&quot;&gt;&lt;saml:Subject&gt;&lt;saml:NameIdentifier Format=&quot;http://schemas.xmlsoap.org/claims/UPN&quot;&gt;0003BFFDE1350D30@Live.com&lt;/saml:NameIdentifier&gt;&lt;saml:SubjectConfirmation&gt;&lt;saml:ConfirmationMethod&gt;urn:oasis:names:tc:SAML:1.0:cm:bearer&lt;/saml:ConfirmationMethod&gt;&lt;/saml:SubjectConfirmation&gt;&lt;/saml:Subject&gt;&lt;/saml:AuthenticationStatement&gt;&lt;ds:Signature xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;&lt;ds:SignedInfo&gt;&lt;ds:CanonicalizationMethod Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; /&gt;&lt;ds:SignatureMethod Algorithm=&quot;http://www.w3.org/2001/04/xmldsig-more#rsa-sha256&quot; /&gt;&lt;ds:Reference URI=&quot;#_e277fbf0-08be-4e01-9ab2-d412eecd7eb7&quot;&gt;&lt;ds:Transforms&gt;&lt;ds:Transform Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot; /&gt;&lt;ds:Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; /&gt;&lt;/ds:Transforms&gt;&lt;ds:DigestMethod Algorithm=&quot;http://www.w3.org/2001/04/xmlenc#sha256&quot; /&gt;&lt;ds:DigestValue&gt;CkJaT5Eoewd8P3vrPSrxcg6T42JTb7EECvzaSYaOd7w=&lt;/ds:DigestValue&gt;&lt;/ds:Reference&gt;&lt;/ds:SignedInfo&gt;&lt;ds:SignatureValue&gt;BcGuqjRyOO+lFcqxrmer3mYa8wil9yuAO5Yv2ev665Bdx7WUG/Dk1XAfhmx/rliJa5OlMLhp//pbGEAnythBgoI5lhbmqWgcahIj5dA7Vi+/jEHRf8GNXVVSAwATbUUFMoe8jRy6KgLVQMtFQOa642NxOmETRNwnOh12sNquFlxZYbfg0iaFHQETgKtaMFkJD7ZlghX2TMXKN4ySIMKr+wjzRNlCg5E+9qYDYuK21MMSaifLd6PfRB/ko9IjmG6+wm5511srCMCs1nRPKwlGEqS25mL6N8mFcvsZOA9UPFMQDlxpEQq+xj2YsSG0W/iGoRT9Ej4XMLTtqCy/REYUyw==&lt;/ds:SignatureValue&gt;&lt;KeyInfo xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;&lt;X509Data&gt;&lt;X509Certificate&gt;MIIGOTCCBCGgAwIBAgITWgAACJLLxSkz0SpNlQABAAAIkjANBgkqhkiG9w0BAQsFADCBizELMAkGA1UEBhMCVVMxEzARBgNVBAgTCldhc2hpbmd0b24xEDAOBgNVBAcTB1JlZG1vbmQxHjAcBgNVBAoTFU1pY3Jvc29mdCBDb3Jwb3JhdGlvbjEVMBMGA1UECxMMTWljcm9zb2Z0IElUMR4wHAYDVQQDExVNaWNyb3NvZnQgSVQgU1NMIFNIQTIwHhcNMTQwNjA0MjAxMTA3WhcNMTYwNjAzMjAxMTA3WjAhMR8wHQYDVQQDExZjb3JwLnN0cy5taWNyb3NvZnQuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4PQIZPN1Wicf7e22ASazMcGcJWDSzTmCDo2X51GAWqjLjSwh9d/E3yREZjX5+vM9ly+d73IC1y4G7FW1DZmVX4QHdYQqFqISxXgHdBzTClCBcSRI6wqLefa1MFlNQ5GeHWEfQ9yd7r73GswrnWhyy00C+G50nGVqpvwvQRXfj0XiD7CbSJopQxu31sjAlxw24IVNua418IcwveYr0ndRcf4WybDRgkrGHc++W91SX4OYJCUjCCg1ESl9ivk8qL5J+CW+FFwMKWCmZ2M+xtboCDEHFh9oHyvZPz2aD9nhaVp2TNdjxJGCuGNob1cGt8OEX8bnTCal2SaMIAP38KywFQIDAQABo4IB/TCCAfkwHQYDVR0OBBYEFCrmK97rCfq/qS4m1ql1R7KHELq/MAsGA1UdDwQEAwIEsDAfBgNVHSMEGDAWgBRRryQmnPRoIleAJis7RmIVex7MpTB9BgNVHR8EdjB0MHKgcKBuhjZodHRwOi8vbXNjcmwubWljcm9zb2Z0LmNvbS9wa2kvbXNjb3JwL2NybC9tc2l0d3d3Mi5jcmyGNGh0dHA6Ly9jcmwubWljcm9zb2Z0LmNvbS9wa2kvbXNjb3JwL2NybC9tc2l0d3d3Mi5jcmwwcAYIKwYBBQUHAQEEZDBiMDwGCCsGAQUFBzAChjBodHRwOi8vd3d3Lm1pY3Jvc29mdC5jb20vcGtpL21zY29ycC9tc2l0d3d3Mi5jcnQwIgYIKwYBBQUHMAGGFmh0dHA6Ly9vY3NwLm1zb2NzcC5jb20wHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCME4GA1UdIARHMEUwQwYJKwYBBAGCNyoBMDYwNAYIKwYBBQUHAgEWKGh0dHA6Ly93d3cubWljcm9zb2Z0LmNvbS9wa2kvbXNjb3JwL2NwcwAwJwYJKwYBBAGCNxUKBBowGDAKBggrBgEFBQcDATAKBggrBgEFBQcDAjAhBgNVHREEGjAYghZjb3JwLnN0cy5taWNyb3NvZnQuY29tMA0GCSqGSIb3DQEBCwUAA4ICAQAMCQK19i2DpyGaeYX4TZ8WgD1Bd8EelDbg9TiV6xtg9oM2+2iA1ivDm/tDfSQwcl55fWQj04SdlWEMVeppXXUUb8HvtcvPdOW9LMprs02XG0eXIdS4ReOkhZKyRAaG1cBm2/ZhcUtZbyK8ZRB9aOuw9rc+6mGpXa8YNwdgtoZRSBaqt6xkzjlHj+uI1J5hqGgYuPmXnjVPR7lHJCR3Pkh0AgViRkTCwtSGJdeOGxDfPjddCPdhiAespUjExtg/LVXFx1qqzzNVUu5ZVFqgsf0p+pOIEG2uRpC4m9kaFASg7kSADZ6NZkU7XFcJRBK5GkrH8+HwvWzpwZmNy0SIQ0zOUgHh3yeNagKFWMePp4FVSgAULaKV+pDpiqAj3UqtB5b0w8pYosR/SQSowKY4+WLZE0MvQ0HTXHSKnr3q90cADzyTMC8/03qJrjie8sDwtA08YWbo7KyiHyeRg4ltubUjM4MRkf62wNyFINPK23wU9257pFoRaMuKdrdOgEY6TenU5LXGobRgRtsU3zriCrcG3DRbIA5yOSJAuo0fSWGZrpEQ0vPQG00Te4bgdbu3ekK63LjYZObkElWfb+W+fMWvARkJAEnWP6oROy0T1GqHKTk/fyTmLbe3VPsGj6rv5XAwR0+uMeEUAt44zXOOTdwG2A7BNIrzFQmrJseyb5VK/w==&lt;/X509Certificate&gt;&lt;/X509Data&gt;&lt;/KeyInfo&gt;&lt;/ds:Signature&gt;&lt;/saml:Assertion&gt;&lt;/t:RequestedSecurityToken&gt;&lt;t:TokenType&gt;urn:oasis:names:tc:SAML:1.0:assertion&lt;/t:TokenType&gt;&lt;t:RequestType&gt;http://schemas.xmlsoap.org/ws/2005/02/trust/Issue&lt;/t:RequestType&gt;&lt;t:KeyType&gt;http://schemas.xmlsoap.org/ws/2005/05/identity/NoProofKey&lt;/t:KeyType&gt;&lt;/t:RequestSecurityTokenResponse&gt;" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="wctx" Value="{{$HIDDEN1.wctx}}" RecordedValue="rm=0&amp;id=passive&amp;ru=%2fUserInfo%2fSelectProfile.aspx%3fReturnURL%3dhttps%253a%252f%252fmbs2-pne.partners.extranet.microsoft.com%252fMSVoice%252fOrganizationMapping.aspx%253fe%253dOQZSRROYTXYYRRQWMTVPQNQYVUSTRLWSUONRUPQOYPMNRLUK" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="51f36df9-9085-46b2-af38-91d6aa22a32f" Version="1.1" Url="https://mbs2-pne.partners.extranet.microsoft.com/UserInfo/SelectProfile.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://mbs2-pne.partners.extranet.microsoft.com/MBSShare/SetLocale.aspx?ReturnURL=https%3a%2f%2fmbs2-pne.partners.extranet.microsoft.com%2fMSVoice%2fOrganizationMapping.aspx%3fe%3dOQZSRROYTXYYRRQWMTVPQNQYVUSTRLWSUONRUPQOYPMNRLUK" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://mbs2-pne.partners.extranet.microsoft.com/UserInfo/SelectProfile.aspx?ReturnURL=https%3a%2f%2fmbs2-pne.partners.extranet.microsoft.com%2fMSVoice%2fOrganizationMapping.aspx%3fe%3dOQZSRROYTXYYRRQWMTVPQNQYVUSTRLWSUONRUPQOYPMNRLUK" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam2.ReturnURL" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?ReturnURL=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="ReturnURL" Value="https%3a%2f%2fmbs2-pne.partners.extranet.microsoft.com%2fMSVoice%2fOrganizationMapping.aspx%3fe%3dOQZSRROYTXYYRRQWMTVPQNQYVUSTRLWSUONRUPQOYPMNRLUK" RecordedValue="https%3a%2f%2fmbs2-pne.partners.extranet.microsoft.com%2fMSVoice%2fOrganizationMapping.aspx%3fe%3dOQZSRROYTXYYRRQWMTVPQNQYVUSTRLWSUONRUPQOYPMNRLUK" CorrelationBinding="{{QueryStringParam3.ReturnURL}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="hiddenNetworkDomainGroupID" Value="{{$HIDDEN1.hiddenNetworkDomainGroupID}}" RecordedValue="2" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="/wEPDwULLTE5MTk5NzkwMjIPZBYGAgEPFgIeBFRleHQFI01pY3Jvc29mdCBEeW5hbWljcyAtIFNlbGVjdCBQcm9maWxlZAIDD2QWAmYPZBYCAgMPDxYCHwBlZGQCBw9kFgQCAQ8WAh8ABTw8YSBpZD1sb2dpbm91dExpbmsgaHJlZj0nL1VzZXJJbmZvL0xvZ291dC5hc3B4Jz5TaWduIE91dDwvYT5kAgkPDxYEHwAFCENvbnRpbnVlHgdFbmFibGVkaGRkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYOBQcyNTYyMDkzBQcyNTYyMDkzBQcyNTYyMDU4BQcyNTYyMDU4BQcyNTYyMDY0BQcyNTYyMDY0BQcyNTYyMDkyBQcyNTYyMDkyBQcyNTYyMDU3BQcyNTYyMDU3BQcyNTYyMDYxBQcyNTYyMDYxBQcyNTYyMDYzBQcyNTYyMDYzepoccxdwmoseNg6gEr5tVQaMwus=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="D1C42006" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="/wEdAAmdHFg8xelS1plB4oNFUytxXQleWhopYjXV0GVb5U9rZtxLggun4lDNuV2Y5gRg4Ca14GXVQGCTMj79kJjF674EJwHV3hjglF7TDpJww94O7u1di4LpLr9vh3ahB6e4xp1A8lQ68WzYfkQy37DaIhzwDh7eEkCvwST81bvSxcO6lAzbLIHFAKFO0Oxc+eQifFgP1GPsLGBsaqLtJITmYdlnPit3qg==" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="radioGroup" Value="2562063" RecordedValue="2562063" CorrelationBinding="{{FormPostParam1.radioGroup}}" UrlEncode="True" />
+        <FormPostParameter Name="continueButton" Value="Continue" RecordedValue="Continue" CorrelationBinding="{{FormPostParam2.continueButton}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="884d4ca1-ab83-4e61-8cc8-e62c42aa8912" Version="1.1" Url="https://mbs2-pne.partners.extranet.microsoft.com/MBSShare/SetLocale.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://mbs2-pne.partners.extranet.microsoft.com/MBSShare/SetLocale.aspx?ReturnURL=https%3a%2f%2fmbs2-pne.partners.extranet.microsoft.com%2fMSVoice%2fOrganizationMapping.aspx%3fe%3dOQZSRROYTXYYRRQWMTVPQNQYVUSTRLWSUONRUPQOYPMNRLUK" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam1.qs" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?qs=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam16.qs" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?qs=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="ReturnURL" Value="https%3a%2f%2fmbs2-pne.partners.extranet.microsoft.com%2fMSVoice%2fOrganizationMapping.aspx%3fe%3dOQZSRROYTXYYRRQWMTVPQNQYVUSTRLWSUONRUPQOYPMNRLUK" RecordedValue="https%3a%2f%2fmbs2-pne.partners.extranet.microsoft.com%2fMSVoice%2fOrganizationMapping.aspx%3fe%3dOQZSRROYTXYYRRQWMTVPQNQYVUSTRLWSUONRUPQOYPMNRLUK" CorrelationBinding="{{QueryStringParam2.ReturnURL}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="/wEPDwUJNTMzODI4MzEzZGQZOVaeCed+N896a41ajMUWJ2uwFA==" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="AF64413D" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="5db4f209-628f-404d-9200-81bf703ed291" Version="1.1" Url="https://mbs2-pne.partners.extranet.microsoft.com/MSVoice/OrganizationMappingBankDetails.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="False" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://mbs2-pne.partners.extranet.microsoft.com/MSVoice/OrganizationMapping.aspx?e=OQZSRROYTXYYRRQWMTVPQNQYVUSTRLWSUONRUPQOYPMNRLUK" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="qs" Value="OQZSRROYTXYYRRQWMTVPQNQYVUSTRLWSZXMXMWNMWYNLOZNKQRTTQYKRROZXYRTYWPSSLWMKRMONMZMPWNXNKKQOTQTRZXYNUSPUQMKNUZQSTZXVMXQQUVOLQQSOZLLTXPUOUYRLQZLRQUOM" RecordedValue="OQZSRROYTXYYRRQWMTVPQNQYVUSTRLWSZXMXMWNMWYNLOZNKQRTTQYKRROZXYRTYWPSSLWMKRMONMZMPWNXNKKQOTQTRZXYNUSPUQMKNUZQSTZXVMXQQUVOLQQSOZLLTXPUOUYRLQZLRQUOM" CorrelationBinding="{{QueryStringParam1.qs}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="6afbe5a7-1435-4ab0-81c5-cd6a273c4dae" Version="1.1" Url="https://partnerpayeeportal-int.azurewebsites.net/Home/Initalize/eea4597a-d300-420b-8d01-4f80204811a6/MTg0NjVmNTktMjQ4Mi00ZmQyLTk5NWItNDU3MjlmYWM5Yzhj0/en-us" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://login.live.com/login.srf?wa=wsignin1.0&amp;wtrealm=https%3a%2f%2faccesscontrol.windows.net%2f&amp;wreply=https%3a%2f%2fmsit-athena-mscertmanagerplanner.accesscontrol.windows.net%2fv2%2fwsfederation&amp;wp=MBI_FED_SSL&amp;wctx=cHI9d3NmZWRlcmF0aW9uJnJtPXVybiUzYWZlZGVyYXRpb24lMmZQWDMuUEkuSW50ZWdyYXRpb24mcnk9JmN4PXJtJTNkMCUyNmlkJTNkcGFzc2l2ZSUyNnJ1JTNkJTI1MmZIb21lJTI1MmZJbml0YWxpemUlMjUyZmVlYTQ1OTdhLWQzMDAtNDIwYi04ZDAxLTRmODAyMDQ4MTFhNiUyNTJmTVRnME5qVm1OVGt0TWpRNE1pMDBabVF5TFRrNU5XSXRORFUzTWpsbVlXTTVZemhqMCUyNTJmZW4tdXM1" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://mbs2-pne.partners.extranet.microsoft.com/MSVoice/OrganizationMappingBankDetails.aspx?qs=OQZSRROYTXYYRRQWMTVPQNQYVUSTRLWSZXMXMWNMWYNLOZNKQRTTQYKRROZXYRTYWPSSLWMKRMONMZMPWNXNKKQOTQTRZXYNUSPUQMKNUZQSTZXVMXQQUVOLQQSOZLLTXPUOUYRLQZLRQUOM" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+    </Request>
+    <Request Method="POST" Guid="2e84084b-035e-46a1-b1f7-d0780a57013e" Version="1.1" Url="https://msit-athena-mscertmanagerplanner.accesscontrol.windows.net/v2/wsfederation" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://login.live.com/login.srf?wa=wsignin1.0&amp;wtrealm=https%3a%2f%2faccesscontrol.windows.net%2f&amp;wreply=https%3a%2f%2fmsit-athena-mscertmanagerplanner.accesscontrol.windows.net%2fv2%2fwsfederation&amp;wp=MBI_FED_SSL&amp;wctx=cHI9d3NmZWRlcmF0aW9uJnJtPXVybiUzYWZlZGVyYXRpb24lMmZQWDMuUEkuSW50ZWdyYXRpb24mcnk9JmN4PXJtJTNkMCUyNmlkJTNkcGFzc2l2ZSUyNnJ1JTNkJTI1MmZIb21lJTI1MmZJbml0YWxpemUlMjUyZmVlYTQ1OTdhLWQzMDAtNDIwYi04ZDAxLTRmODAyMDQ4MTFhNiUyNTJmTVRnME5qVm1OVGt0TWpRNE1pMDBabVF5TFRrNU5XSXRORFUzTWpsbVlXTTVZemhqMCUyNTJmZW4tdXM1" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="wa" Value="{{$HIDDEN1.wa}}" RecordedValue="wsignin1.0" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="wctx" Value="{{$HIDDEN1.wctx}}" RecordedValue="cHI9d3NmZWRlcmF0aW9uJnJtPXVybiUzYWZlZGVyYXRpb24lMmZQWDMuUEkuSW50ZWdyYXRpb24mcnk9JmN4PXJtJTNkMCUyNmlkJTNkcGFzc2l2ZSUyNnJ1JTNkJTI1MmZIb21lJTI1MmZJbml0YWxpemUlMjUyZmVlYTQ1OTdhLWQzMDAtNDIwYi04ZDAxLTRmODAyMDQ4MTFhNiUyNTJmTVRnME5qVm1OVGt0TWpRNE1pMDBabVF5TFRrNU5XSXRORFUzTWpsbVlXTTVZemhqMCUyNTJmZW4tdXM1" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="NAP" Value="{{$HIDDEN1.NAP}}" RecordedValue="V%3D1.9%26E%3D11e9%26C%3DIMKN0nRF2ycfAFw4uQNO1x8KnyNj8y6bpL9NBGF7GqiNRrS-hkL0bA%26W%3D1" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="wresult" Value="{{$HIDDEN1.wresult}}" RecordedValue="&lt;wst:RequestSecurityTokenResponse xmlns:wst=&quot;http://schemas.xmlsoap.org/ws/2005/02/trust&quot;&gt;&lt;wst:RequestedSecurityToken&gt;&lt;saml:Assertion xmlns:saml=&quot;urn:oasis:names:tc:SAML:1.0:assertion&quot; AssertionID=&quot;uuid-cfbadbef-d5b3-4b27-aa4c-469a33059ee0&quot; IssueInstant=&quot;2016-04-22T12:28:25Z&quot; Issuer=&quot;uri:WindowsLiveID&quot; MajorVersion=&quot;1&quot; MinorVersion=&quot;1&quot;&gt;&lt;saml:Conditions NotBefore=&quot;2016-04-22T12:28:25Z&quot; NotOnOrAfter=&quot;2016-04-22T20:28:25Z&quot;&gt;&lt;saml:AudienceRestrictionCondition&gt;&lt;saml:Audience&gt;accesscontrol.windows.net&lt;/saml:Audience&gt;&lt;/saml:AudienceRestrictionCondition&gt;&lt;/saml:Conditions&gt;&lt;saml:AuthenticationStatement AuthenticationInstant=&quot;2016-04-22T12:27:30Z&quot; AuthenticationMethod=&quot;urn:oasis:names:tc:SAML:1.0:am:password&quot;&gt;&lt;saml:Subject&gt;&lt;saml:NameIdentifier Format=&quot;http://schemas.xmlsoap.org/claims/UPN&quot;&gt;0003BFFDE1350D30@Live.com&lt;/saml:NameIdentifier&gt;&lt;/saml:Subject&gt;&lt;/saml:AuthenticationStatement&gt;&lt;saml:AttributeStatement&gt;&lt;saml:Subject&gt;&lt;saml:NameIdentifier Format=&quot;http://schemas.xmlsoap.org/claims/UPN&quot;&gt;0003BFFDE1350D30@Live.com&lt;/saml:NameIdentifier&gt;&lt;/saml:Subject&gt;&lt;saml:Attribute AttributeName=&quot;Managed&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/claims&quot;&gt;&lt;saml:AttributeValue&gt;TRUE&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;Child&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/claims&quot;&gt;&lt;saml:AttributeValue&gt;FALSE&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;TOUAccepted&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/claims&quot;&gt;&lt;saml:AttributeValue&gt;TRUE&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;CID&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/claims&quot;&gt;&lt;saml:AttributeValue&gt;3c6f0f6ced18dabd&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;EmailAddress&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/claims&quot;&gt;&lt;saml:AttributeValue&gt;px3rajesh@outlook.com&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;PUID&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/claims&quot;&gt;&lt;saml:AttributeValue&gt;0003BFFDE1350D30&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;/saml:AttributeStatement&gt;&lt;Signature xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;&lt;SignedInfo&gt;&lt;CanonicalizationMethod Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;&gt;&lt;/CanonicalizationMethod&gt;&lt;SignatureMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#rsa-sha1&quot;&gt;&lt;/SignatureMethod&gt;&lt;Reference URI=&quot;#uuid-cfbadbef-d5b3-4b27-aa4c-469a33059ee0&quot;&gt;&lt;Transforms&gt;&lt;Transform Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot;&gt;&lt;/Transform&gt;&lt;Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;&gt;&lt;/Transform&gt;&lt;/Transforms&gt;&lt;DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;&gt;&lt;/DigestMethod&gt;&lt;DigestValue&gt;ztFSiOjwx7CE0CjRPfgl94gbJ1k=&lt;/DigestValue&gt;&lt;/Reference&gt;&lt;/SignedInfo&gt;&lt;SignatureValue&gt;hOoRS1UxcLMDT7u40tE0k0Vxf5FHqNGE+wRamCnxecPFfw5F8Gb3DFKMJzWfHDT5A0gSv6G9DwTN&#xD;&#xA;z/3ESs4tFj7d6R5ZOp6npjF9OH6696CAXL/rdEuhGdkCSEw9Lj4TYBlcJjpzPpf7Ezk+wedbdDHY&#xD;&#xA;w2ixBqAN6hZ+K1Sgbag=&lt;/SignatureValue&gt;&lt;KeyInfo&gt;&lt;X509Data&gt;&lt;X509SKI&gt;RCN+4cb0pvkykJCUmpjyfUfnRMo=&lt;/X509SKI&gt;&lt;/X509Data&gt;&lt;KeyName&gt;Window Live ID&lt;/KeyName&gt;&lt;/KeyInfo&gt;&lt;/Signature&gt;&lt;/saml:Assertion&gt;&lt;/wst:RequestedSecurityToken&gt;&lt;wsp:AppliesTo xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2004/09/policy&quot;&gt;&lt;wsa:EndpointReference xmlns:wsa=&quot;http://schemas.xmlsoap.org/ws/2004/08/addressing&quot;&gt;&lt;wsa:Address&gt;http://accesscontrol.windows.net&lt;/wsa:Address&gt;&lt;/wsa:EndpointReference&gt;&lt;/wsp:AppliesTo&gt;&lt;/wst:RequestSecurityTokenResponse&gt;" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="wa" Value="{{$HIDDEN1.wa}}" RecordedValue="wsignin1.0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ANON" Value="{{$HIDDEN1.ANON}}" RecordedValue="A%3D4D39BAD5EE012D180B7B1558FFFFFFFF%26E%3D1243%26W%3D1" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="35c74966-ad5a-402c-abe6-4be34fa40c9b" Version="1.1" Url="https://partnerpayeeportal-int.azurewebsites.net/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://partnerpayeeportal-int.azurewebsites.net/Home/Initalize/eea4597a-d300-420b-8d01-4f80204811a6/MTg0NjVmNTktMjQ4Mi00ZmQyLTk5NWItNDU3MjlmYWM5Yzhj0/en-us" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://msit-athena-mscertmanagerplanner.accesscontrol.windows.net/v2/wsfederation?wa=wsignin1.0" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="wa" Value="{{$HIDDEN1.wa}}" RecordedValue="wsignin1.0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="wresult" Value="{{$HIDDEN1.wresult}}" RecordedValue="&lt;t:RequestSecurityTokenResponse Context=&quot;rm=0&amp;amp;id=passive&amp;amp;ru=%2fHome%2fInitalize%2feea4597a-d300-420b-8d01-4f80204811a6%2fMTg0NjVmNTktMjQ4Mi00ZmQyLTk5NWItNDU3MjlmYWM5Yzhj0%2fen-us&quot; xmlns:t=&quot;http://schemas.xmlsoap.org/ws/2005/02/trust&quot;&gt;&lt;t:Lifetime&gt;&lt;wsu:Created xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;2016-04-22T12:28:25.446Z&lt;/wsu:Created&gt;&lt;wsu:Expires xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;2016-04-22T12:38:25.446Z&lt;/wsu:Expires&gt;&lt;/t:Lifetime&gt;&lt;wsp:AppliesTo xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2004/09/policy&quot;&gt;&lt;EndpointReference xmlns=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;Address&gt;urn:federation/PX3.PI.Integration&lt;/Address&gt;&lt;/EndpointReference&gt;&lt;/wsp:AppliesTo&gt;&lt;t:RequestedSecurityToken&gt;&lt;wsse:BinarySecurityToken wsu:Id=&quot;_f9cbf5fb-230d-4675-ac0a-d5e9e4bc169f-2457F3BB887F0700F2A324BD40FC4760&quot; ValueType=&quot;urn:ietf:params:oauth:token-type:jwt&quot; EncodingType=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary&quot; xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot; xmlns:wsse=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&gt;ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKU1V6STFOaUlzSW5nMWRDSTZJbFozYnpWaVpERjVUbFp6UkVSdGRtTnpOa0Z2Tm14TlJraGtUU0o5LmV5SmhkV1FpT2lKMWNtNDZabVZrWlhKaGRHbHZiaTlRV0RNdVVFa3VTVzUwWldkeVlYUnBiMjRpTENKcGMzTWlPaUpvZEhSd2N6b3ZMMjF6YVhRdFlYUm9aVzVoTFcxelkyVnlkRzFoYm1GblpYSndiR0Z1Ym1WeUxtRmpZMlZ6YzJOdmJuUnliMnd1ZDJsdVpHOTNjeTV1WlhRdklpd2libUptSWpveE5EWXhNekk0TVRBMUxDSmxlSEFpT2pFME5qRXpNamczTURVc0ltNWhiV1ZwWkNJNklqQXdNRE5DUmtaRVJURXpOVEJFTXpCQVRHbDJaUzVqYjIwaUxDSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OWpiR0ZwYlhNdlRXRnVZV2RsWkNJNklsUlNWVVVpTENKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5amJHRnBiWE12UTJocGJHUWlPaUpHUVV4VFJTSXNJbWgwZEhBNkx5OXpZMmhsYldGekxuaHRiSE52WVhBdWIzSm5MMk5zWVdsdGN5OVVUMVZCWTJObGNIUmxaQ0k2SWxSU1ZVVWlMQ0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTlqYkdGcGJYTXZRMGxFSWpvaU0yTTJaakJtTm1ObFpERTRaR0ZpWkNJc0ltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwyTnNZV2x0Y3k5UVZVbEVJam9pTURBd00wSkdSa1JGTVRNMU1FUXpNQ0lzSW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmQzTXZNakF3T0M4d05pOXBaR1Z1ZEdsMGVTOWpiR0ZwYlhNdllYVjBhR1Z1ZEdsallYUnBiMjV0WlhSb2IyUWlPaUpvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDNkekx6SXdNRGd2TURZdmFXUmxiblJwZEhrdllYVjBhR1Z1ZEdsallYUnBiMjV0WlhSb2IyUXZjR0Z6YzNkdmNtUWlMQ0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDNkekx6SXdNRGd2TURZdmFXUmxiblJwZEhrdlkyeGhhVzF6TDJGMWRHaGxiblJwWTJGMGFXOXVhVzV6ZEdGdWRDSTZJakl3TVRZdE1EUXRNakpVTVRJNk1qYzZNekF1TURBd1dpSXNJbWgwZEhBNkx5OXpZMmhsYldGekxuaHRiSE52WVhBdWIzSm5MM2R6THpJd01EVXZNRFV2YVdSbGJuUnBkSGt2WTJ4aGFXMXpMMlZ0WVdsc1lXUmtjbVZ6Y3lJNkluQjRNM0poYW1WemFFQnZkWFJzYjI5ckxtTnZiU0lzSW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNkekx6SXdNRFV2TURVdmFXUmxiblJwZEhrdlkyeGhhVzF6TDI1aGJXVWlPaUl3TURBelFrWkdSRVV4TXpVd1JETXdRRXhwZG1VdVkyOXRJaXdpYVdSbGJuUnBkSGx3Y205MmFXUmxjaUk2SW5WeWFUcFhhVzVrYjNkelRHbDJaVWxFSW4wLlZjVXVKcTc1cTl1VnFsRnVqN1FHLUN0TVFtbVc2YkFPZ1oyRlJmUV9KdHV2cmwzejZMOUxzTXVBSmxWbkhZMlpQaGZSYTZTbnNzbWthSkRmNmJ3dmxkWUJ3cGo2Q2w0Q01rOTJMSWhINzFTZHAtUFJDNWpVZEs3OEVqdHI2by1uelNQRDJJMWEwRk9kMjFDSW9FYVhjNzNUSDdZanRZdHR4bWhZWUJOWktNblprY0N3eUVVam91cWRFODljd0Q3ekhpTkN4REVEVjdNS0NjWFUxZl9Sby0wMFZOOFdISG5xTHhiS1JBMi1UM1NVSTdtclQ2c1ZKbDZxbFpQQnNuX0tERThYOXp6aXlwM2ZJVXI5c2V2NkpoZ1FhMTRaamNMT2tTc3BkM2pNQzhLeV9uYU1HNFhraDd0a2N2Vkx3dGlwZWRTODlzZER3dF90U2F2Wnk4eGJ3dw==&lt;/wsse:BinarySecurityToken&gt;&lt;/t:RequestedSecurityToken&gt;&lt;t:TokenType&gt;urn:ietf:params:oauth:token-type:jwt&lt;/t:TokenType&gt;&lt;t:RequestType&gt;http://schemas.xmlsoap.org/ws/2005/02/trust/Issue&lt;/t:RequestType&gt;&lt;t:KeyType&gt;http://schemas.xmlsoap.org/ws/2005/05/identity/NoProofKey&lt;/t:KeyType&gt;&lt;/t:RequestSecurityTokenResponse&gt;" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="wctx" Value="{{$HIDDEN1.wctx}}" RecordedValue="rm=0&amp;id=passive&amp;ru=%2fHome%2fInitalize%2feea4597a-d300-420b-8d01-4f80204811a6%2fMTg0NjVmNTktMjQ4Mi00ZmQyLTk5NWItNDU3MjlmYWM5Yzhj0%2fen-us" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="791f8997-2f57-428d-85d5-824793dea088" Version="1.1" Url="https://partnerpayeeportal-int.azurewebsites.net/Home/Locations/2382249/b1040434-30bb-40f0-a498-c3338d73845c" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://partnerpayeeportal-int.azurewebsites.net/Home/Initalize/eea4597a-d300-420b-8d01-4f80204811a6/MTg0NjVmNTktMjQ4Mi00ZmQyLTk5NWItNDU3MjlmYWM5Yzhj0/en-us" />
+      </Headers>
+    </Request>
+  </Items>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+</WebTest>

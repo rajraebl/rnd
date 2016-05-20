@@ -1,0 +1,32 @@
+﻿<!doctype html>
+<html ng-app="app">
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-touch.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-animate.js"></script>
+    @*<script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>*@
+    <script src="//cdn.rawgit.com/angular-ui/ui-grid.info/gh-pages/release/3.0.0-rc.20/ui-grid.min.js"></script>
+    <link rel="stylesheet" href="http:////cdn.rawgit.com/angular-ui/ui-grid.info/gh-pages/release/3.0.0-rc.20/ui-grid.min.css" type="text/css">
+    <style>
+        .grid {
+            width: auto;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li> http://www.codeproject.com/Articles/1095313/Integrating-Angular-Js-Grid-ui-grid-with-MVC-plus</li>
+        <li> http://www.c-sharpcorner.com/UploadFile/b1df45/web-api-route-and-route-prefix-part-2/ </li>
+    </ul>
+    <div ng-controller="MainCtrl">
+        <div ui-grid="gridOptions" ui-grid-pagination class="grid"></div>
+    </div>
+    <div>
+        @Html.ActionLink("Generate XML", "GenerateXml", "uiGrid", new { @class = "btn btn-default" })
+    </div>
+    <script src="~/Scripts/App.js"></script>
+</body>
+</html>

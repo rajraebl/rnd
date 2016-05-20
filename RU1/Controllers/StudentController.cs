@@ -41,7 +41,7 @@ namespace RU1.Controllers
             {
                 students =
                     students.Where(
-                        x =>
+                        x => //"a" == "a" ||
                             x.LastName.ToUpper().Contains(searchString.ToUpper()) ||
                             x.FirstMidName.ToUpper().Contains(searchString.ToUpper()));
             }

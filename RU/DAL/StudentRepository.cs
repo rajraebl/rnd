@@ -49,11 +49,11 @@ namespace RU.DAL
         // Flag: Has Dispose already been called?
         private bool disposed = false;
 
-        //It should provide one public, non-virtual Dispose() method and a protected virtual Dispose(Boolean disposing) method.
-//The Dispose() method must call Dispose(true) and should suppress finalization for performance.
-//The base type should not include any finalizers.
+        //Disposable Pattern: should provide one public, non-virtual Dispose() method and a protected virtual Dispose(Boolean disposing) method.
+        //The Dispose() method must call Dispose(true) and should suppress finalization for performance.
+        //The base type should not include any finalizers.
         //They can provide a finalizer if needed. The finalizer must call Dispose(false).
-        // If you are inheriting from another class that // also implements IDisposable, don't forget to call base.Dispose() as well.
+        // If you are inheriting from another class that also implements IDisposable, don't forget to call base.Dispose() as well.
 
         //// Public implementation of Dispose pattern callable by consumers.
         public void Dispose()

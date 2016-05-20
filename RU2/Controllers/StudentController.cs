@@ -17,9 +17,14 @@ namespace RU2.Controllers
         //
         // GET: /Student/
 
-        public ActionResult Index(string sortOrder)
+        public ActionResult Index(string sortOrder,string searchString)
         {
-            var students =from s in db.tblStudent select s;
+            //var students =from s in db.tblStudent select s;
+            var students = db.tblStudent.Select(x => x);
+            if (!string.IsNullOrEmpty(searchString))
+                students = students.Where(x => //true || 
+                    x.LastName.ToUpper().Contains(searchString.ToUpper()) || x.FirstMidName.ToUpper().Contains(searchString.ToUpper()));
+
             switch (sortOrder)
             {
                 case "Name_Desc":
@@ -38,6 +43,7 @@ namespace RU2.Controllers
 
             ViewBag.NameSort = sortOrder == "Name_Desc" ? "Name" : "Name_Desc";
             ViewBag.DateSort = sortOrder == "Date_Desc" ? "Date" : "Date_Desc";
+            ViewBag.searchString = searchString;
 
             return View(students.ToList());
         }
