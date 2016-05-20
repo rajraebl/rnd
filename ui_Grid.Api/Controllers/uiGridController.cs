@@ -5,19 +5,23 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using ui_Grid.DAL;
-
+using log4net;
 
 namespace ui_Grid.Api.Controllers
 {
     [RoutePrefix("myAPIPrefix")]
     public class uiGridController : ApiController
     {
+        private static ILog logger = LogManager.GetLogger(typeof(uiGridController));
+
         //db_ui_GridEntities db = new db_ui_gridEntities();
         db_ui_gridEntities db = new db_ui_gridEntities();
 
         [Route("GetStudents")]
         public IEnumerable<Student> Get()
         {
+            logger.Debug("This is my log4net POC");
+            logger.Error("Get method called");
             return db.Students;
         }
 

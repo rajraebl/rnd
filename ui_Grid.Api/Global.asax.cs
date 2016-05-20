@@ -1,5 +1,7 @@
-﻿using System;
+﻿using log4net;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
@@ -16,6 +18,11 @@ namespace ui_Grid.Api
     {
         protected void Application_Start()
         {
+            //log4net.Config.XmlConfigurator.Configure();
+            //log4net.Config.XmlConfigurator.Configure(new FileInfo(Server.MapPath("~/Web.config")));
+            //ILog loggerx = LogManager.GetLogger("ola");
+            //loggerx.Debug("This is my log4net POC");
+
             AreaRegistration.RegisterAllAreas();
 
             //WebApiConfig.Register(GlobalConfiguration.Configuration);
