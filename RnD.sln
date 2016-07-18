@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC4CustomFilter", "MVC4CustomFilter\MVC4CustomFilter.csproj", "{5BB48C64-0B61-434F-B7B9-BBD96FEDCDB7}"
 EndProject
@@ -315,15 +315,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApplication3", "MvcAppli
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pics", "Pics", "{6F12DBE2-61ED-4085-ACC0-80782116D0E9}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\rajesh.sahu\Desktop\Azure-3-tier-vNet.jpg = ..\..\..\..\rajesh.sahu\Desktop\Azure-3-tier-vNet.jpg
-		..\..\..\..\rajesh.sahu\Desktop\azureAccount.png = ..\..\..\..\rajesh.sahu\Desktop\azureAccount.png
-		..\..\..\..\rajesh.sahu\Desktop\Drawing6.gif = ..\..\..\..\rajesh.sahu\Desktop\Drawing6.gif
-		..\..\..\..\rajesh.sahu\Desktop\Drawing6_Topic.bmp = ..\..\..\..\rajesh.sahu\Desktop\Drawing6_Topic.bmp
-		..\..\..\..\rajesh.sahu\Desktop\Drawing7.bmp = ..\..\..\..\rajesh.sahu\Desktop\Drawing7.bmp
-		..\..\..\..\rajesh.sahu\Desktop\Drawing8_SBQueue.bmp = ..\..\..\..\rajesh.sahu\Desktop\Drawing8_SBQueue.bmp
-		..\..\..\..\rajesh.sahu\Desktop\sec-azgsfig3.png = ..\..\..\..\rajesh.sahu\Desktop\sec-azgsfig3.png
-		..\..\..\..\rajesh.sahu\Desktop\sec-azgsfig4.png = ..\..\..\..\rajesh.sahu\Desktop\sec-azgsfig4.png
-		..\..\..\..\rajesh.sahu\Desktop\web_browser_to_web_api.png = ..\..\..\..\rajesh.sahu\Desktop\web_browser_to_web_api.png
+		..\..\rajesh.sahu\Desktop\Azure-3-tier-vNet.jpg = ..\..\rajesh.sahu\Desktop\Azure-3-tier-vNet.jpg
+		..\..\rajesh.sahu\Desktop\azureAccount.png = ..\..\rajesh.sahu\Desktop\azureAccount.png
+		..\..\rajesh.sahu\Desktop\Drawing6.gif = ..\..\rajesh.sahu\Desktop\Drawing6.gif
+		..\..\rajesh.sahu\Desktop\Drawing6_Topic.bmp = ..\..\rajesh.sahu\Desktop\Drawing6_Topic.bmp
+		..\..\rajesh.sahu\Desktop\Drawing7.bmp = ..\..\rajesh.sahu\Desktop\Drawing7.bmp
+		..\..\rajesh.sahu\Desktop\Drawing8_SBQueue.bmp = ..\..\rajesh.sahu\Desktop\Drawing8_SBQueue.bmp
+		..\..\rajesh.sahu\Desktop\sec-azgsfig3.png = ..\..\rajesh.sahu\Desktop\sec-azgsfig3.png
+		..\..\rajesh.sahu\Desktop\sec-azgsfig4.png = ..\..\rajesh.sahu\Desktop\sec-azgsfig4.png
+		..\..\rajesh.sahu\Desktop\web_browser_to_web_api.png = ..\..\rajesh.sahu\Desktop\web_browser_to_web_api.png
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiPractical", "WebApiPractical\WebApiPractical.csproj", "{CB1E2306-7719-4837-B0DB-1F2088E327B3}"
@@ -390,6 +390,16 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ui_Grid.Api", "ui_Grid.Api\ui_Grid.Api.csproj", "{E819B342-D4D8-4FBF-B9FA-F8423319A833}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ui_Grid.DAL", "ui_Grid.DAL\ui_Grid.DAL.csproj", "{B7F9C183-7429-4E94-9F7A-535C5FA01142}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PubSub", "PubSub", "{23C7C83E-4A1F-4DE4-AB79-9C9390E8CB85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PubClient", "PubClient\PubClient.csproj", "{CF9E9895-9E7A-4204-AF02-BF49D21AE6BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubClientAll", "SubClient\SubClientAll.csproj", "{21B63E98-8513-432D-A739-07513F2B7E3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubClientEven", "SubClientEven\SubClientEven.csproj", "{3F545B0E-E3F0-469E-A305-EA552E675FE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubClientOdd", "SubClientOdd\SubClientOdd.csproj", "{51A23F1E-D50D-48A9-9A8E-4E2E554E2E8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -929,6 +939,22 @@ Global
 		{B7F9C183-7429-4E94-9F7A-535C5FA01142}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7F9C183-7429-4E94-9F7A-535C5FA01142}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7F9C183-7429-4E94-9F7A-535C5FA01142}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF9E9895-9E7A-4204-AF02-BF49D21AE6BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF9E9895-9E7A-4204-AF02-BF49D21AE6BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF9E9895-9E7A-4204-AF02-BF49D21AE6BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF9E9895-9E7A-4204-AF02-BF49D21AE6BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21B63E98-8513-432D-A739-07513F2B7E3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21B63E98-8513-432D-A739-07513F2B7E3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21B63E98-8513-432D-A739-07513F2B7E3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21B63E98-8513-432D-A739-07513F2B7E3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F545B0E-E3F0-469E-A305-EA552E675FE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F545B0E-E3F0-469E-A305-EA552E675FE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F545B0E-E3F0-469E-A305-EA552E675FE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F545B0E-E3F0-469E-A305-EA552E675FE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51A23F1E-D50D-48A9-9A8E-4E2E554E2E8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51A23F1E-D50D-48A9-9A8E-4E2E554E2E8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51A23F1E-D50D-48A9-9A8E-4E2E554E2E8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51A23F1E-D50D-48A9-9A8E-4E2E554E2E8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1109,5 +1135,10 @@ Global
 		{611E7CAF-9195-4962-B379-E842EEC729FE} = {D9D109A8-751F-4AEB-A49B-2D95D05FA46B}
 		{E819B342-D4D8-4FBF-B9FA-F8423319A833} = {611E7CAF-9195-4962-B379-E842EEC729FE}
 		{B7F9C183-7429-4E94-9F7A-535C5FA01142} = {611E7CAF-9195-4962-B379-E842EEC729FE}
+		{23C7C83E-4A1F-4DE4-AB79-9C9390E8CB85} = {2B4D12D6-050C-491F-BE98-1D7FF3C42445}
+		{CF9E9895-9E7A-4204-AF02-BF49D21AE6BD} = {23C7C83E-4A1F-4DE4-AB79-9C9390E8CB85}
+		{21B63E98-8513-432D-A739-07513F2B7E3C} = {23C7C83E-4A1F-4DE4-AB79-9C9390E8CB85}
+		{3F545B0E-E3F0-469E-A305-EA552E675FE4} = {23C7C83E-4A1F-4DE4-AB79-9C9390E8CB85}
+		{51A23F1E-D50D-48A9-9A8E-4E2E554E2E8D} = {23C7C83E-4A1F-4DE4-AB79-9C9390E8CB85}
 	EndGlobalSection
 EndGlobal
