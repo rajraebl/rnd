@@ -20,6 +20,7 @@ namespace ui_Grid.Api.Controllers
         [Route("GetStudents")]
         public IEnumerable<Student> Get()
         {
+            //http://www.codeproject.com/Articles/140911/log-net-Tutorial
             logger.Debug("This is my log4net POC");
             logger.Error("Get method called");
             return db.Students;

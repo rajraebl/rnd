@@ -19,6 +19,11 @@ namespace ui_gridWithMVC.Controllers
             return View();
         }
 
+        public ActionResult getGrid()
+        {
+            return PartialView("ngGridview");
+        }
+
         public void GenerateXml()
         {
             HttpClient client = new HttpClient();

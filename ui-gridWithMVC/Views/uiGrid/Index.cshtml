@@ -21,9 +21,7 @@
         <li> http://www.codeproject.com/Articles/1095313/Integrating-Angular-Js-Grid-ui-grid-with-MVC-plus</li>
         <li> http://www.c-sharpcorner.com/UploadFile/b1df45/web-api-route-and-route-prefix-part-2/ </li>
     </ul>
-    <div ng-controller="MainCtrl">
-        <div ui-grid="gridOptions" ui-grid-pagination class="grid"></div>
-    </div>
+    @Html.Action("getGrid")
     <div>
         @Html.ActionLink("Generate XML", "GenerateXml", "uiGrid", new { @class = "btn btn-default" })
     </div>
