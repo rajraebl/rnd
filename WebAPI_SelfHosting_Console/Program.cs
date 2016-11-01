@@ -2,6 +2,7 @@
 using System;
 using System.Net.Http.Formatting;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.SelfHost;
 
 namespace WebAPI_SelfHosting_Console
@@ -17,6 +18,7 @@ namespace WebAPI_SelfHosting_Console
                 defaults: new { id = RouteParameter.Optional }
                 );
 
+            config.EnableCors(new EnableCorsAttribute("http://localhost:1614","*","*"));
             config.Formatters.Clear();
             config.Formatters.Add(new JsonMediaTypeFormatter());
  

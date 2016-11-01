@@ -4,9 +4,25 @@
 
 <head>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <style type="text/css" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></style>
+    
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        th, td {
+    border: 1px solid;
+}
+th {
+    font-weight : bold
+}
+    </style>
 </head>
+
 <h2>Index</h2>
 <script>
+    var recs = ["Jani", "Hege", "Kai"];
     $(document).ready(function() {
         alert('page ready ');
         
@@ -23,19 +39,135 @@
             );
         }
     });
-    function ajaxAPI() {
+    function ajaxAPI($scope) {
+        alert(09);
         $.ajax(
             {
                 type: "GET",
                 catch: false,
                 url: "http://localhost:8090/products/getproducts",
-                success: function (data) { console.log(data); },
+                success: function (data) {
+                    console.log(data);
+
+                    document.body.appendChild(buildHtmlTable(data));
+                },
                 error: function (err) { console.log(err); }
             }
 
         );
     }
+
+
+
+
+    function NoNameController($scope) {
+        $scope.ajaxAPI = function () {
+            alert(8);
+            $.ajax(
+                {
+                    type: "GET",
+                    catch: false,
+                    url: "http://localhost:8090/products/getproducts",
+                    success: function (data) { console.log(data); },
+                    error: function (err) { console.log(err); }
+                }
+            );
+        };
+    }
     
+    var _table_ = document.createElement('table'),
+    _tr_ = document.createElement('tr'),
+    _th_ = document.createElement('th'),
+    _td_ = document.createElement('td');
+
+    // Builds the HTML Table out of myList json data from Ivy restful service.
+    function buildHtmlTable(arr) {
+        var table = _table_.cloneNode(false),
+            columns = addAllColumnHeaders(arr, table);
+        for (var i = 0, maxi = arr.length; i < maxi; ++i) {
+            var tr = _tr_.cloneNode(false);
+            for (var j = 0, maxj = columns.length; j < maxj ; ++j) {
+                var td = _td_.cloneNode(false);
+                cellValue = arr[i][columns[j]];
+                td.appendChild(document.createTextNode(arr[i][columns[j]] || ''));
+                tr.appendChild(td);
+            }
+            table.appendChild(tr);
+        }
+        return table;
+    }
+
+    // Adds a header row to the table and returns the set of columns.
+    // Need to do union of keys from all records as some records may not contain
+    // all records
+    function addAllColumnHeaders(arr, table) {
+        var columnSet = [],
+            tr = _tr_.cloneNode(false);
+        for (var i = 0, l = arr.length; i < l; i++) {
+            for (var key in arr[i]) {
+                if (arr[i].hasOwnProperty(key) && columnSet.indexOf(key) === -1) {
+                    columnSet.push(key);
+                    var th = _th_.cloneNode(false);
+                    th.appendChild(document.createTextNode(key));
+                    tr.appendChild(th);
+                }
+            }
+        }
+        table.appendChild(tr);
+        return columnSet;
+    }
+
+
+    
+
 </script>
 
-<input type="button" value="CallAPI" onclick="ajaxAPI();"/>
+<input type="button" class="btn btn-primary" value="Call Self Hosted API via jQuery" onclick="ajaxAPI();" />
+
+<div ng-app="" ng-init="names=['Jani','Hege','Kai']">
+    
+    <p>Looping with ng-repeat:</p>
+    <ul>
+        <li ng-repeat="x in names">
+            {{ x }}
+        </li>
+    </ul>
+
+   
+    <p>Enter your Name: <input type="text" ng-model="name"></p>
+    <p>Hello <span ng-bind="name"></span>!</p>
+    <p>Hi <input type="text" value="{{name}}" /></p>
+    <p>Ahoy <input type="text" ng-value="name" /></p>
+    <input type="button" value="CallAPIviaNg" ng-click="NoNameController().ajaxAPI($scope)" />
+</div>
+
+<div>
+    Demonstration of bootstrap from https://www.tutorialspoint.com/bootstrap/bootstrap_grid_system.htm <p></p>
+    <input type="button" class="btn btn-danger" value="Danger button" />
+
+    <button type="button" class="btn btn-default">
+        <span class="glyphicon glyphicon-sort-by-attributes"></span>
+    </button>
+
+    <button type="button" class="btn btn-default">
+        <span class="glyphicon glyphicon-sort-by-attributes-alt"></span>
+    </button>
+    
+    <button type="button" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-user"></span>
+
+        User
+    </button>
+    <button type="button" class="btn btn-default btn-sm">
+        <span class="glyphicon glyphicon-user"></span>
+
+        User
+    </button>
+    <button type="button" class="btn btn-default btn-xs">
+        <span class="glyphicon glyphicon-user"></span>
+
+        User
+    </button>
+</div>
+
+
