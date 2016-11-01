@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<head>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<h2>Index</h2>
+<script>
+    $(document).ready(function() {
+        alert('page ready ');
+        
+        function ajaxAPI() {
+            $.ajax(
+                {
+                    type: "GET",
+                    catch: false,
+                    url: "http://localhost:8090/products/getproducts",
+                    success: function (data) { console.log(data); },
+                    error:function (err){console.log(err);}
+                }
+
+            );
+        }
+    });
+    function ajaxAPI() {
+        $.ajax(
+            {
+                type: "GET",
+                catch: false,
+                url: "http://localhost:8090/products/getproducts",
+                success: function (data) { console.log(data); },
+                error: function (err) { console.log(err); }
+            }
+
+        );
+    }
+    
+</script>
+
+<input type="button" value="CallAPI" onclick="ajaxAPI();"/>

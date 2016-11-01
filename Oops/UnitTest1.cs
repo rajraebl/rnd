@@ -18,6 +18,7 @@ namespace Oops
             catch (Exception ex)
             {
                 Assert.IsTrue(ex is NullReferenceException);
+                
             }
         }
     }

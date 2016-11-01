@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login <br />
+    http://www.codeproject.com/Articles/1140228/Implementation-of-Single-Sign-On-SSO-in-ASP-NET-MV <br />
+    http://www.codeproject.com/Articles/106439/Single-Sign-On-SSO-for-cross-domain-ASP-NET-applic
+    <br/>
+    Forms authentication allows to share the same cookie across multiple sites under the same domain using the same configuration key using the machinekey element. It's not easy to implement a Single Sign On for sites under different domains, for the very fundamental reason that, the cookie of a particular domain cannot be shared with another domain.
+    FormsAuthentication.SetAuthCookie() method : sets the user name to the Thread.CurrentPrincipal.Identity.Name property, writes a cookie in the Response (along with setting the cookie value with the user information and setting some properties like cookie name, expiration date/time etc.),
+    HTTP protocol says, two different sites can share a cookie if and only if both sites are deployed under the same domain (or, sub-domain).
+    https://motor.compare.com, https://secure.compare.com, 
+</h2>
+
+@using (Html.BeginForm(new { returnUrl = ViewBag.ReturnUrl }))
+{
+  @Html.ValidationSummary()
+  @Html.AntiForgeryToken()
+    
+    <div class="form-group">
+        @Html.Label("UserName")
+        @Html.Editor("UserName")
+    </div>
+
+    <div class="form-group">
+        @Html.LabelForModel("Password")
+        @Html.Password("Password")
+    </div>
+    
+    <input type="submit" class="btn btn-primary" value="Login"/>
+}
