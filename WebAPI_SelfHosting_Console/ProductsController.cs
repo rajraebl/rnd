@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,12 @@ namespace WebAPI_SelfHosting_Console
     {
         public List<Product> GetProducts()
         {
+            using (var el = new EventLog("Application"))
+            {
+                el.Source = "MsiInstaller";
+                el.WriteEntry("GetProducts() method called Which is self hosted.MsiInstaller", EventLogEntryType.Error, 1035);
+            }
+
             return new List<Product> 
             {
                 new Product() {Id = 1, Name = "Name1", Type = "Type1"},
