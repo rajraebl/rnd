@@ -1,0 +1,31 @@
+﻿@model List<FileUpload.ViewModel.File>
+
+@{
+    var hasAnyImage = Model.Any();
+}
+
+@if (hasAnyImage)
+{
+    <li>Uploaded Images</li>
+
+    <table>
+        <tr>
+            <th>Thumbnail</th>
+            <th>FileName</th>
+            <th>Action</th>
+        </tr>
+
+        @foreach (var file in Model)
+        {
+        <tr>
+            <td><img height="25px" src="@Url.Content("~/uploads/"+file.FileName)" /></td>
+            <td>@file.FileName</td>
+            <td><img src="@Url.Content("~/content/img/delete.png")" /></td>
+        </tr>
+        }
+    </table>
+}
+else
+{
+    <li>No Uploaded Images</li>
+}

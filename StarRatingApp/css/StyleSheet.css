@@ -1,0 +1,16 @@
+﻿body {
+}
+
+.starGlow{
+    background-image:url('/Img/starglow.gif');
+    min-width:30px;
+    min-height:30px;
+    display:inline-block;
+    cursor:pointer;
+}.starFade{
+    background-image:url('/Img/starFade.gif');
+    min-width:30px;
+    min-height:30px;
+    display:inline-block;
+    cursor:pointer;
+}

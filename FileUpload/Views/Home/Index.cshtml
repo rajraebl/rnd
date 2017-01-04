@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "File Upload";
+}
+
+<style>
+    .round {
+        border-radius: 50%;
+    displayx:block;
+    }
+</style>
+
+<h2>https://www.codeproject.com/Articles/1053609/Asp-net-mvc-Async-File-Uploading-using-JQuery</h2>
+<div style="background-color:azure">
+    @using (Html.BeginForm("Upload", "Home", FormMethod.Post, new { enctype="multipart/form-data", id="frmUpload", target="ifrmUpload"}))
+    {
+    <input type="file" name="fileFieldName" id="uploadField" data-val="true" data-val-required="Please select a file to upload" />
+     <br /><input type="button" onclick="UploadImage()" value="Upload" />
+
+    <br /><span id="validityMessages" style="color: Red;"></span>
+    }
+    
+    <span id="progressIndicator" style="displayx:none"><img class="round" src="@Url.Content("content/img/loading.gif")" /> Please wait...</span>
+</div>
+<iframe id="ifrmUpload" name="ifrmUpload" src="Home/uploads" onload="UploadImage_Completed()" style="height:400px; width:600px"></iframe>
+
+        @section scripts
+{
+    <script>
+        function UploadImage()
+        {
+            //alert();
+            if ($('#uploadField').val() && isLessThan4MB()) {
+                $('#progressIndicator').toggle(500);
+                $('#frmUpload').submit();
+            }
+            else {
+                $('#validityMessages').html('Please select a file to upload');
+            }
+        }
+
+        function UploadImage_Completed()
+        {
+            $('#progressIndicator').toggle(500);
+            $('#frmUpload').reset();
+        }
+
+        function isLessThan4MB()
+        {
+            var sizeinMB = ($('#uploadField')[0].files[0].size / 1024) / 1024;
+            var roundOffSize = Math.round(sizeinMB * 100 / 100);
+            //alert(roundOffSize);
+            if (roundOffSize > 2)
+                return false;
+            return true;
+        }
+    </script>
+}

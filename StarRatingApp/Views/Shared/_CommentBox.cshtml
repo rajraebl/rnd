@@ -1,0 +1,49 @@
+﻿<div>Please provide ur comment</div>
+@using (Html.BeginForm("Create", "Comment", FormMethod.Post, new { onsubmit = "return validateRatingNComment()" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Comment</legend>
+        <span onmouseoutx="setRatingStar($('#Rating').val())">
+            @for (int i = 1; i <= 5; i++)
+            {
+                {
+                    <span class="starFade" id="star_@i" onclick="setRating(@i)"></span>
+                }
+            }
+        </span>
+
+        <input type="hidden" name="ArticleId" value="@ViewBag.ArticleId" />
+
+        <div class="editor-label">            Comment        </div>
+        <div class="editor-field">            <input type="text" name="comment1" id="" value="" />        </div>
+
+        <input type="hidden" name="Rating" id="Rating" value="0" />
+        <p>
+            <input type="submit" value="Submit Comment" />
+        </p>
+    </fieldset>
+}
+<script>
+    function setRating(i) {
+        $('#Rating').val(i);
+        //alert($('#Rating').val());
+        setRatingStar(i);
+    }
+    function setRatingStar(i) {
+        for (var j = 1; j <= 5; j++) {
+            if (j <= i)
+            {
+                $('#star_' + j).attr('class', 'starGlow')
+            }
+            else
+            {
+                $('#star_' + j).attr('class', 'starFade')
+            }
+        }
+
+        //alert($('#Rating').val());
+    }
+</script>

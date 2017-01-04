@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC4CustomFilter", "MVC4CustomFilter\MVC4CustomFilter.csproj", "{5BB48C64-0B61-434F-B7B9-BBD96FEDCDB7}"
 EndProject
@@ -452,6 +452,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriorityQueue.High", "Priority Queue\PriorityQueue.High\PriorityQueue.High.csproj", "{D33D8C0F-74F6-45C4-B0F8-BE7B0D99A526}"
 EndProject
 Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "PriorityQueue", "Priority Queue\PriorityQueue\PriorityQueue.ccproj", "{8EFF3F54-F420-441A-9786-4144FA4C15B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileUpload", "FileUpload\FileUpload.csproj", "{185D3641-9465-456D-A9D5-5C5CB85458D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StarArticle", "StarArticle", "{B98F8BBA-A162-4176-8AE8-AC8403EEB153}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarRatingApp", "StarRatingApp\StarRatingApp.csproj", "{B4A114C1-D62C-47DC-8870-9BA5B31D0883}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1079,6 +1085,14 @@ Global
 		{8EFF3F54-F420-441A-9786-4144FA4C15B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EFF3F54-F420-441A-9786-4144FA4C15B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EFF3F54-F420-441A-9786-4144FA4C15B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{185D3641-9465-456D-A9D5-5C5CB85458D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{185D3641-9465-456D-A9D5-5C5CB85458D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{185D3641-9465-456D-A9D5-5C5CB85458D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{185D3641-9465-456D-A9D5-5C5CB85458D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4A114C1-D62C-47DC-8870-9BA5B31D0883}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4A114C1-D62C-47DC-8870-9BA5B31D0883}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4A114C1-D62C-47DC-8870-9BA5B31D0883}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4A114C1-D62C-47DC-8870-9BA5B31D0883}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1289,5 +1303,8 @@ Global
 		{42ADB077-95F2-4079-9659-F8C8D9348130} = {97ABEE49-4FF4-41AA-9DF0-2418AC9244C6}
 		{D33D8C0F-74F6-45C4-B0F8-BE7B0D99A526} = {97ABEE49-4FF4-41AA-9DF0-2418AC9244C6}
 		{8EFF3F54-F420-441A-9786-4144FA4C15B2} = {97ABEE49-4FF4-41AA-9DF0-2418AC9244C6}
+		{185D3641-9465-456D-A9D5-5C5CB85458D3} = {CDA20D00-41AC-4AAA-9DD5-9C59462C2099}
+		{B98F8BBA-A162-4176-8AE8-AC8403EEB153} = {C9091C9C-C55E-4953-9FE9-4686AC0BBEBC}
+		{B4A114C1-D62C-47DC-8870-9BA5B31D0883} = {B98F8BBA-A162-4176-8AE8-AC8403EEB153}
 	EndGlobalSection
 EndGlobal

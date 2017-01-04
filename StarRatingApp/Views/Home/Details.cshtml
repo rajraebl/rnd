@@ -1,0 +1,81 @@
+﻿@model StarRatingApp.DB.Article
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+@{
+    var comments = (IEnumerable<StarRatingApp.DB.Comment>)ViewBag.Comments;
+}
+
+<fieldset>
+    <legend>Article</legend>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+    <div class="display-field">
+        @{
+            int sumOfRatings = 0;
+            foreach (var c in comments)
+            {
+                sumOfRatings = sumOfRatings + (c.Rating ?? 0); //agar hai to dedo nahi to 0
+
+            }
+            var avgRating = sumOfRatings / comments.Count();
+
+            for (int i = 1; i <= 5; i++)
+            {
+                if (i <= avgRating)
+                {
+                    <span class="starGlow"></span>
+                }
+                else
+                {
+                    <span class="starFade"></span>
+                }
+            }
+
+        }
+    </div>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    
+</fieldset>
+@*<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ArticleId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@
+
+<div><h3>Comments</h3>
+    @foreach (var c in comments)
+    {
+        <hr />
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-1">@c.Rating</div>
+            <div class="col-md-3">
+                @for (int i = 1; i <= 5; i++)
+                {
+                    if (i <= c.Rating)
+                    {
+                        <span class="starGlow"></span>
+                    }
+                    else
+                    {
+                        <span class="starFade"></span>
+                    }
+                }
+            </div>
+            <div class="col-md-7">         @Html.Raw(c.Comment1)            </div>
+        </div>
+}
+</div>
+
+@Html.Partial("_CommentBox")
